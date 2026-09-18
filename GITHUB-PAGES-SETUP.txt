@@ -1,0 +1,44 @@
+SPLITCODE V12.2 — GITHUB PAGES SETUP
+
+Repository:
+https://github.com/pavan416/splitcode
+
+Expected live URL:
+https://pavan416.github.io/splitcode/
+
+COPY THESE FILES INTO YOUR EXISTING LOCAL PROJECT:
+
+- index.html
+- vite.config.js
+- .gitignore
+- src/App.jsx
+- src/App.css
+- public/*
+- .github/workflows/deploy.yml
+
+IMPORTANT:
+Do NOT replace package.json, package-lock.json, src/components, or src/utils
+with this package. Keep those from your existing working V12.1 project.
+
+WHY V12.2:
+GitHub project pages are hosted under /splitcode/.
+This package changes:
+- Vite base -> /splitcode/
+- SplitCode logo URLs -> import.meta.env.BASE_URL
+- favicon/manifest links -> %BASE_URL%
+- manifest URLs -> relative paths
+- canonical URL -> https://pavan416.github.io/splitcode/
+- og:url -> https://pavan416.github.io/splitcode/
+- social preview -> https://pavan416.github.io/splitcode/splitcode-social-preview.png
+- GitHub Actions deployment workflow
+
+AFTER COPYING, FROM POWERSHELL:
+
+cd C:\Users\DELL\Documents\SplitCode
+npm run build
+
+Then initialize/push Git only if this folder is not already a Git repository.
+
+Since your GitHub repository already has one commit, the safest beginner workflow
+is to CLONE it into a separate folder and copy your complete project into that
+clone before committing. Follow the instructions in ChatGPT.
