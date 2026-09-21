@@ -20,6 +20,7 @@ import {
 
 import {
   importProjectFiles,
+  importDroppedProject,
   getSupportedAcceptString,
 } from "./utils/projectImporter";
 
@@ -234,17 +235,12 @@ function getDirectory(path = "") {
 
 function languageFromFilename(path = "") {
   const lower = path.toLowerCase();
+  const fileName = getFileName(lower);
 
-  if (
-    lower.endsWith(".html") ||
-    lower.endsWith(".htm")
-  ) {
-    return "html";
-  }
-
-  if (lower.endsWith(".css")) {
-    return "css";
-  }
+  if (lower.endsWith(".html") || lower.endsWith(".htm")) return "html";
+  if (lower.endsWith(".css")) return "css";
+  if (lower.endsWith(".scss") || lower.endsWith(".sass")) return "scss";
+  if (lower.endsWith(".less")) return "less";
 
   if (
     lower.endsWith(".js") ||
@@ -254,24 +250,37 @@ function languageFromFilename(path = "") {
     return "javascript";
   }
 
-  if (lower.endsWith(".jsx")) {
-    return "jsx";
+  if (lower.endsWith(".jsx")) return "jsx";
+  if (lower.endsWith(".tsx")) return "tsx";
+  if (lower.endsWith(".ts")) return "typescript";
+  if (lower.endsWith(".json") || lower.endsWith(".jsonc")) return "json";
+  if (lower.endsWith(".md") || lower.endsWith(".mdx")) return "markdown";
+  if (lower.endsWith(".yaml") || lower.endsWith(".yml")) return "yaml";
+  if (lower.endsWith(".xml") || lower.endsWith(".svg")) return "xml";
+  if (lower.endsWith(".py")) return "python";
+  if (lower.endsWith(".java")) return "java";
+  if (lower.endsWith(".cs")) return "csharp";
+  if (lower.endsWith(".go")) return "go";
+  if (lower.endsWith(".rs")) return "rust";
+  if (lower.endsWith(".php")) return "php";
+  if (lower.endsWith(".rb")) return "ruby";
+  if (lower.endsWith(".sql")) return "sql";
+  if (lower.endsWith(".sh") || lower.endsWith(".ps1")) return "shell";
+
+  if (
+    lower.endsWith(".vue") ||
+    lower.endsWith(".svelte") ||
+    lower.endsWith(".astro")
+  ) {
+    return "html";
   }
 
-  if (lower.endsWith(".tsx")) {
-    return "tsx";
-  }
-
-  if (lower.endsWith(".ts")) {
-    return "typescript";
-  }
-
-  if (lower.endsWith(".json")) {
-    return "json";
-  }
-
-  if (lower.endsWith(".md")) {
-    return "markdown";
+  if (
+    fileName === "dockerfile" ||
+    fileName === "makefile" ||
+    fileName.startsWith(".env")
+  ) {
+    return "text";
   }
 
   return "text";
@@ -347,7 +356,7 @@ function defaultContentForFile(path) {
 // ==========================================================
 
 function App() {
-  const [inputCode, setInputCode] = useState(starterCode);
+  const [inputCode, setInputCode] = useState("");
 
   const [files, setFiles] = useState([]);
   const [folders, setFolders] = useState([]);
@@ -367,6 +376,9 @@ function App() {
   const [editorCursor, setEditorCursor] = useState({ line: 1, column: 1 });
   const [fileSearch, setFileSearch] = useState("");
   const [sourceFileName, setSourceFileName] = useState("");
+  const [startMode, setStartMode] = useState("choices");
+  const [workspaceTab, setWorkspaceTab] = useState("code");
+  const [workspaceMenuOpen, setWorkspaceMenuOpen] = useState(false);
   const [dialog, setDialog] = useState(null);
   const dialogResolverRef = useRef(null);
   const dialogInputRef = useRef(null);
@@ -379,34 +391,80 @@ function App() {
   // ========================================================
 
   function getFileLanguage(fileName = "") {
-    const ext = fileName.split(".").pop()?.toLowerCase();
+    const lower = fileName.toLowerCase();
+    const ext = lower.split(".").pop();
+
+    if (lower.endsWith(".component.ts")) return "Angular TypeScript";
+    if (lower.endsWith(".component.html")) return "Angular Template";
+    if (lower.endsWith(".component.scss")) return "Angular SCSS";
+
     const languages = {
       html: "HTML",
       htm: "HTML",
       css: "CSS",
       scss: "SCSS",
+      sass: "Sass",
+      less: "Less",
       js: "JavaScript",
+      mjs: "JavaScript Module",
+      cjs: "CommonJS",
       jsx: "React JSX",
       ts: "TypeScript",
       tsx: "React TSX",
+      vue: "Vue",
+      svelte: "Svelte",
+      astro: "Astro",
       json: "JSON",
+      jsonc: "JSON with Comments",
       md: "Markdown",
+      mdx: "MDX",
       txt: "Plain Text",
       svg: "SVG",
       xml: "XML",
+      yaml: "YAML",
+      yml: "YAML",
+      toml: "TOML",
+      graphql: "GraphQL",
+      gql: "GraphQL",
+      prisma: "Prisma",
       py: "Python",
+      java: "Java",
+      cs: "C#",
+      go: "Go",
+      rs: "Rust",
+      php: "PHP",
+      rb: "Ruby",
+      sh: "Shell",
+      ps1: "PowerShell",
+      sql: "SQL",
     };
+
+    if (fileName === "Dockerfile") return "Dockerfile";
+    if (fileName === "Makefile") return "Makefile";
+
     return languages[ext] || (ext ? ext.toUpperCase() : "Text");
   }
 
   function getFileIcon(fileName = "") {
     const ext = fileName.split(".").pop()?.toLowerCase();
-    if (["html", "htm"].includes(ext)) return "bi-filetype-html";
-    if (["css", "scss"].includes(ext)) return "bi-filetype-css";
-    if (["js", "jsx"].includes(ext)) return "bi-filetype-js";
-    if (["json"].includes(ext)) return "bi-braces";
-    if (["md"].includes(ext)) return "bi-markdown";
+
+    if (["html", "htm", "vue", "svelte", "astro"].includes(ext)) {
+      return "bi-filetype-html";
+    }
+
+    if (["css", "scss", "sass", "less"].includes(ext)) {
+      return "bi-filetype-css";
+    }
+
+    if (["js", "jsx", "mjs", "cjs"].includes(ext)) {
+      return "bi-filetype-js";
+    }
+
+    if (["ts", "tsx"].includes(ext)) return "bi-file-earmark-code";
+    if (["json", "jsonc"].includes(ext)) return "bi-braces";
+    if (["md", "mdx"].includes(ext)) return "bi-markdown";
     if (["svg"].includes(ext)) return "bi-filetype-svg";
+
     return "bi-file-earmark-code";
   }
 
@@ -594,6 +652,54 @@ function App() {
   });
 
   // ========================================================
+  // V12.3 SAFE FILE DRAGGING
+  // ========================================================
+
+  useEffect(() => {
+    function hasFiles(event) {
+      return Array.from(event.dataTransfer?.types || []).includes("Files");
+    }
+
+    function preventBrowserFileNavigation(event) {
+      if (hasFiles(event)) {
+        event.preventDefault();
+      }
+    }
+
+    function clearDragState(event) {
+      if (hasFiles(event)) {
+        event.preventDefault();
+        setDragging(false);
+      }
+    }
+
+    window.addEventListener("dragover", preventBrowserFileNavigation);
+    window.addEventListener("drop", clearDragState);
+
+    return () => {
+      window.removeEventListener("dragover", preventBrowserFileNavigation);
+      window.removeEventListener("drop", clearDragState);
+    };
+  }, []);
+
+  useEffect(() => {
+    function closeWorkspaceMenu(event) {
+      if (
+        workspaceMenuOpen &&
+        !event.target.closest(".scWorkspaceMenuWrap")
+      ) {
+        setWorkspaceMenuOpen(false);
+      }
+    }
+
+    window.addEventListener("pointerdown", closeWorkspaceMenu);
+
+    return () => {
+      window.removeEventListener("pointerdown", closeWorkspaceMenu);
+    };
+  }, [workspaceMenuOpen]);
+
+  // ========================================================
   // V9 PRODUCT NAVIGATION
   // ========================================================
 
@@ -683,29 +789,17 @@ useEffect(() => {
   // ========================================================
 
   function startNewProject() {
-    const parsed = parseProject(starterCode);
-
-    const generatedFiles = parsed.files.map((file) => {
-      const path = normalizePath(file.path);
-
-      return {
-        ...file,
-        path,
-        name: getFileName(path),
-      };
-    });
-
-    const mainHTML = findMainHTMLFile(generatedFiles);
-    const firstFile = mainHTML || generatedFiles[0] || null;
-
-    setInputCode(starterCode);
-    setFiles(generatedFiles);
-    setFolders(collectFoldersFromFiles(generatedFiles));
-    setActiveFileId(firstFile?.id || null);
-    setOpenFileIds(firstFile ? [firstFile.id] : []);
+    setInputCode("");
+    setFiles([]);
+    setFolders([]);
+    setActiveFileId(null);
+    setOpenFileIds([]);
     setPreview("");
-    setMessage("New project ready.");
-    setSourceCollapsed(true);
+    setMessage("");
+    setSourceFileName("");
+    setStartMode("choices");
+    setWorkspaceTab("code");
+    setSourceCollapsed(false);
     setView("workspace");
   }
 
@@ -753,7 +847,7 @@ useEffect(() => {
     setInputCode(
       typeof saved.inputCode === "string"
         ? saved.inputCode
-        : starterCode
+        : ""
     );
     setFiles(restoredFiles);
     setFolders(restoredFolders);
@@ -761,6 +855,8 @@ useEffect(() => {
     setOpenFileIds(restoredOpenFileIds);
     setSavedProject(saved);
     setMessage("Saved project restored.");
+    setStartMode("choices");
+    setWorkspaceTab("code");
     setSourceCollapsed(true);
     setView("workspace");
   }
@@ -1103,6 +1199,7 @@ useEffect(() => {
 
   function openFile(fileId) {
     setActiveFileId(fileId);
+    setWorkspaceTab("code");
 
     setOpenFileIds((current) => {
       if (current.includes(fileId)) {
@@ -1366,6 +1463,8 @@ useEffect(() => {
 
     setPreview("");
     setSourceCollapsed(true);
+    setStartMode("choices");
+    setWorkspaceTab("code");
     setSourceFileName("");
 
     setMessage(
@@ -1952,6 +2051,73 @@ useEffect(() => {
       setMessage(
         `Renamed ${oldPath} → ${newPath}. No references needed updating.`
       );
+    }
+  }
+
+
+  // ========================================================
+  // V12.3.6 MOVE FILE TO FOLDER
+  // ========================================================
+
+  function moveFileToFolder(fileId, targetFolderPath = "") {
+    const file = files.find((item) => item.id === fileId);
+
+    if (!file) {
+      return;
+    }
+
+    const oldPath = normalizePath(file.path);
+    const targetFolder = normalizePath(targetFolderPath);
+    const filename = getFileName(oldPath);
+
+    const newPath = normalizePath(
+      targetFolder ? `${targetFolder}/${filename}` : filename
+    );
+
+    if (!newPath || oldPath === newPath) {
+      return;
+    }
+
+    if (filePathExists(newPath, fileId)) {
+      setMessage(`${newPath} already exists.`);
+      return;
+    }
+
+    const referenceResult = updateProjectReferences(
+      files,
+      oldPath,
+      newPath
+    );
+
+    const movedFiles = referenceResult.files.map((item) => {
+      if (item.id !== fileId) {
+        return item;
+      }
+
+      return {
+        ...item,
+        path: newPath,
+        name: getFileName(newPath),
+        language: languageFromFilename(newPath),
+      };
+    });
+
+    setFiles(movedFiles);
+
+    if (targetFolder) {
+      setFolders((current) =>
+        ensureFolderParents(current, targetFolder)
+      );
+    }
+
+    if (referenceResult.totalUpdates > 0) {
+      setMessage(
+        `Moved ${oldPath} → ${newPath} • Updated ${referenceResult.totalUpdates} reference${
+          referenceResult.totalUpdates === 1 ? "" : "s"
+        }.`
+      );
+    } else {
+      setMessage(`Moved ${oldPath} → ${newPath}.`);
     }
   }
 
@@ -2720,17 +2886,93 @@ ${jsFile.content}
   }
 
   // ========================================================
-  // V5.4 PROJECT IMPORT
+  // V12.3 PROJECT IMPORT
   // ========================================================
+
+  function applyImportedProjectResult(result) {
+    if (!result?.files?.length) {
+      setMessage(
+        result?.message ||
+          "No readable project files were found."
+      );
+      return;
+    }
+
+    if (
+      result.files.length === 1 &&
+      result.files[0].language === "html" &&
+      hasSplittableInlineCode(
+        result.files[0].content
+      )
+    ) {
+      const htmlFile =
+        result.files[0];
+
+      const splitResult =
+        splitStandaloneHtmlDocument(
+          htmlFile.content,
+          htmlFile.path || htmlFile.name || "index.html"
+        );
+
+      const applied =
+        applySplitResult(
+          splitResult,
+          `${htmlFile.name || "HTML file"} imported and separated.`
+        );
+
+      if (applied) {
+        setView("workspace");
+        setStartMode("choices");
+        setWorkspaceTab("code");
+        setSourceCollapsed(true);
+
+        setMessage(
+          `${htmlFile.name || "HTML file"} imported and automatically separated into ${splitResult.files.length} files.`
+        );
+      }
+
+      return;
+    }
+
+    setFiles(result.files);
+    setFolders(result.folders || []);
+
+    const mainHTML =
+      findMainHTMLFile(
+        result.files
+      );
+
+    const preferredFile =
+      mainHTML ||
+      result.files.find((file) =>
+        /(^|\/)src\/(App|app)\.(tsx|jsx|ts|js)$/i.test(file.path)
+      ) ||
+      result.files.find((file) =>
+        /(^|\/)src\/(main|index)\.(tsx|jsx|ts|js)$/i.test(file.path)
+      ) ||
+      result.files[0];
+
+    setActiveFileId(
+      preferredFile.id
+    );
+
+    setOpenFileIds([
+      preferredFile.id,
+    ]);
+
+    setSourceCollapsed(true);
+    setStartMode("choices");
+    setWorkspaceTab("code");
+    setView("workspace");
+    setMessage(result.message);
+  }
 
   async function handleProjectImport(fileList) {
     if (!fileList || !fileList.length) {
       return;
     }
 
-    setMessage(
-      "Importing project..."
-    );
+    setMessage("Importing project...");
 
     try {
       const result =
@@ -2738,84 +2980,10 @@ ${jsFile.content}
           fileList
         );
 
-      if (!result.files.length) {
-        setMessage(
-          result.message
-        );
-
-        return;
-      }
-
-      if (
-        result.files.length === 1 &&
-        result.files[0].language === "html" &&
-        hasSplittableInlineCode(
-          result.files[0].content
-        )
-      ) {
-        const htmlFile =
-          result.files[0];
-
-        const splitResult =
-          splitStandaloneHtmlDocument(
-            htmlFile.content,
-            htmlFile.path || htmlFile.name || "index.html"
-          );
-
-        const applied =
-          applySplitResult(
-            splitResult,
-            `${htmlFile.name || "HTML file"} imported and separated.`
-          );
-
-        if (applied) {
-          setView("workspace");
-
-          setMessage(
-            `${htmlFile.name || "HTML file"} imported and automatically separated into ${splitResult.files.length} files.`
-          );
-        }
-
-        return;
-      }
-
-      setFiles(
-        result.files
-      );
-
-      setFolders(
-        result.folders
-      );
-
-      const mainHTML =
-        findMainHTMLFile(
-          result.files
-        );
-
-      const firstFile =
-        mainHTML ||
-        result.files[0];
-
-      setActiveFileId(
-        firstFile.id
-      );
-
-      setOpenFileIds([
-        firstFile.id,
-      ]);
-
-      setMessage(
-        result.message
-      );
-
-      setSourceCollapsed(true);
-      setView("workspace");
+      applyImportedProjectResult(result);
     } catch (error) {
       console.error(error);
-
-      setMessage(
-        "Unable to import this project."
-      );
+      setMessage("Unable to import this project.");
     }
   }
 
@@ -2827,12 +2995,7 @@ ${jsFile.content}
     const lowerName =
       file.name.toLowerCase();
 
-    return [
-      ".html",
-      ".htm",
-      ".txt",
-      ".md",
-    ].some((extension) =>
+    return [".txt", ".md"].some((extension) =>
       lowerName.endsWith(extension)
     );
   }
@@ -2884,47 +3047,26 @@ ${jsFile.content}
     event.target.value = "";
   }
 
-  function handleProjectDrop(event) {
+  async function handleProjectDrop(event) {
     event.preventDefault();
+    event.stopPropagation();
 
     setDragging(false);
+    setMessage("Reading dropped project...");
 
-    const selectedFiles =
-      event.dataTransfer?.files;
-
-    if (!selectedFiles?.length) {
-      setMessage(
-        "Drop project files here or use Choose Files / Choose Folder."
-      );
-      return;
-    }
-
-    if (selectedFiles.length === 1) {
-      const file =
-        selectedFiles[0];
-
-      const lowerName =
-        file.name.toLowerCase();
-
-      if (
-        lowerName.endsWith(".html") ||
-        lowerName.endsWith(".htm")
-      ) {
-        importSingleHtmlAsSplitProject(
-          file
+    try {
+      const result =
+        await importDroppedProject(
+          event.dataTransfer
         );
-        return;
-      }
 
-      if (isSplitSourceFile(file)) {
-        handleFile(file);
-        return;
-      }
+      applyImportedProjectResult(result);
+    } catch (error) {
+      console.error(error);
+      setMessage(
+        "Unable to read the dropped files or folder."
+      );
     }
-
-    handleProjectImport(
-      selectedFiles
-    );
   }
 
   // ========================================================
@@ -3341,6 +3483,10 @@ ${jsFile.content}
   setSavedProject(null);
 
   setMessage("Project cleared.");
+  setStartMode("choices");
+  setWorkspaceTab("code");
+  setWorkspaceMenuOpen(false);
+  setSourceCollapsed(false);
   setView("home");
 }
 
@@ -3807,26 +3953,16 @@ function repairDiagnosticReference(issue) {
   // ========================================================
 
   function scrollToProjectIssues() {
-    const relationshipPanel =
-      document.getElementById(
-        "splitcode-relationships"
-      );
+    setWorkspaceTab("issues");
 
-    const diagnosticsPanel =
-      document.getElementById(
-        "splitcode-diagnostics"
-      );
-
-    const target =
-      projectRelationships.missingCount > 0 ||
-      projectRelationships.orphanedCount > 0
-        ? relationshipPanel
-        : diagnosticsPanel;
-
-    target?.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
+    window.setTimeout(() => {
+      document
+        .getElementById("splitcode-diagnostics")
+        ?.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+    }, 0);
   }
 
   async function fixAllSafeIssues() {
@@ -3952,6 +4088,39 @@ function repairDiagnosticReference(issue) {
           : "s"
       }. Review the remaining issues manually.`
     );
+  }
+
+  // ========================================================
+  // V12.3 SIMPLIFIED START / WORKSPACE ACTIONS
+  // ========================================================
+
+  function openStartPanel(mode = "choices") {
+    setStartMode(mode);
+    setSourceCollapsed(false);
+    setWorkspaceMenuOpen(false);
+  }
+
+  function clearSourceCode() {
+    setInputCode("");
+    setSourceFileName("");
+    setMessage("Pasted source cleared.");
+  }
+
+  function openEmptyWorkspace() {
+    setInputCode("");
+    setFiles([]);
+    setFolders([]);
+    setActiveFileId(null);
+    setOpenFileIds([]);
+    setPreview("");
+    setSourceFileName("");
+    setMessage(
+      "Empty workspace ready. Create a file or folder from Project Files."
+    );
+    setStartMode("choices");
+    setWorkspaceTab("code");
+    setSourceCollapsed(true);
+    setView("workspace");
   }
 
   // ========================================================
@@ -4139,31 +4308,119 @@ function repairDiagnosticReference(issue) {
               </p>
             </div>
 
-            <div className="scDarkSteps" id="features">
-              <article>
-                <span>01</span>
-                <i className="bi bi-braces" />
-                <h3>Paste messy code</h3>
-                <p>Bring output from ChatGPT, Claude, Gemini or another coding assistant.</p>
-              </article>
-              <article>
-                <span>02</span>
-                <i className="bi bi-folder2-open" />
-                <h3>Build the structure</h3>
-                <p>Split code into real files and manage the project from one workspace.</p>
-              </article>
-              <article>
-                <span>03</span>
-                <i className="bi bi-activity" />
-                <h3>Check & repair</h3>
-                <p>Find broken references, inspect issues and repair common project problems.</p>
-              </article>
-              <article>
-                <span>04</span>
-                <i className="bi bi-file-earmark-zip" />
-                <h3>Preview & export</h3>
-                <p>Review the result in the browser and download the organized project as ZIP.</p>
-              </article>
+            <div className="scProcessFlow" id="features">
+              <svg
+                className="scProcessFlowSvg"
+                viewBox="0 0 1000 430"
+                preserveAspectRatio="none"
+                aria-hidden="true"
+              >
+                <defs>
+                  <linearGradient
+                    id="splitcodeProcessGradient"
+                    x1="0"
+                    y1="0"
+                    x2="1"
+                    y2="0"
+                  >
+                    <stop offset="0%" stopColor="#3366FF" stopOpacity="0.55" />
+                    <stop offset="45%" stopColor="#5C8BFF" stopOpacity="0.95" />
+                    <stop offset="100%" stopColor="#3366FF" stopOpacity="0.55" />
+                  </linearGradient>
+
+                  <filter
+                    id="splitcodeProcessGlow"
+                    x="-20%"
+                    y="-40%"
+                    width="140%"
+                    height="180%"
+                  >
+                    <feGaussianBlur stdDeviation="5" result="blur" />
+                    <feMerge>
+                      <feMergeNode in="blur" />
+                      <feMergeNode in="SourceGraphic" />
+                    </feMerge>
+                  </filter>
+                </defs>
+
+                <path
+                  className="scProcessFlowShadow"
+                  d="M125 238 C220 238 275 128 375 128 S525 248 625 248 S775 138 875 138"
+                />
+
+                <path
+                  className="scProcessFlowTrack"
+                  d="M125 238 C220 238 275 128 375 128 S525 248 625 248 S775 138 875 138"
+                  stroke="url(#splitcodeProcessGradient)"
+                  filter="url(#splitcodeProcessGlow)"
+                />
+              </svg>
+
+              <div className="scProcessGrid">
+                <article className="scProcessStep scProcessStep-1">
+                  <span className="scProcessNumber" aria-hidden="true">01</span>
+
+                  <div className="scProcessNode">
+                    <i className="bi bi-braces" aria-hidden="true" />
+                  </div>
+
+                  <div className="scProcessCopy">
+                    <small>STEP 01</small>
+                    <h3>Paste messy code</h3>
+                    <p>
+                      Bring output from ChatGPT, Claude, Gemini or another coding assistant.
+                    </p>
+                  </div>
+                </article>
+
+                <article className="scProcessStep scProcessStep-2">
+                  <span className="scProcessNumber" aria-hidden="true">02</span>
+
+                  <div className="scProcessNode">
+                    <i className="bi bi-folder2-open" aria-hidden="true" />
+                  </div>
+
+                  <div className="scProcessCopy">
+                    <small>STEP 02</small>
+                    <h3>Build the structure</h3>
+                    <p>
+                      Split code into real files and manage the project from one workspace.
+                    </p>
+                  </div>
+                </article>
+
+                <article className="scProcessStep scProcessStep-3">
+                  <span className="scProcessNumber" aria-hidden="true">03</span>
+
+                  <div className="scProcessNode">
+                    <i className="bi bi-activity" aria-hidden="true" />
+                  </div>
+
+                  <div className="scProcessCopy">
+                    <small>STEP 03</small>
+                    <h3>Check & repair</h3>
+                    <p>
+                      Find broken references, inspect issues and repair common project problems.
+                    </p>
+                  </div>
+                </article>
+
+                <article className="scProcessStep scProcessStep-4">
+                  <span className="scProcessNumber" aria-hidden="true">04</span>
+
+                  <div className="scProcessNode">
+                    <i className="bi bi-file-earmark-zip" aria-hidden="true" />
+                  </div>
+
+                  <div className="scProcessCopy">
+                    <small>STEP 04</small>
+                    <h3>Preview & export</h3>
+                    <p>
+                      Review the result in the browser and download the organized project as ZIP.
+                    </p>
+                  </div>
+                </article>
+              </div>
             </div>
 
             <div className="scDarkBottom">
@@ -4212,7 +4469,7 @@ function repairDiagnosticReference(issue) {
 
               <p>
                 Turn AI-generated code into structured, reviewable and export-ready
-                projects — directly in your browser.
+                projects directly in your browser.
               </p>
 
               <div className="scFooterTrust">
@@ -4344,46 +4601,105 @@ function repairDiagnosticReference(issue) {
             <button
               type="button"
               className="scFinalHeaderButton"
-              onClick={() => setSourceCollapsed((value) => !value)}
-            >
-              <i className="bi bi-plus-square" aria-hidden="true" />
-              Add / Import
-            </button>
-
-            <button
-              type="button"
-              className="scFinalHeaderButton"
-              onClick={downloadZip}
+              onClick={() => {
+                setWorkspaceTab("export");
+                setWorkspaceMenuOpen(false);
+              }}
             >
               <i className="bi bi-download" aria-hidden="true" />
-              Download
+              Export
             </button>
 
-            <button
-              type="button"
-              className="scFinalHeaderPrimary"
-              onClick={goHome}
-            >
-              <i className="bi bi-arrow-left" aria-hidden="true" />
-              Back to Home
-            </button>
+            <div className="scWorkspaceMenuWrap">
+              <button
+                type="button"
+                className="scFinalIconButton scWorkspaceMenuTrigger"
+                onClick={() =>
+                  setWorkspaceMenuOpen((value) => !value)
+                }
+                aria-label="More project actions"
+                aria-expanded={workspaceMenuOpen}
+                title="More project actions"
+              >
+                <i className="bi bi-three-dots" aria-hidden="true" />
+              </button>
+
+              {workspaceMenuOpen ? (
+                <div className="scWorkspaceMenu">
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setWorkspaceMenuOpen(false);
+                      saveCurrentProjectNow();
+                      setMessage("Project saved locally.");
+                    }}
+                  >
+                    <i className="bi bi-floppy" aria-hidden="true" />
+                    Save Project
+                  </button>
+
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setWorkspaceMenuOpen(false);
+                      goHome();
+                    }}
+                  >
+                    <i className="bi bi-house" aria-hidden="true" />
+                    Back to Home
+                  </button>
+
+                  <button
+                    type="button"
+                    className="isDanger"
+                    onClick={() => {
+                      setWorkspaceMenuOpen(false);
+                      clearProject();
+                    }}
+                  >
+                    <i className="bi bi-trash3" aria-hidden="true" />
+                    Clear Project
+                  </button>
+                </div>
+              ) : null}
+            </div>
           </div>
         </div>
       </header>
 
       <main className="scFinalContainer">
         {!sourceCollapsed ? (
-          <section className="scSimpleStartPanel">
+          <section className="scSimpleStartPanel scV123StartPanel">
             <div className="scSimpleStartHeader">
               <div>
                 <span className="scSimpleStartIcon">
-                  <i className="bi bi-plus-square" aria-hidden="true" />
+                  <i
+                    className={
+                      startMode === "paste"
+                        ? "bi bi-stars"
+                        : startMode === "import"
+                          ? "bi bi-folder2-open"
+                          : "bi bi-grid"
+                    }
+                    aria-hidden="true"
+                  />
                 </span>
 
                 <div>
-                  <strong>Add code to your project</strong>
+                  <strong>
+                    {startMode === "paste"
+                      ? "Paste AI Code"
+                      : startMode === "import"
+                        ? "Import Project"
+                        : "What do you want to do?"}
+                  </strong>
+
                   <span>
-                    Choose one simple path: paste AI-generated code or import an existing project.
+                    {startMode === "paste"
+                      ? "Paste one AI response and SplitCode will turn it into project files."
+                      : startMode === "import"
+                        ? "Import files or a complete project folder. Framework source files stay editable."
+                        : "Choose one clear starting action. You can switch later without losing your current project."}
                   </span>
                 </div>
               </div>
@@ -4392,26 +4708,121 @@ function repairDiagnosticReference(issue) {
                 type="button"
                 className="scFinalIconButton"
                 onClick={() => setSourceCollapsed(true)}
-                aria-label="Close add or import panel"
+                aria-label="Close start panel"
                 title="Close"
               >
                 <i className="bi bi-x-lg" aria-hidden="true" />
               </button>
             </div>
 
-            <div className="scSimpleStartGrid">
-              <section className="scSimplePasteCard">
-                <div className="scSimpleCardHeading">
-                  <span className="scSimpleCardIcon">
+            {startMode === "choices" ? (
+              <div className="scV123ChoiceGrid">
+                <button
+                  type="button"
+                  className="scV123ChoiceCard"
+                  onClick={() => setStartMode("paste")}
+                >
+                  <span className="scV123ChoiceIcon isPrimary">
                     <i className="bi bi-stars" aria-hidden="true" />
                   </span>
+                  <strong>Paste AI Code</strong>
+                  <p>
+                    Turn code from ChatGPT, Claude, Gemini or another AI assistant into real files.
+                  </p>
+                  <span className="scV123ChoiceAction">
+                    Paste code
+                    <i className="bi bi-arrow-right" aria-hidden="true" />
+                  </span>
+                </button>
 
-                  <div>
-                    <strong>Paste AI Code</strong>
-                    <p>
-                      Paste code from ChatGPT, Claude, Gemini or another AI assistant.
-                    </p>
+                <button
+                  type="button"
+                  className="scV123ChoiceCard"
+                  onClick={() => setStartMode("import")}
+                >
+                  <span className="scV123ChoiceIcon">
+                    <i className="bi bi-folder2-open" aria-hidden="true" />
+                  </span>
+                  <strong>Import Project</strong>
+                  <p>
+                    Import HTML, React, Angular, Vue, Svelte, TypeScript or another source project.
+                  </p>
+                  <span className="scV123ChoiceAction">
+                    Import files or folder
+                    <i className="bi bi-arrow-right" aria-hidden="true" />
+                  </span>
+                </button>
+
+                <div className="scV123ChoiceCard scV123CreateCard">
+                  <span className="scV123ChoiceIcon">
+                    <i className="bi bi-file-earmark-plus" aria-hidden="true" />
+                  </span>
+                  <strong>
+                    {files.length ? "Create New" : "Start Empty"}
+                  </strong>
+                  <p>
+                    {files.length
+                      ? "Add a new file or folder to the current project."
+                      : "Open a blank workspace and create only the files you need."}
+                  </p>
+
+                  <div className="scV123CreateActions">
+                    {files.length ? (
+                      <>
+                        <button
+                          type="button"
+                          onClick={() => {
+                            setSourceCollapsed(true);
+                            createFile();
+                          }}
+                        >
+                          New File
+                        </button>
+
+                        <button
+                          type="button"
+                          onClick={() => {
+                            setSourceCollapsed(true);
+                            createFolder();
+                          }}
+                        >
+                          New Folder
+                        </button>
+                      </>
+                    ) : (
+                      <button
+                        type="button"
+                        onClick={openEmptyWorkspace}
+                      >
+                        Open Empty Workspace
+                      </button>
+                    )}
                   </div>
+                </div>
+              </div>
+            ) : null}
+
+            {startMode === "paste" ? (
+              <section className="scSimplePasteCard scV123FocusedCard">
+                <div className="scV123FocusedTop">
+                  <button
+                    type="button"
+                    className="scV123BackButton"
+                    onClick={() => setStartMode("choices")}
+                  >
+                    <i className="bi bi-arrow-left" aria-hidden="true" />
+                    All options
+                  </button>
+
+                  <button
+                    type="button"
+                    className="scV123ClearButton"
+                    onClick={clearSourceCode}
+                    disabled={!inputCode && !sourceFileName}
+                  >
+                    <i className="bi bi-eraser" aria-hidden="true" />
+                    Clear Code
+                  </button>
                 </div>
 
                 <textarea
@@ -4429,31 +4840,46 @@ function repairDiagnosticReference(issue) {
                     {sourceFileName
                       ? `${sourceFileName} · ready to split`
                       : inputCode.trim()
-                        ? `${inputCode.split("\\n").length} lines ready`
-                        : "HTML, CSS, JavaScript, React and more"}
+                        ? `${inputCode.split("\n").length} lines ready`
+                        : "Paste HTML, CSS, JavaScript, React, TypeScript and more"}
                   </span>
 
                   <button
                     type="button"
                     className="scFinalPrimaryButton"
                     onClick={splitCode}
+                    disabled={!inputCode.trim()}
                   >
-                    Split Project
+                    Split into Project
                     <i className="bi bi-arrow-right" aria-hidden="true" />
                   </button>
                 </div>
               </section>
+            ) : null}
 
+            {startMode === "import" ? (
               <section
                 className={
                   dragging
-                    ? "scSimpleImportCard isDragging"
-                    : "scSimpleImportCard"
+                    ? "scSimpleImportCard scV123FocusedCard isDragging"
+                    : "scSimpleImportCard scV123FocusedCard"
                 }
+                onDragEnter={handleDragOver}
                 onDragOver={handleDragOver}
                 onDragLeave={handleDragLeave}
                 onDrop={handleProjectDrop}
               >
+                <div className="scV123FocusedTop">
+                  <button
+                    type="button"
+                    className="scV123BackButton"
+                    onClick={() => setStartMode("choices")}
+                  >
+                    <i className="bi bi-arrow-left" aria-hidden="true" />
+                    All options
+                  </button>
+                </div>
+
                 <div className="scSimpleImportVisual">
                   <span>
                     <i className="bi bi-folder2-open" aria-hidden="true" />
@@ -4461,15 +4887,17 @@ function repairDiagnosticReference(issue) {
                 </div>
 
                 <div className="scSimpleImportCopy">
-                  <strong>Import Project</strong>
-                  <p>
-                    Drop files here or choose files / a project folder.
-                    A single HTML file is automatically separated into HTML, CSS and JavaScript when inline code is present. Multiple files import as an existing project.
-                  </p>
-                </div>
+                  <strong>
+                    {dragging
+                      ? "Drop project here"
+                      : "Drop files or a project folder"}
+                  </strong>
 
-                <div className="scSimpleImportTypes">
-                  Single HTML → Auto Split · Multiple files/folder → Import
+                  <p>
+                    Browser navigation is blocked while dragging files over SplitCode.
+                    React, Angular, Vue, Svelte, Astro, JSX, TSX, TypeScript,
+                    SCSS, JSON and configuration files are imported as readable source.
+                  </p>
                 </div>
 
                 <div className="scSimpleImportActions">
@@ -4500,10 +4928,10 @@ function repairDiagnosticReference(issue) {
                 </div>
 
                 <small className="scSimpleImportNote">
-                  Tip: if the HTML contains inline &lt;style&gt; or &lt;script&gt;, SplitCode separates them automatically.
+                  Heavy generated folders such as node_modules, dist, build and .git are ignored automatically.
                 </small>
               </section>
-            </div>
+            ) : null}
 
             {message ? (
               <div className="scSimpleStartMessage">
@@ -4523,23 +4951,28 @@ function repairDiagnosticReference(issue) {
                   <strong>Project Files</strong>
                 </div>
 
-                <div className="scFinalSidebarActions">
+                <div
+                  className="scFinalSidebarActions scV123SidebarActions scCleanCreateActions"
+                  aria-label="Create project item"
+                >
                   <button
                     type="button"
                     onClick={createFile}
-                    title="New file"
-                    aria-label="New file"
+                    title="Create new file"
                   >
-                    <i className="bi bi-plus-lg" aria-hidden="true" />
+                    <span className="scCleanCreatePlus" aria-hidden="true">+</span>
+                    <span>File</span>
                   </button>
+
+                  <span className="scCleanCreateDivider" aria-hidden="true" />
 
                   <button
                     type="button"
                     onClick={createFolder}
-                    title="New folder"
-                    aria-label="New folder"
+                    title="Create new folder"
                   >
-                    <i className="bi bi-folder-plus" aria-hidden="true" />
+                    <span className="scCleanCreatePlus" aria-hidden="true">+</span>
+                    <span>Folder</span>
                   </button>
                 </div>
               </div>
@@ -4622,6 +5055,7 @@ function repairDiagnosticReference(issue) {
                 onDeleteFile={deleteFile}
                 onRenameFolder={renameFolder}
                 onDeleteFolder={deleteFolder}
+                onMoveFile={moveFileToFolder}
               />
 
               {fileSearch && filteredFiles.length === 0 ? (
@@ -4668,24 +5102,69 @@ function repairDiagnosticReference(issue) {
               <button
                 type="button"
                 disabled={!files.length}
-                onClick={() =>
-                  document
-                    .getElementById("splitcode-diagnostics")
-                    ?.scrollIntoView({
-                      behavior: "smooth",
-                      block: "start",
-                    })
-                }
+                onClick={() => setWorkspaceTab("issues")}
               >
                 {diagnostics.issues.length > 0
                   ? "Review Issues"
-                  : "View Diagnostics"}
+                  : "View Checks"}
                 <i className="bi bi-arrow-right" aria-hidden="true" />
               </button>
             </div>
           </aside>
 
-          <div className="scFinalMain">
+          <div className={`scFinalMain scWorkspaceView-${workspaceTab}`}>
+            <nav className="scWorkspaceTabs" aria-label="Workspace views">
+              <button
+                type="button"
+                className={workspaceTab === "code" ? "isActive" : ""}
+                onClick={() => setWorkspaceTab("code")}
+              >
+                <i className="bi bi-code-slash" aria-hidden="true" />
+                Editor
+              </button>
+
+              <button
+                type="button"
+                className={workspaceTab === "preview" ? "isActive" : ""}
+                onClick={() => setWorkspaceTab("preview")}
+              >
+                <i className="bi bi-play-circle" aria-hidden="true" />
+                Preview
+              </button>
+
+              <button
+                type="button"
+                className={workspaceTab === "issues" ? "isActive" : ""}
+                onClick={() => setWorkspaceTab("issues")}
+              >
+                <i className="bi bi-exclamation-circle" aria-hidden="true" />
+                Issues
+                {diagnostics.issues.length ? (
+                  <span className="scWorkspaceTabBadge">
+                    {diagnostics.issues.length}
+                  </span>
+                ) : null}
+              </button>
+
+              <button
+                type="button"
+                className={workspaceTab === "relationships" ? "isActive" : ""}
+                onClick={() => setWorkspaceTab("relationships")}
+              >
+                <i className="bi bi-diagram-3" aria-hidden="true" />
+                Relationships
+              </button>
+
+              <button
+                type="button"
+                className={workspaceTab === "export" ? "isActive" : ""}
+                onClick={() => setWorkspaceTab("export")}
+              >
+                <i className="bi bi-box-arrow-down" aria-hidden="true" />
+                Export
+              </button>
+            </nav>
+
             <section className="scFinalEditorCard" id="splitcode-editor">
               <div className="scFinalTabsToolbar">
                 <div className="scFinalTabsList">
@@ -5849,7 +6328,7 @@ function repairDiagnosticReference(issue) {
                               type="button"
                               onClick={() => quickFixDiagnostic(issue)}
                             >
-                              Create Missing File
+                              Create File
                             </button>
                           ) : null}
 
@@ -5858,7 +6337,7 @@ function repairDiagnosticReference(issue) {
                               type="button"
                               onClick={() => openDiagnosticFile(issue)}
                             >
-                              Open
+                              Open File
                               <i className="bi bi-arrow-right" aria-hidden="true" />
                             </button>
                           ) : null}

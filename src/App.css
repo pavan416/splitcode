@@ -219,7 +219,7 @@
 .tab.active::after {
   content: "";
   height: 2px;
-  background: #7180ff;
+  background: #3366FF;
   position: absolute;
   left: 0;
   right: 0;
@@ -355,7 +355,7 @@ footer strong {
 }
 
 .uploadDragging {
-  border-color: #7180ff;
+  border-color: #3366FF;
   background: #11172a;
   transform: scale(1.005);
 }
@@ -543,7 +543,7 @@ footer strong {
 }
 
 .folderIcon {
-  color: #7281ff;
+  color: #3366FF;
 
   font-size: 10px;
 }
@@ -587,7 +587,7 @@ footer strong {
   color: white;
 
   box-shadow:
-    inset 2px 0 0 #7180ff;
+    inset 2px 0 0 #3366FF;
 }
 
 .fileTypeIcon {
@@ -724,7 +724,7 @@ footer strong {
 
   background: #121824;
 
-  color: #7180ff;
+  color: #3366FF;
 
   font-size: 8px;
   font-weight: 700;
@@ -818,7 +818,7 @@ footer strong {
 
   background: #111722;
 
-  color: #7180ff;
+  color: #3366FF;
 
   font-family:
     Consolas,
@@ -905,7 +905,7 @@ footer strong {
   color: white;
 
   box-shadow:
-    inset 0 2px 0 #7180ff;
+    inset 0 2px 0 #3366FF;
 }
 
 .editorTabName {
@@ -1100,7 +1100,7 @@ footer strong {
   background: #151c29;
 
   box-shadow:
-    inset 2px 0 0 #7180ff;
+    inset 2px 0 0 #3366FF;
 }
 
 .fileExplorerEmpty {
@@ -2736,8 +2736,8 @@ button.homeActionCard:not(:disabled):hover,
   font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   color: #172033;
   background: #f4f7fb;
-  --sc-blue: #2563eb;
-  --sc-blue-hover: #1d4ed8;
+  --sc-blue: #3366FF;
+  --sc-blue-hover: #2957E6;
   --sc-blue-soft: #eff6ff;
   --sc-text: #0f172a;
   --sc-muted: #64748b;
@@ -3310,7 +3310,7 @@ button.scTextAction:disabled {
 
 .fileExplorerFile.activeFile,
 .activeExplorerRow {
-  background: #1d4ed8 !important;
+  background: #2957E6 !important;
   color: #fff !important;
 }
 
@@ -3341,7 +3341,7 @@ button.scTextAction:disabled {
 .editorTab.activeEditorTab {
   background: #0f172a !important;
   color: #fff !important;
-  box-shadow: inset 0 2px 0 #3b82f6 !important;
+  box-shadow: inset 0 2px 0 #3366FF !important;
 }
 
 .v4EditorHeader {
@@ -3510,7 +3510,7 @@ footer:not(.scHomeFooter) strong { color: #526077 !important; }
 .scProjectEditor.scResizing .scExplorerResizer span {
   left: 1px;
   width: 2px;
-  background: #3b82f6;
+  background: #3366FF;
 }
 
 body.scIsResizing,
@@ -3579,7 +3579,7 @@ body.scIsResizing * {
   bottom: 0;
   height: 2px;
   border-radius: 2px 2px 0 0;
-  background: #3b82f6;
+  background: #3366FF;
 }
 
 /* Preview toolbar */
@@ -3633,7 +3633,7 @@ body.scIsResizing * {
 }
 
 .scViewportButton.active {
-  color: #1d4ed8;
+  color: #2957E6;
   background: #fff;
   box-shadow: 0 1px 2px rgba(15, 23, 42, .08);
 }
@@ -3782,8 +3782,8 @@ body.scIsResizing * {
    ========================================================= */
 
 .scCortexHome {
-  --sc-purple: #5b2cf4;
-  --sc-purple-dark: #4820d8;
+  --sc-purple: #3366FF;
+  --sc-purple-dark: #2957E6;
   --sc-ink: #130a24;
   --sc-muted: #625d70;
   --sc-lavender: #f1effd;
@@ -3888,7 +3888,7 @@ body.scIsResizing * {
   border: 1px solid var(--sc-purple);
   background: var(--sc-purple);
   color: #fff;
-  box-shadow: 0 8px 20px rgba(91, 44, 244, 0.18);
+  box-shadow: 0 8px 20px rgba(51, 102, 255, 0.18);
 }
 
 .scNavPrimary:hover,
@@ -3908,8 +3908,8 @@ body.scIsResizing * {
   min-height: 850px;
   padding: 102px 24px 0;
   background:
-    linear-gradient(rgba(91, 44, 244, 0.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(91, 44, 244, 0.035) 1px, transparent 1px),
+    linear-gradient(rgba(51, 102, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(51, 102, 255, 0.035) 1px, transparent 1px),
     #f2f0fc;
   background-size: 52px 52px;
   border-radius: 0 0 28px 28px;
@@ -3919,7 +3919,7 @@ body.scIsResizing * {
 .scCortexHero::after {
   content: "";
   position: absolute;
-  border: 1px solid rgba(91, 44, 244, 0.08);
+  border: 1px solid rgba(51, 102, 255, 0.08);
   background: rgba(255,255,255,0.3);
   transform: rotate(-12deg);
   pointer-events: none;
@@ -3976,7 +3976,7 @@ body.scIsResizing * {
   width: fit-content;
   margin: 0 auto 22px;
   padding: 8px 12px;
-  border: 1px solid rgba(91, 44, 244, 0.13);
+  border: 1px solid rgba(51, 102, 255, 0.13);
   border-radius: 999px;
   background: rgba(255,255,255,0.66);
   color: var(--sc-purple);
@@ -4033,7 +4033,7 @@ body.scIsResizing * {
   border: 1px solid var(--sc-purple);
   background: var(--sc-purple);
   color: #fff;
-  box-shadow: 0 12px 28px rgba(91, 44, 244, 0.2);
+  box-shadow: 0 12px 28px rgba(51, 102, 255, 0.2);
 }
 
 .scSecondaryCta {
@@ -4043,7 +4043,7 @@ body.scIsResizing * {
 }
 
 .scSecondaryCta:hover {
-  border-color: rgba(91, 44, 244, 0.25);
+  border-color: rgba(51, 102, 255, 0.25);
   color: var(--sc-purple);
 }
 
@@ -4312,7 +4312,7 @@ body.scIsResizing * {
   height: calc(100% - 28px);
   padding: 56px 20px 20px;
   text-align: center;
-  background: linear-gradient(145deg, #f7f5ff, #ffffff);
+  background: linear-gradient(145deg, #F5F8FF, #ffffff);
 }
 
 .scMockSiteBadge {
@@ -4648,8 +4648,8 @@ body.scIsResizing * {
    ========================================================= */
 
 .scCortexWorkspace {
-  --scw-purple: #5b2cf4;
-  --scw-purple-dark: #4820d8;
+  --scw-purple: #3366FF;
+  --scw-purple-dark: #2957E6;
   --scw-ink: #130a24;
   --scw-muted: #6d6678;
   --scw-page: #f3f1fb;
@@ -4801,7 +4801,7 @@ body.scIsResizing * {
   border-radius: 20px;
   background:
     radial-gradient(circle at 84% 18%, rgba(109, 70, 245, 0.10), transparent 28%),
-    linear-gradient(135deg, #f8f6ff 0%, #f0edfb 100%);
+    linear-gradient(135deg, #F7F9FF 0%, #f0edfb 100%);
   box-shadow: none;
 }
 
@@ -4812,7 +4812,7 @@ body.scIsResizing * {
   height: 54px;
   right: -80px;
   top: 20px;
-  border: 1px solid rgba(91, 44, 244, 0.08);
+  border: 1px solid rgba(51, 102, 255, 0.08);
   border-radius: 18px;
   transform: rotate(-11deg);
 }
@@ -4863,7 +4863,7 @@ body.scIsResizing * {
 }
 
 .scCortexWorkspace .v9WorkflowStepActive {
-  border-color: rgba(91, 44, 244, 0.26);
+  border-color: rgba(51, 102, 255, 0.26);
   background: #fff;
 }
 
@@ -4916,7 +4916,7 @@ body.scIsResizing * {
 
 .scCortexWorkspace .step {
   border-radius: 6px;
-  background: #eee9ff;
+  background: #EAF0FF;
   color: var(--scw-purple);
 }
 
@@ -4943,7 +4943,7 @@ body.scIsResizing * {
 
 .scCortexWorkspace .uploadIcon,
 .scCortexWorkspace .projectImportIcon {
-  background: #eee9ff;
+  background: #EAF0FF;
   color: var(--scw-purple);
   border-radius: 9px;
 }
@@ -5448,7 +5448,7 @@ body.scIsResizing * {
 .scCortexWorkspace .scProjectEditor > :first-child .active,
 .scCortexWorkspace .scProjectEditor > :first-child .activeFile,
 .scCortexWorkspace .scProjectEditor > :first-child [aria-current="true"] {
-  background: #eee9ff !important;
+  background: #EAF0FF !important;
   color: #4d22dc !important;
 }
 
@@ -5629,8 +5629,8 @@ body.scIsResizing * {
 .scCortexWorkspace .previewHeader .step {
   padding: 5px 8px;
   border-radius: 6px;
-  background: #eee9ff;
-  color: #5b2cf4;
+  background: #EAF0FF;
+  color: #3366FF;
   font-size: 9px;
   letter-spacing: .06em;
 }
@@ -5711,9 +5711,9 @@ body.scIsResizing * {
    ========================================================= */
 
 .scFinalWorkspacePage {
-  --scf-purple: #5d2df5;
-  --scf-purple-2: #7549ff;
-  --scf-purple-soft: #f1edff;
+  --scf-purple: #3366FF;
+  --scf-purple-2: #3366FF;
+  --scf-purple-soft: #EDF2FF;
   --scf-page: #f7f7fc;
   --scf-panel: #ffffff;
   --scf-border: #e7e4ef;
@@ -5724,7 +5724,7 @@ body.scIsResizing * {
   --scf-editor-soft: #1b2132;
   min-height: 100vh;
   background:
-    radial-gradient(circle at 82% 2%, rgba(110, 76, 247, 0.07), transparent 28%),
+    radial-gradient(circle at 82% 2%, rgba(51, 102, 255, 0.07), transparent 28%),
     #f7f7fc;
   color: var(--scf-ink);
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -5739,7 +5739,7 @@ body.scIsResizing * {
 .scFinalWorkspacePage button:focus-visible,
 .scFinalWorkspacePage input:focus-visible,
 .scFinalWorkspacePage textarea:focus-visible {
-  outline: 2px solid rgba(93, 45, 245, 0.35);
+  outline: 2px solid rgba(51, 102, 255, 0.35);
   outline-offset: 2px;
 }
 
@@ -5788,7 +5788,7 @@ body.scIsResizing * {
   border-radius: 11px;
   background: linear-gradient(145deg, #6f42ff, #4e23df);
   color: #fff;
-  box-shadow: 0 8px 20px rgba(93, 45, 245, 0.22);
+  box-shadow: 0 8px 20px rgba(51, 102, 255, 0.22);
   font-size: 20px;
 }
 
@@ -5800,7 +5800,7 @@ body.scIsResizing * {
 }
 
 .scFinalBrandName strong {
-  color: #5d2df5;
+  color: #3366FF;
   font-weight: 720;
 }
 
@@ -5884,14 +5884,14 @@ body.scIsResizing * {
 .scFinalHeaderButton:hover {
   border-color: #d2c7ec;
   background: #fbfaff;
-  color: #5d2df5;
+  color: #3366FF;
 }
 
 .scFinalHeaderPrimary {
   border: 1px solid var(--scf-purple);
   background: linear-gradient(135deg, #6e3ffb, #5225e8);
   color: #fff;
-  box-shadow: 0 9px 22px rgba(93, 45, 245, 0.18);
+  box-shadow: 0 9px 22px rgba(51, 102, 255, 0.18);
 }
 
 .scFinalHeaderPrimary:hover {
@@ -6064,13 +6064,13 @@ body.scIsResizing * {
 
 .scFinalImportButton:hover {
   border-color: #d0c4ed;
-  color: #5d2df5;
+  color: #3366FF;
 }
 
 .scFinalImportPrimary {
   border-color: #d5c8fb;
-  background: #f1edff;
-  color: #5b2cf4;
+  background: #EDF2FF;
+  color: #3366FF;
 }
 
 /* Main workspace grid */
@@ -6116,7 +6116,7 @@ body.scIsResizing * {
 }
 
 .scFinalSidebarTitle i {
-  color: #5d2df5;
+  color: #3366FF;
   font-size: 16px;
 }
 
@@ -6147,9 +6147,9 @@ body.scIsResizing * {
 .scFinalSidebarActions button:hover,
 .scFinalIconButton:hover:not(:disabled),
 .scFinalViewportButton:hover:not(:disabled) {
-  border-color: #d1c6ec;
+  border-color: #C7D4F5;
   background: #f8f5ff;
-  color: #5d2df5;
+  color: #3366FF;
 }
 
 .scFinalIconButton:disabled,
@@ -6242,8 +6242,8 @@ body.scIsResizing * {
 }
 
 .scFinalSearch input:focus {
-  border-color: #cbbdf4;
-  box-shadow: 0 0 0 3px rgba(93, 45, 245, 0.07);
+  border-color: #B8CAFF;
+  box-shadow: 0 0 0 3px rgba(51, 102, 255, 0.07);
 }
 
 .scFinalSearch button {
@@ -6312,8 +6312,8 @@ body.scIsResizing * {
 
 .scFinalSidebarTree .fileExplorerFile.activeFile,
 .scFinalSidebarTree .activeExplorerRow {
-  background: #eee9ff !important;
-  color: #5426e5 !important;
+  background: #EAF0FF !important;
+  color: #3366FF !important;
 }
 
 .scFinalSidebarTree .folderArrow {
@@ -6333,8 +6333,8 @@ body.scIsResizing * {
 }
 
 .scFinalSidebarTree .explorerRowActions button:hover {
-  background: #ece7f5 !important;
-  color: #5d2df5 !important;
+  background: #E9EEF8 !important;
+  color: #3366FF !important;
 }
 
 .scFinalSearchEmpty {
@@ -6379,7 +6379,7 @@ body.scIsResizing * {
   place-items: center;
   border-radius: 10px;
   background: #e9e2ff;
-  color: #5d2df5;
+  color: #3366FF;
 }
 
 .scFinalSidebarHelp strong {
@@ -6633,7 +6633,7 @@ body.scIsResizing * {
 .scFinalEditorActions button:hover:not(:disabled) {
   border-color: #cdc2e8;
   background: #faf8ff;
-  color: #5b2cf4;
+  color: #3366FF;
 }
 
 .scFinalEditorActions button:disabled {
@@ -6674,12 +6674,12 @@ body.scIsResizing * {
 
 .scFinalWorkflow button:hover {
   border-color: #d7ccf3;
-  background: #f4f1ff;
+  background: #F3F6FF;
 }
 
 .scFinalWorkflow button.isActive {
   border-color: #d4c5fa;
-  background: linear-gradient(135deg, #f1edff, #f7f5ff);
+  background: linear-gradient(135deg, #EDF2FF, #F5F8FF);
 }
 
 .scFinalWorkflow button > span {
@@ -6697,7 +6697,7 @@ body.scIsResizing * {
 
 .scFinalWorkflow button.isActive > span {
   background: #e5dcff;
-  color: #5b2cf4;
+  color: #3366FF;
 }
 
 .scFinalWorkflow strong,
@@ -6785,7 +6785,7 @@ body.scIsResizing * {
 }
 
 .scFinalPreviewTextButton:hover:not(:disabled) {
-  color: #5d2df5;
+  color: #3366FF;
 }
 
 .scFinalPreviewTextButton:disabled {
@@ -6796,7 +6796,7 @@ body.scIsResizing * {
 .scFinalViewportButton.isActive {
   border-color: #c7b6f7;
   background: #f0ebff;
-  color: #5d2df5;
+  color: #3366FF;
 }
 
 .scFinalPreviewCanvas {
@@ -7050,7 +7050,7 @@ body.scIsResizing * {
 .scFinalDiagnosticActions button:hover {
   border-color: #d0c4ed;
   background: #f8f5ff;
-  color: #5d2df5;
+  color: #3366FF;
 }
 
 #splitcode-editor,
@@ -7214,7 +7214,7 @@ body.scIsResizing * {
   gap: 18px;
   border-bottom: 1px solid #ece9f1;
   background:
-    radial-gradient(circle at 88% 0%, rgba(93, 45, 245, 0.065), transparent 36%),
+    radial-gradient(circle at 88% 0%, rgba(51, 102, 255, 0.065), transparent 36%),
     #fff;
 }
 
@@ -7234,7 +7234,7 @@ body.scIsResizing * {
   place-items: center;
   border-radius: 10px;
   background: #f0ebff;
-  color: #5d2df5;
+  color: #3366FF;
 }
 
 .scSimpleStartHeader strong {
@@ -7312,7 +7312,7 @@ body.scIsResizing * {
 
 .scSimplePasteCard textarea:focus {
   border-color: #7554df;
-  box-shadow: 0 0 0 3px rgba(93, 45, 245, 0.08);
+  box-shadow: 0 0 0 3px rgba(51, 102, 255, 0.08);
 }
 
 .scSimplePasteFooter {
@@ -7364,7 +7364,7 @@ body.scIsResizing * {
   border-color: #744cf6;
   background-color: #f5f1ff;
   transform: translateY(-1px);
-  box-shadow: inset 0 0 0 1px rgba(93, 45, 245, 0.1);
+  box-shadow: inset 0 0 0 1px rgba(51, 102, 255, 0.1);
 }
 
 .scSimpleImportVisual > span {
@@ -7374,8 +7374,8 @@ body.scIsResizing * {
   place-items: center;
   border-radius: 16px;
   background: linear-gradient(145deg, #eee8ff, #f8f5ff);
-  color: #5d2df5;
-  box-shadow: 0 8px 22px rgba(93, 45, 245, 0.08);
+  color: #3366FF;
+  box-shadow: 0 8px 22px rgba(51, 102, 255, 0.08);
   font-size: 23px;
 }
 
@@ -7432,12 +7432,12 @@ body.scIsResizing * {
 .scSimpleImportButton:hover {
   border-color: #cfc3ed;
   background: #faf8ff;
-  color: #5d2df5;
+  color: #3366FF;
 }
 
 .scSimpleImportButton.isPrimary {
-  border-color: #5d2df5;
-  background: #5d2df5;
+  border-color: #3366FF;
+  background: #3366FF;
   color: #fff;
 }
 
@@ -7556,7 +7556,7 @@ body.scIsResizing * {
   background:
     radial-gradient(
       circle at 88% 0%,
-      rgba(93, 45, 245, 0.075),
+      rgba(51, 102, 255, 0.075),
       transparent 42%
     ),
     #fff;
@@ -7569,8 +7569,8 @@ body.scIsResizing * {
   display: grid;
   place-items: center;
   border-radius: 12px;
-  background: #eee9ff;
-  color: #5d2df5;
+  background: #EAF0FF;
+  color: #3366FF;
   font-size: 17px;
 }
 
@@ -7667,7 +7667,7 @@ body.scIsResizing * {
 .scDialogInputWrap input:focus {
   border-color: #a78df8;
   box-shadow:
-    0 0 0 4px rgba(93, 45, 245, 0.08),
+    0 0 0 4px rgba(51, 102, 255, 0.08),
     0 1px 2px rgba(35, 23, 55, 0.025);
 }
 
@@ -7704,7 +7704,7 @@ body.scIsResizing * {
 .scDialogExamples button:hover {
   border-color: #cfc2f0;
   background: #f2edff;
-  color: #5d2df5;
+  color: #3366FF;
 }
 
 .scDialogConfirmBody {
@@ -7778,10 +7778,10 @@ body.scIsResizing * {
 }
 
 .scDialogPrimary {
-  border: 1px solid #5d2df5;
+  border: 1px solid #3366FF;
   background: linear-gradient(135deg, #6c40fa, #5124e5);
   color: #fff;
-  box-shadow: 0 7px 17px rgba(93, 45, 245, 0.15);
+  box-shadow: 0 7px 17px rgba(51, 102, 255, 0.15);
 }
 
 .scDialogPrimary:hover {
@@ -7882,8 +7882,8 @@ body.scIsResizing * {
 
 .scFinalEditorActions button.isSplitHtml {
   border-color: #d5c8fb;
-  background: #f1edff;
-  color: #5b2cf4;
+  background: #EDF2FF;
+  color: #3366FF;
 }
 
 .scFinalEditorActions button.isSplitHtml:hover:not(:disabled) {
@@ -7902,7 +7902,7 @@ body.scIsResizing * {
   border-color: #6d42f5;
   background: #6d42f5;
   color: #fff;
-  box-shadow: 0 7px 17px rgba(93, 45, 245, 0.16);
+  box-shadow: 0 7px 17px rgba(51, 102, 255, 0.16);
 }
 
 .scFinalEditorActions button.isSplitHtml:hover:not(:disabled) {
@@ -7919,8 +7919,8 @@ body.scIsResizing * {
   gap: 6px;
   border: 1px solid #d5c8fb;
   border-radius: 8px;
-  background: #f1edff;
-  color: #5b2cf4;
+  background: #EDF2FF;
+  color: #3366FF;
   font-size: 8px;
   font-weight: 750;
   white-space: nowrap;
@@ -7955,7 +7955,7 @@ body.scIsResizing * {
   place-items: center;
   border-radius: 9px;
   background: #eee8ff;
-  color: #5d2df5;
+  color: #3366FF;
   font-size: 13px;
 }
 
@@ -8047,10 +8047,10 @@ body.scIsResizing * {
   display: grid;
   place-items: center;
   border-radius: 15px;
-  background: #5d2df5;
+  background: #3366FF;
   color: #fff;
   font-size: 20px;
-  box-shadow: 0 12px 26px rgba(93, 45, 245, 0.18);
+  box-shadow: 0 12px 26px rgba(51, 102, 255, 0.18);
 }
 
 .scRuntimePreviewCopy {
@@ -8162,7 +8162,7 @@ body.scIsResizing * {
   gap: 7px;
   border: 0;
   border-radius: 9px;
-  background: #5d2df5;
+  background: #3366FF;
   color: #fff;
   font-size: 9px;
   font-weight: 750;
@@ -8233,8 +8233,8 @@ body.scIsResizing * {
   flex: 0 0 auto;
   place-items: center;
   border-radius: 10px;
-  background: #eee9ff;
-  color: #5d2df5;
+  background: #EAF0FF;
+  color: #3366FF;
   font-size: 13px;
 }
 
@@ -8750,7 +8750,7 @@ body.scIsResizing * {
   place-items: center;
   border-radius: 12px;
   background: #f1ecff;
-  color: #5d2df5;
+  color: #3366FF;
   font-size: 15px;
 }
 
@@ -8770,8 +8770,8 @@ body.scIsResizing * {
 }
 
 .scHealthCenter.is-runtime .scHealthIcon {
-  background: #eee9ff;
-  color: #5d2df5;
+  background: #EAF0FF;
+  color: #3366FF;
 }
 
 .scHealthIdentity > div {
@@ -8843,7 +8843,7 @@ body.scIsResizing * {
 }
 
 .scHealthCenter.is-runtime .scHealthStatusBlock strong {
-  color: #5d2df5;
+  color: #3366FF;
 }
 
 .scHealthStatusBlock span {
@@ -9008,14 +9008,14 @@ body.scIsResizing * {
 .scHealthActions button:hover {
   border-color: #cfc4ed;
   background: #f9f6ff;
-  color: #5d2df5;
+  color: #3366FF;
 }
 
 .scHealthActions button.isPrimary {
-  border-color: #5d2df5;
-  background: #5d2df5;
+  border-color: #3366FF;
+  background: #3366FF;
   color: #fff;
-  box-shadow: 0 7px 17px rgba(93, 45, 245, 0.15);
+  box-shadow: 0 7px 17px rgba(51, 102, 255, 0.15);
 }
 
 .scHealthActions button.isPrimary:hover {
@@ -9130,7 +9130,7 @@ body.scIsResizing * {
   place-items: center;
   border-radius: 11px;
   background: #f0ebff;
-  color: #5d2df5;
+  color: #3366FF;
   font-size: 14px;
 }
 
@@ -9342,12 +9342,12 @@ body.scIsResizing * {
 .scExportPreflightActions button:hover:not(:disabled) {
   border-color: #cec3ed;
   background: #f9f6ff;
-  color: #5d2df5;
+  color: #3366FF;
 }
 
 .scExportPreflightActions button.isPrimary {
-  border-color: #5d2df5;
-  background: #5d2df5;
+  border-color: #3366FF;
+  background: #3366FF;
   color: #fff;
 }
 
@@ -9376,7 +9376,7 @@ body.scIsResizing * {
 
 .scExportRuntimeNote i {
   margin-top: 1px;
-  color: #5d2df5;
+  color: #3366FF;
 }
 
 @media (max-width: 900px) {
@@ -9437,8 +9437,8 @@ body.scIsResizing * {
   flex: 0 0 auto;
   place-items: center;
   border-radius: 9px;
-  background: #eee9ff;
-  color: #5d2df5;
+  background: #EAF0FF;
+  color: #3366FF;
   font-size: 11px;
 }
 
@@ -9530,7 +9530,7 @@ body.scIsResizing * {
 
 .scExportDocumentationFiles em.isGenerated {
   background: #eee8ff;
-  color: #5d2df5;
+  color: #3366FF;
 }
 
 .scExportDocumentationFiles em.isPreserved {
@@ -9578,9 +9578,9 @@ body.scIsResizing * {
   --ux-muted-2: #9297a6;
   --ux-border: #e5e7ee;
   --ux-border-strong: #d9dce6;
-  --ux-purple: #5d2df5;
-  --ux-purple-hover: #4f24dc;
-  --ux-purple-soft: #f2efff;
+  --ux-purple: #3366FF;
+  --ux-purple-hover: #2957E6;
+  --ux-purple-soft: #EDF2FF;
   --ux-green: #218a52;
   --ux-green-soft: #edf8f1;
   --ux-amber: #9a6a12;
@@ -10635,7 +10635,7 @@ body.scIsResizing * {
 .scFinalSidebarHelp button:not(:disabled):hover {
   border-color: #d4c9f6;
   background: #f7f4ff;
-  color: #5d2df5;
+  color: #3366FF;
 }
 
 
@@ -10720,7 +10720,7 @@ body::-webkit-scrollbar-corner {
 
 .scFinalWorkspacePage *::-webkit-scrollbar-thumb:hover,
 .scCortexHome *::-webkit-scrollbar-thumb:hover {
-  background-color: rgba(93, 45, 245, 0.52);
+  background-color: rgba(51, 102, 255, 0.52);
 }
 
 /* Monaco owns its own visual scrollbar; avoid fighting its internals. */
@@ -10837,10 +10837,10 @@ body::-webkit-scrollbar-corner {
   display: grid;
   place-items: center;
   border-radius: 10px;
-  background: #5d2df5;
+  background: #3366FF;
   color: #ffffff;
   font-size: 15px;
-  box-shadow: 0 10px 26px rgba(93, 45, 245, 0.2);
+  box-shadow: 0 10px 26px rgba(51, 102, 255, 0.2);
 }
 
 .scFooterBrandName {
@@ -10978,7 +10978,7 @@ body::-webkit-scrollbar-corner {
 
 .scFooterBottom > button:hover {
   border-color: rgba(156, 131, 255, 0.45);
-  background: rgba(93, 45, 245, 0.12);
+  background: rgba(51, 102, 255, 0.12);
   color: #ffffff;
 }
 
@@ -12275,4 +12275,3092 @@ iframe {
   .scFinalBrandLogoImage {
     width: 102px;
   }
+}
+
+
+/* =========================================================
+   SPLITCODE V12.3 — STABILIZATION + UX CLEANUP
+   ========================================================= */
+
+/* ---------- Workspace navigation ---------- */
+
+.scWorkspaceTabs {
+  position: sticky;
+  top: 78px;
+  z-index: 24;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+  padding: 6px;
+  margin-bottom: 2px;
+  overflow-x: auto;
+  background: rgba(246, 247, 251, 0.94);
+  border: 1px solid #e5e7ee;
+  border-radius: 12px;
+  backdrop-filter: blur(16px);
+  scrollbar-width: none;
+}
+
+.scWorkspaceTabs::-webkit-scrollbar {
+  display: none;
+}
+
+.scWorkspaceTabs button {
+  min-height: 38px;
+  padding: 0 13px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  flex: 0 0 auto;
+  border: 1px solid transparent;
+  border-radius: 9px;
+  background: transparent;
+  color: #667085;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    background-color 180ms ease,
+    border-color 180ms ease,
+    color 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease;
+}
+
+.scWorkspaceTabs button:hover {
+  background: #ffffff;
+  border-color: #e5e7ee;
+  color: #252338;
+}
+
+.scWorkspaceTabs button.isActive {
+  background: #ffffff;
+  border-color: #dcd8ed;
+  color: #3366FF;
+  box-shadow: 0 4px 14px rgba(29, 23, 56, 0.08);
+}
+
+.scWorkspaceTabBadge {
+  min-width: 19px;
+  height: 19px;
+  padding: 0 5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: #fff1f0;
+  color: #c6382c;
+  font-size: 10px;
+  line-height: 1;
+}
+
+/* Old four-step workflow duplicated the new workspace tabs. */
+.scFinalWorkflow {
+  display: none !important;
+}
+
+/* Only show the selected workspace view. */
+.scWorkspaceView-code > .scFinalPreviewCard,
+.scWorkspaceView-code > .scHealthCenter,
+.scWorkspaceView-code > .scExportPreflight,
+.scWorkspaceView-code > .scRelationshipPanel,
+.scWorkspaceView-code > .scFinalDiagnostics {
+  display: none !important;
+}
+
+.scWorkspaceView-preview > .scFinalEditorCard,
+.scWorkspaceView-preview > .scFinalEditorActions,
+.scWorkspaceView-preview > .scHealthCenter,
+.scWorkspaceView-preview > .scExportPreflight,
+.scWorkspaceView-preview > .scRelationshipPanel,
+.scWorkspaceView-preview > .scFinalDiagnostics {
+  display: none !important;
+}
+
+.scWorkspaceView-issues > .scFinalEditorCard,
+.scWorkspaceView-issues > .scFinalEditorActions,
+.scWorkspaceView-issues > .scFinalPreviewCard,
+.scWorkspaceView-issues > .scExportPreflight,
+.scWorkspaceView-issues > .scRelationshipPanel {
+  display: none !important;
+}
+
+.scWorkspaceView-relationships > .scFinalEditorCard,
+.scWorkspaceView-relationships > .scFinalEditorActions,
+.scWorkspaceView-relationships > .scFinalPreviewCard,
+.scWorkspaceView-relationships > .scHealthCenter,
+.scWorkspaceView-relationships > .scExportPreflight,
+.scWorkspaceView-relationships > .scFinalDiagnostics {
+  display: none !important;
+}
+
+.scWorkspaceView-export > .scFinalEditorCard,
+.scWorkspaceView-export > .scFinalEditorActions,
+.scWorkspaceView-export > .scFinalPreviewCard,
+.scWorkspaceView-export > .scHealthCenter,
+.scWorkspaceView-export > .scRelationshipPanel,
+.scWorkspaceView-export > .scFinalDiagnostics {
+  display: none !important;
+}
+
+/* ---------- Clear onboarding ---------- */
+
+.scV123StartPanel {
+  animation: scV123PanelIn 190ms ease both;
+}
+
+.scV123ChoiceGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  padding: 0 20px 20px;
+}
+
+.scV123ChoiceCard {
+  min-width: 0;
+  min-height: 190px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  text-align: left;
+  border: 1px solid #e3e5ed;
+  border-radius: 14px;
+  background: #ffffff;
+  color: #171923;
+  font: inherit;
+  cursor: pointer;
+  box-shadow: 0 7px 24px rgba(23, 25, 35, 0.05);
+  transition:
+    transform 190ms ease,
+    border-color 190ms ease,
+    box-shadow 190ms ease,
+    background-color 190ms ease;
+}
+
+.scV123ChoiceCard:hover {
+  transform: translateY(-2px);
+  border-color: #CBD8FF;
+  box-shadow: 0 12px 30px rgba(45, 35, 89, 0.09);
+}
+
+.scV123ChoiceCard > strong {
+  font-size: 15px;
+  line-height: 1.3;
+}
+
+.scV123ChoiceCard > p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.scV123ChoiceIcon {
+  width: 38px;
+  height: 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: #f1f3f8;
+  color: #555e70;
+  font-size: 17px;
+}
+
+.scV123ChoiceIcon.isPrimary {
+  background: #eeeaff;
+  color: #3366FF;
+}
+
+.scV123ChoiceAction {
+  margin-top: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: #3366FF;
+  font-size: 11px;
+  font-weight: 750;
+}
+
+.scV123CreateCard {
+  cursor: default;
+}
+
+.scV123CreateCard:hover {
+  transform: none;
+}
+
+.scV123CreateActions {
+  width: 100%;
+  margin-top: auto;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.scV123CreateActions button {
+  min-height: 36px;
+  padding: 0 13px;
+  border: 1px solid #dfe2ea;
+  border-radius: 8px;
+  background: #f8f9fc;
+  color: #303446;
+  font: inherit;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.scV123CreateActions button:hover {
+  border-color: #CBD8FF;
+  background: #F3F6FF;
+  color: #3366FF;
+}
+
+.scV123FocusedCard {
+  margin: 0 20px 20px;
+  animation: scV123PanelIn 180ms ease both;
+}
+
+.scV123FocusedTop {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.scV123BackButton,
+.scV123ClearButton {
+  min-height: 34px;
+  padding: 0 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  border: 1px solid #e0e3eb;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #50586a;
+  font: inherit;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    background-color 170ms ease,
+    border-color 170ms ease,
+    color 170ms ease;
+}
+
+.scV123BackButton:hover,
+.scV123ClearButton:hover {
+  border-color: #CBD8FF;
+  background: #F5F8FF;
+  color: #3366FF;
+}
+
+.scV123ClearButton:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.scV123FocusedCard.isDragging {
+  border-color: #3366FF !important;
+  background: #F7F9FF !important;
+  box-shadow: 0 0 0 4px rgba(51, 102, 255, 0.09) !important;
+}
+
+/* ---------- Project file creation ---------- */
+
+.scV123SidebarActions {
+  gap: 5px !important;
+}
+
+.scV123SidebarActions button {
+  width: auto !important;
+  min-width: 0 !important;
+  height: 30px !important;
+  padding: 0 8px !important;
+  display: inline-flex !important;
+  align-items: center;
+  gap: 5px;
+  border-radius: 7px !important;
+}
+
+.scV123SidebarActions button span {
+  display: inline !important;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+/* ---------- Header project menu ---------- */
+
+.scWorkspaceMenuWrap {
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.scWorkspaceMenuTrigger {
+  width: 38px !important;
+  height: 38px !important;
+}
+
+.scWorkspaceMenu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  z-index: 80;
+  width: 190px;
+  padding: 6px;
+  display: grid;
+  gap: 3px;
+  border: 1px solid #e1e3eb;
+  border-radius: 11px;
+  background: #ffffff;
+  box-shadow: 0 16px 44px rgba(20, 23, 34, 0.15);
+  animation: scV123MenuIn 150ms ease both;
+}
+
+.scWorkspaceMenu button {
+  min-height: 36px;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  border: 0;
+  border-radius: 7px;
+  background: transparent;
+  color: #343849;
+  font: inherit;
+  font-size: 11px;
+  font-weight: 650;
+  text-align: left;
+  cursor: pointer;
+}
+
+.scWorkspaceMenu button:hover {
+  background: #f5f6f9;
+}
+
+.scWorkspaceMenu button.isDanger {
+  color: #b42318;
+}
+
+.scWorkspaceMenu button.isDanger:hover {
+  background: #fff1f0;
+}
+
+/* ---------- Framework/runtime clarity ---------- */
+
+.scRuntimePreviewNotice {
+  animation: scV123PanelIn 180ms ease both;
+}
+
+.scFrameworkDetector {
+  transition:
+    border-color 180ms ease,
+    background-color 180ms ease,
+    transform 180ms ease;
+}
+
+.scFrameworkDetector:hover {
+  transform: translateY(-1px);
+}
+
+/* ---------- Motion system ---------- */
+
+.scFinalHeaderButton,
+.scFinalHeaderPrimary,
+.scFinalIconButton,
+.scFinalPrimaryButton,
+.scSimpleImportButton,
+.scFinalDiagnosticActions button,
+.scRelationshipRepairActions button,
+.scFinalEditorActions button,
+.scHealthActions button,
+.scExportPreflight button {
+  transition:
+    transform 170ms ease,
+    background-color 170ms ease,
+    border-color 170ms ease,
+    color 170ms ease,
+    box-shadow 170ms ease,
+    opacity 170ms ease;
+}
+
+.scFinalHeaderButton:hover,
+.scFinalHeaderPrimary:hover,
+.scFinalPrimaryButton:hover,
+.scSimpleImportButton:hover {
+  transform: translateY(-1px);
+}
+
+.scFinalPreviewCard,
+.scHealthCenter,
+.scExportPreflight,
+.scRelationshipPanel,
+.scFinalDiagnostics,
+.scFinalEditorCard {
+  animation: scV123PanelIn 180ms ease both;
+}
+
+@keyframes scV123PanelIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scV123MenuIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scV123StartPanel,
+  .scV123FocusedCard,
+  .scWorkspaceMenu,
+  .scFinalPreviewCard,
+  .scHealthCenter,
+  .scExportPreflight,
+  .scRelationshipPanel,
+  .scFinalDiagnostics,
+  .scFinalEditorCard {
+    animation: none !important;
+  }
+
+  .scWorkspaceTabs button,
+  .scV123ChoiceCard,
+  .scFinalHeaderButton,
+  .scFinalHeaderPrimary,
+  .scFinalIconButton,
+  .scFinalPrimaryButton,
+  .scSimpleImportButton {
+    transition: none !important;
+  }
+}
+
+/* ---------- Responsive V12.3 ---------- */
+
+@media (max-width: 900px) {
+  .scV123ChoiceGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .scV123ChoiceCard {
+    min-height: 0;
+  }
+
+  .scWorkspaceTabs {
+    top: 66px;
+  }
+}
+
+@media (max-width: 640px) {
+  .scWorkspaceTabs {
+    position: static;
+    margin-bottom: 0;
+    border-radius: 10px;
+  }
+
+  .scWorkspaceTabs button {
+    min-height: 40px;
+    padding: 0 11px;
+  }
+
+  .scV123ChoiceGrid {
+    padding: 0 14px 14px;
+  }
+
+  .scV123FocusedCard {
+    margin: 0 14px 14px;
+  }
+
+  .scV123SidebarActions button span {
+    display: none !important;
+  }
+
+  .scV123SidebarActions button {
+    width: 30px !important;
+    padding: 0 !important;
+    justify-content: center;
+  }
+
+  .scWorkspaceMenu {
+    position: fixed;
+    top: 66px;
+    right: 12px;
+    width: min(220px, calc(100vw - 24px));
+  }
+}
+
+
+/* =========================================================
+   SPLITCODE V12.3.1 — #3366FF BRAND + FILE EXPLORER POLISH
+   UI-only update. No functionality changes.
+   ========================================================= */
+
+/* ---------- Unified product accent ---------- */
+
+:root {
+  --splitcode-brand: #3366FF;
+  --splitcode-brand-hover: #2957E6;
+  --splitcode-brand-soft: #EDF3FF;
+  --splitcode-brand-soft-2: #F6F8FF;
+
+  --sc-blue: #3366FF;
+  --sc-blue-hover: #2957E6;
+  --sc-blue-soft: #EDF3FF;
+}
+
+.scCortexHome {
+  --sc-purple: #3366FF;
+  --sc-purple-dark: #2957E6;
+  --sc-lavender: #F4F7FF;
+}
+
+.scCortexWorkspace {
+  --scw-purple: #3366FF;
+  --scw-purple-dark: #2957E6;
+  --scw-page: #F5F7FC;
+  --scw-soft: #F8FAFE;
+}
+
+.scFinalWorkspacePage {
+  --scf-purple: #3366FF;
+  --scf-purple-2: #3366FF;
+  --scf-purple-soft: #EDF3FF;
+
+  --ux-purple: #3366FF;
+  --ux-purple-hover: #2957E6;
+  --ux-purple-soft: #EDF3FF;
+}
+
+/* ---------- Primary buttons ---------- */
+
+.scPrimaryCta,
+.scFinalHeaderPrimary,
+.scFinalPrimaryButton,
+.scSimpleImportButton,
+.scV123ChoiceCard.isPrimary,
+.scExportPrimaryButton,
+.scHealthPrimaryButton {
+  border-color: #3366FF !important;
+  background: #3366FF !important;
+  color: #FFFFFF !important;
+}
+
+.scPrimaryCta:hover,
+.scFinalHeaderPrimary:hover,
+.scFinalPrimaryButton:hover,
+.scSimpleImportButton:hover,
+.scV123ChoiceCard.isPrimary:hover,
+.scExportPrimaryButton:hover,
+.scHealthPrimaryButton:hover {
+  border-color: #2957E6 !important;
+  background: #2957E6 !important;
+  color: #FFFFFF !important;
+}
+
+/* Brand-coloured text / active states */
+.scCortexHome a:hover,
+.scWorkspaceTabs button.isActive,
+.scFinalSidebarTitle i,
+.scFrameworkDetectorIcon,
+.scFinalHelpIcon,
+.scFinalSearch button:hover,
+.scV123BackButton:hover,
+.scV123ClearButton:hover {
+  color: #3366FF !important;
+}
+
+/* Focus treatment */
+.scFinalSearch input:focus,
+.scSimpleCodeArea textarea:focus,
+.scSourceTextarea:focus {
+  border-color: #3366FF !important;
+  box-shadow: 0 0 0 3px rgba(51, 102, 255, 0.10) !important;
+}
+
+/* Drag state */
+.scV123FocusedCard.isDragging,
+.scSimpleImportDrop.isDragging {
+  border-color: #3366FF !important;
+  background: #F6F8FF !important;
+  box-shadow: 0 0 0 4px rgba(51, 102, 255, 0.10) !important;
+}
+
+
+/* =========================================================
+   PROFESSIONAL PROJECT FILE SIDEBAR
+   Cleaner hierarchy, fewer visual boxes, better file rows.
+   ========================================================= */
+
+@media (min-width: 1025px) {
+  .scFinalWorkspaceGrid {
+    grid-template-columns: 306px minmax(0, 1fr);
+    gap: 16px;
+  }
+}
+
+.scFinalSidebar {
+  border: 1px solid #DEE4EE !important;
+  border-radius: 14px !important;
+  background: #FBFCFE !important;
+  box-shadow:
+    0 1px 2px rgba(15, 23, 42, 0.025),
+    0 10px 30px rgba(15, 23, 42, 0.045) !important;
+}
+
+/* ---------- Sidebar header ---------- */
+
+.scFinalSidebarHeader {
+  padding: 14px !important;
+  border-bottom: 1px solid #E7EBF2 !important;
+  background: #FFFFFF !important;
+}
+
+.scFinalSidebarTitleRow {
+  min-height: 34px;
+}
+
+.scFinalSidebarTitle {
+  gap: 9px !important;
+}
+
+.scFinalSidebarTitle i {
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #DCE6FF;
+  border-radius: 8px;
+  background: #EDF3FF;
+  color: #3366FF !important;
+  font-size: 14px !important;
+}
+
+.scFinalSidebarTitle strong {
+  color: #192234 !important;
+  font-size: 14px !important;
+  font-weight: 750 !important;
+  letter-spacing: -0.01em;
+}
+
+/* File / Folder creation controls as one quiet segmented group */
+.scV123SidebarActions {
+  gap: 2px !important;
+  padding: 3px;
+  border: 1px solid #E2E7F0;
+  border-radius: 9px;
+  background: #F5F7FA;
+}
+
+.scV123SidebarActions button {
+  width: auto !important;
+  min-width: 0 !important;
+  height: 29px !important;
+  padding: 0 8px !important;
+  gap: 5px !important;
+  border: 0 !important;
+  border-radius: 6px !important;
+  background: transparent !important;
+  color: #525B6B !important;
+  box-shadow: none !important;
+}
+
+.scV123SidebarActions button i {
+  font-size: 12px;
+}
+
+.scV123SidebarActions button span {
+  font-size: 10px !important;
+  font-weight: 700 !important;
+}
+
+.scV123SidebarActions button:hover {
+  background: #FFFFFF !important;
+  color: #3366FF !important;
+  box-shadow: 0 1px 4px rgba(15, 23, 42, 0.08) !important;
+}
+
+/* ---------- Compact stats ---------- */
+
+.scFinalStats {
+  margin-top: 12px !important;
+  gap: 6px;
+  overflow: visible !important;
+  border: 0 !important;
+  background: transparent !important;
+}
+
+.scFinalStats > div {
+  min-height: 54px !important;
+  padding: 8px 6px !important;
+  border: 1px solid #E5E9F0 !important;
+  border-radius: 9px;
+  background: #FAFBFD;
+}
+
+.scFinalStats strong {
+  color: #202A3A !important;
+  font-size: 13px !important;
+}
+
+.scFinalStats span {
+  margin-top: 3px !important;
+  color: #8A92A1 !important;
+  font-size: 9px !important;
+}
+
+/* Keep health semantic, not brand-coloured */
+.scFinalHealth-healthy strong {
+  color: #218A52 !important;
+}
+
+.scFinalHealth-warning strong {
+  color: #9A6A12 !important;
+}
+
+.scFinalHealth-error strong {
+  color: #C43E46 !important;
+}
+
+/* ---------- Framework card ---------- */
+
+.scFrameworkDetector {
+  margin-top: 10px !important;
+  min-height: 54px !important;
+  padding: 9px 10px !important;
+  border: 1px solid #E5E9F0 !important;
+  border-radius: 9px !important;
+  background: #FAFBFD !important;
+}
+
+.scFrameworkDetector:hover {
+  border-color: #D6DEEB !important;
+  background: #FFFFFF !important;
+  transform: none !important;
+}
+
+.scFrameworkDetectorIcon {
+  background: #EDF3FF !important;
+  color: #3366FF !important;
+}
+
+/* ---------- Search ---------- */
+
+.scFinalSearch {
+  margin-top: 10px !important;
+}
+
+.scFinalSearch input {
+  height: 38px !important;
+  padding-left: 35px !important;
+  border: 1px solid #DFE4EC !important;
+  border-radius: 8px !important;
+  background: #FFFFFF !important;
+  color: #283244 !important;
+  font-size: 11px !important;
+}
+
+.scFinalSearch input::placeholder {
+  color: #9AA2AF;
+}
+
+.scFinalSearch > i {
+  color: #8A93A2 !important;
+}
+
+/* ---------- File tree shell ---------- */
+
+.scFinalSidebarTree {
+  min-height: 340px !important;
+  padding: 7px 6px 10px;
+  border-bottom: 1px solid #E7EBF2;
+  background: #FBFCFE !important;
+  scrollbar-width: thin;
+  scrollbar-color: #CCD5E3 transparent;
+}
+
+.scFinalSidebarTree::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scFinalSidebarTree::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scFinalSidebarTree::-webkit-scrollbar-thumb {
+  border: 2px solid transparent;
+  border-radius: 999px;
+  background: #CCD5E3;
+  background-clip: padding-box;
+}
+
+.scFinalSidebarTree .fileExplorer {
+  background: transparent !important;
+}
+
+.scFinalSidebarTree .fileExplorerTree {
+  padding: 2px !important;
+  background: transparent !important;
+}
+
+/* ---------- Folder and file rows ---------- */
+
+.scFinalSidebarTree .explorerFolderRow,
+.scFinalSidebarTree .explorerFileRow {
+  min-height: 38px !important;
+  margin: 2px 0;
+  overflow: hidden;
+  border: 1px solid transparent;
+  border-radius: 8px !important;
+  background: transparent;
+  transition:
+    background-color 150ms ease,
+    border-color 150ms ease,
+    box-shadow 150ms ease;
+}
+
+.scFinalSidebarTree .explorerFolderRow:hover,
+.scFinalSidebarTree .explorerFileRow:hover {
+  border-color: #E4E9F1 !important;
+  background: #F3F6FA !important;
+}
+
+.scFinalSidebarTree .fileExplorerFolder,
+.scFinalSidebarTree .fileExplorerFile {
+  min-height: 38px !important;
+  height: 38px !important;
+  padding-right: 58px !important;
+  border-radius: 8px !important;
+  background: transparent !important;
+  color: #3B4658 !important;
+  font-size: 11.5px !important;
+}
+
+.scFinalSidebarTree .fileExplorerFolder:hover,
+.scFinalSidebarTree .fileExplorerFile:hover {
+  background: transparent !important;
+  color: #1C2636 !important;
+}
+
+.scFinalSidebarTree .folderName {
+  color: #273247 !important;
+  font-size: 11.5px !important;
+  font-weight: 700 !important;
+}
+
+.scFinalSidebarTree .fileName {
+  color: #4B5668 !important;
+  font-size: 11.5px !important;
+  font-weight: 520 !important;
+}
+
+.scFinalSidebarTree .folderArrow {
+  width: 13px !important;
+  color: #7E8898 !important;
+  font-size: 9px !important;
+}
+
+/* Clean folder icon */
+.scFinalSidebarTree .folderIcon {
+  width: 20px;
+  height: 20px;
+  display: grid;
+  flex: 0 0 20px;
+  place-items: center;
+  border: 1px solid #DDE6FB;
+  border-radius: 5px;
+  background: #EDF3FF;
+  color: #3366FF !important;
+  font-size: 10px !important;
+}
+
+/* File extension badge */
+.scFinalSidebarTree .fileTypeIcon {
+  min-width: 28px !important;
+  height: 21px;
+  padding: 0 4px;
+  display: inline-grid;
+  flex: 0 0 auto;
+  place-items: center;
+  border: 1px solid #E3E8EF;
+  border-radius: 5px;
+  background: #FFFFFF;
+  font-size: 8px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.015em;
+}
+
+/* Active file */
+.scFinalSidebarTree .fileExplorerFile.activeFile,
+.scFinalSidebarTree .activeExplorerRow {
+  border-color: #CBD8FF !important;
+  background: #EAF0FF !important;
+  color: #1E4FCC !important;
+  box-shadow: inset 3px 0 0 #3366FF !important;
+}
+
+.scFinalSidebarTree .activeExplorerRow .fileName,
+.scFinalSidebarTree .fileExplorerFile.activeFile .fileName {
+  color: #1D4FC7 !important;
+  font-weight: 700 !important;
+}
+
+/* ---------- Row actions ---------- */
+
+.scFinalSidebarTree .explorerRowActions {
+  right: 5px !important;
+  padding: 3px 3px 3px 13px !important;
+  gap: 2px;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(243, 246, 250, 0),
+      #F3F6FA 26%
+    ) !important;
+}
+
+.scFinalSidebarTree .activeExplorerRow .explorerRowActions {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(234, 240, 255, 0),
+      #EAF0FF 26%
+    ) !important;
+}
+
+.scFinalSidebarTree .explorerRowActions button {
+  width: 25px !important;
+  height: 25px !important;
+  border: 1px solid transparent !important;
+  border-radius: 6px !important;
+  background: transparent !important;
+  color: #7E8796 !important;
+}
+
+.scFinalSidebarTree .explorerRowActions button:hover {
+  border-color: #D9E0EA !important;
+  background: #FFFFFF !important;
+  color: #3366FF !important;
+}
+
+/* ---------- Empty tree ---------- */
+
+.scFinalSidebarTree .fileExplorerEmpty,
+.scFinalSearchEmpty {
+  margin: 18px 8px;
+  padding: 24px 14px !important;
+  border: 1px dashed #D8DEE8;
+  border-radius: 10px;
+  background: #FFFFFF;
+}
+
+/* ---------- Diagnostics card under tree ---------- */
+
+.scFinalSidebarHelp {
+  margin: 10px !important;
+  padding: 12px !important;
+  border: 1px solid #E3E8EF !important;
+  border-radius: 10px !important;
+  background: #FFFFFF !important;
+}
+
+.scFinalHelpIcon {
+  background: #EDF3FF !important;
+  color: #3366FF !important;
+}
+
+.scFinalSidebarHelp button:not(:disabled) {
+  border-color: #D8E2FF !important;
+  background: #F6F8FF !important;
+  color: #2557D8 !important;
+}
+
+.scFinalSidebarHelp button:not(:disabled):hover {
+  border-color: #3366FF !important;
+  background: #3366FF !important;
+  color: #FFFFFF !important;
+}
+
+/* ---------- Workspace tabs ---------- */
+
+.scWorkspaceTabs button.isActive {
+  border-color: #D8E2FF !important;
+  background: #EDF3FF !important;
+  color: #2455D6 !important;
+  box-shadow: inset 0 -2px 0 #3366FF !important;
+}
+
+/* ---------- Accessible selection ---------- */
+
+.scFinalWorkspacePage ::selection,
+.scCortexHome ::selection {
+  background: rgba(51, 102, 255, 0.20);
+}
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 640px) {
+  .scFinalSidebarHeader {
+    padding: 12px !important;
+  }
+
+  .scV123SidebarActions {
+    padding: 2px;
+  }
+
+  .scV123SidebarActions button {
+    width: 30px !important;
+    height: 30px !important;
+    padding: 0 !important;
+    justify-content: center;
+  }
+
+  .scFinalSidebarTree {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .scFinalSidebarTree .fileExplorerFolder,
+  .scFinalSidebarTree .fileExplorerFile {
+    font-size: 11px !important;
+  }
+}
+
+
+
+/* =========================================================
+   SPLITCODE V12.3.2 — HOW IT WORKS STEP NUMBER REFINEMENT
+   Reworks the 01 / 02 / 03 / 04 presentation into proper
+   step badges and removes the remaining purple visual tone.
+   ========================================================= */
+
+.scCortexDark {
+  background: #0B1220 !important;
+}
+
+.scDarkIntro h2 span {
+  color: #3366FF !important;
+}
+
+.scDarkIntro p {
+  color: #AAB4C5 !important;
+}
+
+/* Replace the old rigid divider layout with distinct step cards. */
+.scDarkSteps {
+  margin-top: 72px !important;
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 14px !important;
+  border: 0 !important;
+}
+
+.scDarkSteps article {
+  position: relative;
+  min-height: 286px !important;
+  padding: 22px 22px 24px !important;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.09) !important;
+  border-radius: 14px !important;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.035),
+      rgba(255, 255, 255, 0.018)
+    ) !important;
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    background-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.scDarkSteps article:first-child {
+  border-left: 1px solid rgba(255, 255, 255, 0.09) !important;
+}
+
+.scDarkSteps article:hover {
+  transform: translateY(-3px);
+  border-color: rgba(51, 102, 255, 0.34) !important;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(51, 102, 255, 0.07),
+      rgba(255, 255, 255, 0.018)
+    ) !important;
+  box-shadow:
+    0 18px 40px rgba(0, 0, 0, 0.18);
+}
+
+/* Proper step-number badge. */
+.scDarkSteps article > span {
+  width: fit-content !important;
+  min-height: 28px;
+  padding: 0 10px !important;
+  display: inline-flex !important;
+  align-items: center;
+  gap: 7px;
+  border: 1px solid rgba(51, 102, 255, 0.28);
+  border-radius: 999px;
+  background: rgba(51, 102, 255, 0.09);
+  color: #DCE6FF !important;
+  font-size: 11px !important;
+  line-height: 1;
+  font-weight: 800 !important;
+  letter-spacing: 0.06em;
+}
+
+.scDarkSteps article > span::before {
+  content: "STEP";
+  color: #8190A8;
+  font-size: 8.5px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+/* Small sequence marker at the top edge reinforces ordering. */
+.scDarkSteps article::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 18px;
+  right: 18px;
+  height: 2px;
+  border-radius: 999px;
+  background: transparent;
+  transition: background-color 180ms ease;
+}
+
+.scDarkSteps article:hover::before {
+  background: #3366FF;
+}
+
+/* Icon treatment: blue only, no remaining purple. */
+.scDarkSteps article > i {
+  width: 44px !important;
+  height: 44px !important;
+  margin: 30px 0 22px !important;
+  border: 1px solid rgba(51, 102, 255, 0.18);
+  border-radius: 10px !important;
+  background: rgba(51, 102, 255, 0.11) !important;
+  color: #7EA0FF !important;
+  font-size: 18px !important;
+}
+
+.scDarkSteps h3 {
+  color: #FFFFFF !important;
+  font-size: 18px !important;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+}
+
+.scDarkSteps p {
+  margin-top: 10px !important;
+  color: #9EABBF !important;
+  font-size: 13px !important;
+  line-height: 1.65 !important;
+}
+
+/* Bottom block follows the same neutral dark system. */
+.scDarkBottom small {
+  color: #7F8DA4 !important;
+}
+
+.scDarkBottom strong {
+  color: #EAF0FA !important;
+}
+
+@media (max-width: 1100px) {
+  .scDarkSteps {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .scDarkSteps {
+    margin-top: 48px !important;
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+  }
+
+  .scDarkSteps article {
+    min-height: auto !important;
+    padding: 18px !important;
+  }
+
+  .scDarkSteps article > i {
+    margin: 24px 0 18px !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scDarkSteps article {
+    transition: none !important;
+  }
+
+  .scDarkSteps article:hover {
+    transform: none !important;
+  }
+}
+
+
+/* =========================================================
+   SPLITCODE V12.3.3 — NAV + CREATE ACTIONS + STEP NUMBERS
+   ========================================================= */
+
+/* ---------------------------------------------------------
+   HOME NAVIGATION
+   Full-width white bar that stays fixed while scrolling.
+   --------------------------------------------------------- */
+
+.scCortexHome .scCortexNav {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  z-index: 1000 !important;
+
+  width: 100% !important;
+  max-width: none !important;
+  height: 76px !important;
+  margin: 0 !important;
+
+  padding-left: max(24px, calc((100vw - 1180px) / 2)) !important;
+  padding-right: max(24px, calc((100vw - 1180px) / 2)) !important;
+
+  box-sizing: border-box !important;
+  background: #FFFFFF !important;
+  border: 0 !important;
+  border-bottom: 1px solid #E7EBF2 !important;
+  box-shadow: 0 6px 22px rgba(15, 23, 42, 0.045) !important;
+  backdrop-filter: none !important;
+}
+
+.scCortexHome .scCortexMain {
+  padding-top: 76px !important;
+}
+
+/* Keep nav controls visually clean on the white bar. */
+.scCortexHome .scNavSecondary {
+  background: #FFFFFF !important;
+  border-color: #DDE3EC !important;
+  color: #354052 !important;
+}
+
+.scCortexHome .scNavSecondary:hover {
+  border-color: #C9D6F7 !important;
+  background: #F8FAFF !important;
+  color: #3366FF !important;
+}
+
+.scCortexHome .scNavPrimary {
+  border-color: #3366FF !important;
+  background: #3366FF !important;
+  color: #FFFFFF !important;
+  box-shadow: none !important;
+}
+
+.scCortexHome .scNavPrimary:hover {
+  border-color: #2957E6 !important;
+  background: #2957E6 !important;
+}
+
+/* ---------------------------------------------------------
+   PROJECT FILES — CLEAN CREATE ACTIONS
+   No file/folder pictogram icons. Clear + File / + Folder.
+   --------------------------------------------------------- */
+
+.scCleanCreateActions {
+  min-height: 32px;
+  padding: 3px !important;
+  gap: 0 !important;
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid #DFE5EE !important;
+  border-radius: 9px !important;
+  background: #F7F9FC !important;
+}
+
+.scCleanCreateActions button {
+  min-width: 0 !important;
+  height: 28px !important;
+  padding: 0 8px !important;
+  gap: 5px !important;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  border: 0 !important;
+  border-radius: 6px !important;
+  background: transparent !important;
+  color: #536073 !important;
+  box-shadow: none !important;
+  cursor: pointer;
+}
+
+.scCleanCreateActions button:hover {
+  background: #FFFFFF !important;
+  color: #3366FF !important;
+  box-shadow: 0 1px 4px rgba(15, 23, 42, 0.07) !important;
+}
+
+.scCleanCreatePlus {
+  color: #3366FF;
+  font-size: 15px !important;
+  line-height: 1;
+  font-weight: 600 !important;
+}
+
+.scCleanCreateActions button > span:last-child {
+  font-size: 10.5px !important;
+  line-height: 1;
+  font-weight: 720 !important;
+}
+
+.scCleanCreateDivider {
+  width: 1px;
+  height: 16px;
+  flex: 0 0 1px;
+  background: #DFE5EE;
+}
+
+/* ---------------------------------------------------------
+   HOW IT WORKS — CLEAR SEQUENTIAL NUMBERING
+   --------------------------------------------------------- */
+
+.scDarkSteps {
+  counter-reset: splitcode-step;
+}
+
+.scDarkSteps article {
+  counter-increment: splitcode-step;
+}
+
+/* Hide the old loose 01/02/03/04 text visually but keep it in
+   the document structure. The visible badge is generated here. */
+.scDarkSteps article > span {
+  position: relative;
+  width: 48px !important;
+  min-width: 48px;
+  height: 48px !important;
+  min-height: 48px !important;
+  padding: 0 !important;
+  display: grid !important;
+  place-items: center;
+  border: 1px solid rgba(51, 102, 255, 0.24) !important;
+  border-radius: 12px !important;
+  background: rgba(51, 102, 255, 0.08) !important;
+
+  color: transparent !important;
+  font-size: 0 !important;
+  letter-spacing: 0 !important;
+}
+
+.scDarkSteps article > span::before {
+  content: counter(splitcode-step, decimal-leading-zero) !important;
+  color: #8EADFF !important;
+  font-size: 13px !important;
+  line-height: 1 !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.04em !important;
+}
+
+.scDarkSteps article > span::after {
+  content: "STEP";
+  position: absolute;
+  top: 50%;
+  left: 61px;
+  transform: translateY(-50%);
+  color: #66758C;
+  font-size: 9px;
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+}
+
+.scDarkSteps article > i {
+  margin-top: 26px !important;
+}
+
+/* ---------------------------------------------------------
+   WORKSPACE HEADER
+   Keep it clean white and stable while the workspace scrolls.
+   --------------------------------------------------------- */
+
+.scFinalHeader {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 1000 !important;
+  background: #FFFFFF !important;
+  border-bottom: 1px solid #E5EAF1 !important;
+  box-shadow: 0 5px 18px rgba(15, 23, 42, 0.035) !important;
+  backdrop-filter: none !important;
+}
+
+/* ---------------------------------------------------------
+   RESPONSIVE NAV
+   --------------------------------------------------------- */
+
+@media (max-width: 820px) {
+  .scCortexHome .scCortexNav {
+    height: 68px !important;
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+  }
+
+  .scCortexHome .scCortexMain {
+    padding-top: 68px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .scCortexHome .scCortexNav {
+    height: 64px !important;
+    padding-left: 14px !important;
+    padding-right: 14px !important;
+  }
+
+  .scCortexHome .scCortexMain {
+    padding-top: 64px !important;
+  }
+
+  .scCleanCreateActions {
+    min-height: 30px;
+  }
+
+  .scCleanCreateActions button {
+    width: auto !important;
+    height: 26px !important;
+    padding: 0 7px !important;
+  }
+
+  .scCleanCreateActions button > span:last-child {
+    display: inline !important;
+  }
+}
+
+
+/* =========================================================
+   SPLITCODE V12.3.4 — STEP NUMBERS + PROFESSIONAL FILE ICONS
+   ========================================================= */
+
+/* ---------------------------------------------------------
+   1) HOW IT WORKS — LARGE, CLEAN STEP NUMBERS
+   --------------------------------------------------------- */
+
+.scDarkSteps article {
+  padding-top: 34px !important;
+}
+
+.scDarkSteps article > span {
+  width: auto !important;
+  min-width: 0 !important;
+  height: auto !important;
+  min-height: 0 !important;
+  padding: 0 !important;
+  display: inline-flex !important;
+  align-items: flex-end !important;
+  gap: 12px !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+}
+
+.scDarkSteps article > span::before {
+  content: counter(splitcode-step, decimal-leading-zero) !important;
+  color: #AFC3FF !important;
+  font-family: "Plus Jakarta Sans", "Inter", sans-serif !important;
+  font-size: 32px !important;
+  line-height: 0.95 !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.035em !important;
+  text-shadow: 0 6px 20px rgba(51, 102, 255, 0.12);
+}
+
+.scDarkSteps article > span::after {
+  content: "STEP" !important;
+  position: static !important;
+  transform: none !important;
+  margin-bottom: 5px !important;
+  padding: 6px 10px !important;
+  border: 1px solid rgba(102, 132, 214, 0.18) !important;
+  border-radius: 999px !important;
+  background: rgba(51, 102, 255, 0.08) !important;
+  color: #7F97D6 !important;
+  font-size: 10px !important;
+  line-height: 1 !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.16em !important;
+}
+
+.scDarkSteps article > i {
+  width: 56px !important;
+  height: 56px !important;
+  margin-top: 18px !important;
+  display: grid !important;
+  place-items: center !important;
+  border: 1px solid rgba(51, 102, 255, 0.22) !important;
+  border-radius: 16px !important;
+  background: linear-gradient(180deg, rgba(24, 42, 85, 0.88) 0%, rgba(17, 31, 62, 0.96) 100%) !important;
+  color: #8EADFF !important;
+  font-size: 22px !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.05);
+}
+
+.scDarkSteps article h3 {
+  margin-top: 24px !important;
+}
+
+/* ---------------------------------------------------------
+   2) FILE TREE — PROFESSIONAL FOLDER / FILE BADGES
+   --------------------------------------------------------- */
+
+.scFinalSidebarTree .folderName {
+  color: #243246 !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.01em;
+}
+
+.scFinalSidebarTree .fileName {
+  color: #445166 !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.01em;
+}
+
+.scFinalSidebarTree .folderArrow {
+  width: 14px !important;
+  color: #8390A3 !important;
+  font-size: 10px !important;
+}
+
+.scFinalSidebarTree .folderIcon {
+  position: relative;
+  width: 26px !important;
+  height: 22px !important;
+  flex: 0 0 26px !important;
+  border: 0 !important;
+  border-radius: 7px !important;
+  background: transparent !important;
+  color: transparent !important;
+  font-size: 0 !important;
+}
+
+.scFinalSidebarTree .folderIcon::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 3px;
+  width: 11px;
+  height: 5px;
+  border-radius: 4px 4px 1px 1px;
+  background: linear-gradient(180deg, #C4D6FF 0%, #A8C0FF 100%);
+  border: 1px solid #AFC6FF;
+  border-bottom: 0;
+}
+
+.scFinalSidebarTree .folderIcon::after {
+  content: "";
+  position: absolute;
+  left: 2px;
+  right: 2px;
+  top: 7px;
+  bottom: 2px;
+  border-radius: 6px;
+  background: linear-gradient(180deg, #AFC7FF 0%, #7EA3FF 100%);
+  border: 1px solid #8DAEFF;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.38),
+    0 3px 10px rgba(51, 102, 255, 0.12);
+}
+
+.scFinalSidebarTree .fileTypeIcon {
+  position: relative;
+  min-width: 40px !important;
+  height: 24px !important;
+  padding: 0 8px !important;
+  display: inline-grid !important;
+  place-items: center !important;
+  border-radius: 8px !important;
+  border: 1px solid #E0E7F1 !important;
+  background: #FFFFFF !important;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04);
+  color: transparent !important;
+  font-size: 0 !important;
+  overflow: hidden;
+}
+
+.scFinalSidebarTree .fileTypeIcon::before {
+  content: "FILE";
+  color: #63748B;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace !important;
+  font-size: 10px !important;
+  line-height: 1 !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.04em !important;
+}
+
+.scFinalSidebarTree .fileTypeIcon.html {
+  background: #FFF4EE !important;
+  border-color: #FFD9CB !important;
+}
+.scFinalSidebarTree .fileTypeIcon.html::before {
+  content: "HTML";
+  color: #E26A3A;
+}
+
+.scFinalSidebarTree .fileTypeIcon.css {
+  background: #EEF5FF !important;
+  border-color: #D8E7FF !important;
+}
+.scFinalSidebarTree .fileTypeIcon.css::before {
+  content: "CSS";
+  color: #2F6FEA;
+}
+
+.scFinalSidebarTree .fileTypeIcon.javascript {
+  background: #FFF9E7 !important;
+  border-color: #F8EBB7 !important;
+}
+.scFinalSidebarTree .fileTypeIcon.javascript::before {
+  content: "JS";
+  color: #AD8400;
+}
+
+.scFinalSidebarTree .fileTypeIcon.typescript {
+  background: #EEF4FF !important;
+  border-color: #D8E4FF !important;
+}
+.scFinalSidebarTree .fileTypeIcon.typescript::before {
+  content: "TS";
+  color: #2E63D8;
+}
+
+.scFinalSidebarTree .fileTypeIcon.jsx {
+  background: #EAF9FF !important;
+  border-color: #CDEFFF !important;
+}
+.scFinalSidebarTree .fileTypeIcon.jsx::before {
+  content: "JSX";
+  color: #0E88AA;
+}
+
+.scFinalSidebarTree .fileTypeIcon.tsx {
+  background: #ECF7FF !important;
+  border-color: #D4EBFF !important;
+}
+.scFinalSidebarTree .fileTypeIcon.tsx::before {
+  content: "TSX";
+  color: #166EA3;
+}
+
+.scFinalSidebarTree .fileTypeIcon.json {
+  background: #EEF9F1 !important;
+  border-color: #D9F0E0 !important;
+}
+.scFinalSidebarTree .fileTypeIcon.json::before {
+  content: "JSON";
+  color: #2E8B57;
+}
+
+.scFinalSidebarTree .fileTypeIcon.markdown {
+  background: #F5F0FF !important;
+  border-color: #E5D8FF !important;
+}
+.scFinalSidebarTree .fileTypeIcon.markdown::before {
+  content: "MD";
+  color: #7A50D6;
+}
+
+.scFinalSidebarTree .explorerFolderRow,
+.scFinalSidebarTree .explorerFileRow {
+  min-height: 42px !important;
+  border-radius: 10px !important;
+}
+
+.scFinalSidebarTree .fileExplorerFolder,
+.scFinalSidebarTree .fileExplorerFile {
+  min-height: 42px !important;
+  height: 42px !important;
+  padding-right: 58px !important;
+  border-radius: 10px !important;
+}
+
+.scFinalSidebarTree .fileExplorerFile.activeFile,
+.scFinalSidebarTree .activeExplorerRow {
+  border-color: #C8D7FF !important;
+  background: linear-gradient(180deg, #ECF2FF 0%, #E8F0FF 100%) !important;
+  box-shadow:
+    inset 3px 0 0 #3366FF,
+    0 6px 16px rgba(51, 102, 255, 0.06) !important;
+}
+
+.scFinalSidebarTree .activeExplorerRow .fileName,
+.scFinalSidebarTree .fileExplorerFile.activeFile .fileName,
+.scFinalSidebarTree .activeExplorerRow .folderName {
+  color: #1D4FC7 !important;
+  font-weight: 700 !important;
+}
+
+/* ---------------------------------------------------------
+   Responsive fine-tuning
+   --------------------------------------------------------- */
+
+@media (max-width: 760px) {
+  .scDarkSteps article > span::before {
+    font-size: 28px !important;
+  }
+
+  .scDarkSteps article > i {
+    width: 52px !important;
+    height: 52px !important;
+    font-size: 20px !important;
+  }
+}
+
+/* =========================================================
+   SPLITCODE V12.3.6 — PROCESS + PROJECT TREE
+   ========================================================= */
+
+/* ---------------------------------------------------------
+   PROCESS SECTION — REFERENCE-INSPIRED HIERARCHY
+   --------------------------------------------------------- */
+
+.scDarkSteps {
+  position: relative;
+  gap: 18px !important;
+}
+
+.scDarkSteps article {
+  position: relative !important;
+  overflow: hidden !important;
+  min-height: 304px !important;
+  padding: 30px 28px 28px !important;
+  border: 1px solid rgba(113, 137, 191, 0.14) !important;
+  border-radius: 20px !important;
+  background:
+    radial-gradient(circle at 16% 14%, rgba(51, 102, 255, 0.10), transparent 35%),
+    linear-gradient(180deg, rgba(13, 24, 49, 0.96) 0%, rgba(8, 18, 39, 0.99) 100%) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.025),
+    0 16px 42px rgba(0, 8, 27, 0.18) !important;
+}
+
+.scDarkSteps article:hover {
+  transform: translateY(-3px) !important;
+  border-color: rgba(51, 102, 255, 0.26) !important;
+}
+
+.scDarkSteps article::before {
+  content: "" !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 24px !important;
+  width: 88px !important;
+  height: 2px !important;
+  border-radius: 999px !important;
+  background: #3366FF !important;
+  opacity: 0.88;
+}
+
+.scDarkSteps article::after {
+  position: absolute !important;
+  top: 14px !important;
+  right: 18px !important;
+  font-family: "Plus Jakarta Sans", "Inter", sans-serif !important;
+  font-size: 110px !important;
+  line-height: 0.86 !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.07em !important;
+  color: rgba(214, 224, 255, 0.055) !important;
+  pointer-events: none !important;
+}
+
+.scDarkSteps article:nth-child(1)::after { content: "1" !important; }
+.scDarkSteps article:nth-child(2)::after { content: "2" !important; }
+.scDarkSteps article:nth-child(3)::after { content: "3" !important; }
+.scDarkSteps article:nth-child(4)::after { content: "4" !important; }
+
+.scDarkSteps article > span {
+  position: relative !important;
+  z-index: 2 !important;
+  width: auto !important;
+  min-width: 0 !important;
+  height: auto !important;
+  min-height: 0 !important;
+  margin: 0 0 20px !important;
+  padding: 0 !important;
+  display: inline-flex !important;
+  align-items: flex-end !important;
+  gap: 12px !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+}
+
+.scDarkSteps article > span::before {
+  content: counter(splitcode-step, decimal-leading-zero) !important;
+  color: #AFC3FF !important;
+  font-family: "Plus Jakarta Sans", "Inter", sans-serif !important;
+  font-size: 34px !important;
+  line-height: 0.92 !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.055em !important;
+  text-shadow: none !important;
+}
+
+.scDarkSteps article > span::after {
+  content: "STEP" !important;
+  position: static !important;
+  transform: none !important;
+  margin: 0 0 3px !important;
+  padding: 6px 10px !important;
+  border: 1px solid rgba(92, 119, 185, 0.20) !important;
+  border-radius: 999px !important;
+  background: rgba(35, 56, 105, 0.28) !important;
+  color: #7894D7 !important;
+  font-size: 9px !important;
+  line-height: 1 !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.17em !important;
+}
+
+.scDarkSteps article > i {
+  position: relative !important;
+  z-index: 2 !important;
+  width: 54px !important;
+  height: 54px !important;
+  margin: 0 0 24px !important;
+  display: grid !important;
+  place-items: center !important;
+  border: 1px solid rgba(51, 102, 255, 0.24) !important;
+  border-radius: 16px !important;
+  background: linear-gradient(180deg, rgba(26, 49, 100, 0.88), rgba(17, 34, 72, 0.96)) !important;
+  color: #91AEFF !important;
+  font-size: 21px !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.055),
+    0 10px 24px rgba(2, 11, 35, 0.15) !important;
+}
+
+.scDarkSteps article h3 {
+  position: relative !important;
+  z-index: 2 !important;
+  margin: 0 0 10px !important;
+  color: #F8FAFF !important;
+  font-size: 19px !important;
+  line-height: 1.25 !important;
+  font-weight: 750 !important;
+  letter-spacing: -0.03em !important;
+}
+
+.scDarkSteps article p {
+  position: relative !important;
+  z-index: 2 !important;
+  max-width: 285px !important;
+  margin: 0 !important;
+  color: #A8B5C9 !important;
+  font-size: 14px !important;
+  line-height: 1.68 !important;
+  font-weight: 500 !important;
+}
+
+/* ---------------------------------------------------------
+   PROJECT FILE TREE — NESTED PATHS + DRAG TO MOVE
+   --------------------------------------------------------- */
+
+.scFinalSidebarTree {
+  padding: 8px 8px 12px !important;
+}
+
+.scFinalSidebarTree .scProfessionalTree {
+  width: 100%;
+  min-height: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  color: #344054 !important;
+}
+
+.scFinalSidebarTree .scProfessionalTree .fileExplorerTree {
+  padding: 0 !important;
+  background: transparent !important;
+}
+
+.scTreeRoot,
+.scTreeFolderBranch,
+.scTreeRootRow,
+.scTreeFolderRow,
+.scTreeFileRow {
+  position: relative;
+}
+
+.scTreeRootRow {
+  min-height: 38px;
+  padding: 0 9px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  color: #172033;
+  transition: background-color 150ms ease, border-color 150ms ease;
+}
+
+.scTreeRootRow strong {
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 760;
+  letter-spacing: -0.015em;
+}
+
+.scTreeRootChevron {
+  width: 13px;
+  flex: 0 0 13px;
+  display: grid;
+  place-items: center;
+  color: #7B8798;
+  font-size: 8px;
+}
+
+.scTreeRootChildren,
+.scTreeChildren {
+  position: relative;
+  margin-left: 15px;
+  padding-left: 12px;
+  border-left: 1px solid #E2E7EF;
+}
+
+.scTreeFolderRow,
+.scTreeFileRow {
+  min-height: 36px !important;
+  margin: 1px 0 !important;
+  border: 1px solid transparent !important;
+  border-radius: 7px !important;
+  background: transparent !important;
+  transition: background-color 140ms ease, border-color 140ms ease, box-shadow 140ms ease;
+}
+
+.scTreeFolderRow:hover,
+.scTreeFileRow:hover {
+  border-color: #E5E9F0 !important;
+  background: #F6F8FB !important;
+}
+
+.scTreeFolderRow::before,
+.scTreeFileRow::before {
+  content: "";
+  position: absolute;
+  left: -13px;
+  top: 18px;
+  width: 10px;
+  height: 1px;
+  background: #E2E7EF;
+}
+
+.scTreeFolderRow .fileExplorerFolder,
+.scTreeFileRow .fileExplorerFile {
+  width: 100% !important;
+  min-height: 36px !important;
+  height: 36px !important;
+  padding: 0 60px 0 7px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 7px !important;
+  border: 0 !important;
+  border-radius: 7px !important;
+  background: transparent !important;
+  color: #465266 !important;
+  text-align: left !important;
+  box-shadow: none !important;
+}
+
+.scTreeFolderRow .fileExplorerFolder:hover,
+.scTreeFileRow .fileExplorerFile:hover {
+  background: transparent !important;
+}
+
+.scTreeFolderGlyph {
+  position: relative;
+  width: 16px;
+  height: 13px;
+  flex: 0 0 16px;
+}
+
+.scTreeFolderGlyph::before {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  width: 7px;
+  height: 4px;
+  border-radius: 2px 2px 0 0;
+  background: #A7B0BD;
+}
+
+.scTreeFolderGlyph::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 4px;
+  bottom: 0;
+  border-radius: 3px;
+  background: #929CAB;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.28);
+}
+
+.scTreeFolderGlyph.isOpen::before { background: #91A0B5; }
+.scTreeFolderGlyph.isOpen::after { background: #7F8DA0; }
+
+.scTreeFolderRow .folderArrow {
+  width: 10px !important;
+  flex: 0 0 10px;
+  color: #8994A5 !important;
+  font-size: 8px !important;
+}
+
+.scTreeFolderRow .folderName {
+  min-width: 0;
+  overflow: hidden;
+  color: #344054 !important;
+  font-size: 11.5px !important;
+  line-height: 1;
+  font-weight: 650 !important;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.scTreeFileRow .scTreeTypeLabel {
+  min-width: 34px !important;
+  width: 34px !important;
+  height: auto !important;
+  padding: 0 !important;
+  display: inline-block !important;
+  flex: 0 0 34px !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  color: #7D8796 !important;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace !important;
+  font-size: 8px !important;
+  line-height: 1 !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.01em !important;
+  text-align: left;
+}
+
+.scTreeFileRow .scTreeTypeLabel::before,
+.scTreeFileRow .scTreeTypeLabel::after {
+  content: none !important;
+  display: none !important;
+}
+
+.scTreeFileRow .scTreeTypeLabel.html { color: #DD6B45 !important; }
+.scTreeFileRow .scTreeTypeLabel.css { color: #3D78DE !important; }
+.scTreeFileRow .scTreeTypeLabel.javascript { color: #9D7C12 !important; }
+.scTreeFileRow .scTreeTypeLabel.typescript,
+.scTreeFileRow .scTreeTypeLabel.tsx { color: #356FC7 !important; }
+.scTreeFileRow .scTreeTypeLabel.jsx { color: #1685A4 !important; }
+.scTreeFileRow .scTreeTypeLabel.json { color: #458358 !important; }
+.scTreeFileRow .scTreeTypeLabel.markdown { color: #7865A8 !important; }
+.scTreeFileRow .scTreeTypeLabel.vue { color: #3A896D !important; }
+.scTreeFileRow .scTreeTypeLabel.svelte { color: #C95A35 !important; }
+.scTreeFileRow .scTreeTypeLabel.astro { color: #7B5CB0 !important; }
+.scTreeFileRow .scTreeTypeLabel.python { color: #4A6FA8 !important; }
+
+.scTreeFileRow .fileName {
+  min-width: 0;
+  overflow: hidden;
+  color: #4A5568 !important;
+  font-size: 11.5px !important;
+  line-height: 1;
+  font-weight: 540 !important;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.scTreeFileRow.activeExplorerRow,
+.scTreeFileRow .fileExplorerFile.activeFile {
+  border-color: transparent !important;
+  background: #EFF4FF !important;
+  box-shadow: inset 2px 0 0 #3366FF !important;
+}
+
+.scTreeFileRow.activeExplorerRow .fileName,
+.scTreeFileRow .fileExplorerFile.activeFile .fileName {
+  color: #234FB8 !important;
+  font-weight: 680 !important;
+}
+
+.scProfessionalTree .explorerRowActions {
+  right: 5px !important;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 120ms ease;
+}
+
+.scTreeFolderRow:hover .explorerRowActions,
+.scTreeFileRow:hover .explorerRowActions,
+.scTreeFolderRow:focus-within .explorerRowActions,
+.scTreeFileRow:focus-within .explorerRowActions {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.scProfessionalTree .explorerRowActions button {
+  width: 24px !important;
+  height: 24px !important;
+  border: 0 !important;
+  border-radius: 5px !important;
+  background: #FFFFFF !important;
+  color: #7A8594 !important;
+  box-shadow: 0 1px 4px rgba(15, 23, 42, 0.07) !important;
+}
+
+.scProfessionalTree .explorerRowActions button:hover {
+  color: #3366FF !important;
+}
+
+.scTreeFileRow.isDragging { opacity: 0.42; }
+
+.scTreeFolderRow.isDropTarget,
+.scTreeRootRow.isDropTarget {
+  border-color: #AFC4FF !important;
+  background: #ECF2FF !important;
+  box-shadow: inset 0 0 0 1px rgba(51, 102, 255, 0.08);
+}
+
+.scTreeDropHint {
+  margin-left: auto;
+  color: #3366FF;
+  font-size: 9px;
+  line-height: 1;
+  font-weight: 760;
+  white-space: nowrap;
+}
+
+.scTreeEmptyFolder {
+  min-height: 28px;
+  padding: 7px 8px;
+  color: #A0A8B5;
+  font-size: 10px;
+  font-style: italic;
+}
+
+.scTreeEmptyActions {
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+}
+
+.scTreeEmptyActions button {
+  height: 30px;
+  padding: 0 10px;
+  border: 1px solid #DDE4EE;
+  border-radius: 7px;
+  background: #FFFFFF;
+  color: #536073;
+  font-size: 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.scTreeEmptyActions button:hover {
+  border-color: #B8CAFF;
+  color: #3366FF;
+}
+
+@media (max-width: 760px) {
+  .scDarkSteps article { min-height: 0 !important; }
+  .scDarkSteps article::after { font-size: 82px !important; }
+  .scDarkSteps article > span::before { font-size: 29px !important; }
+}
+
+
+/* =========================================================
+   SPLITCODE V12.3.7 — TRUE PROCESS FLOW + IDE-LIKE FILE TREE
+   ========================================================= */
+
+/* ---------------------------------------------------------
+   HOMEPAGE PROCESS FLOW
+   Reference-inspired journey instead of 4 equal cards.
+   --------------------------------------------------------- */
+
+.scProcessFlow {
+  position: relative;
+  width: 100%;
+  min-height: 430px;
+  margin-top: 56px;
+  overflow: hidden;
+}
+
+.scProcessFlowSvg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 430px;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.scProcessFlowShadow,
+.scProcessFlowTrack {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.scProcessFlowShadow {
+  stroke: rgba(51, 102, 255, 0.08);
+  stroke-width: 10;
+}
+
+.scProcessFlowTrack {
+  stroke-width: 2.25;
+  stroke-dasharray: 10 9;
+  animation: scProcessDash 18s linear infinite;
+}
+
+@keyframes scProcessDash {
+  to {
+    stroke-dashoffset: -190;
+  }
+}
+
+.scProcessGrid {
+  position: relative;
+  z-index: 2;
+  height: 430px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.scProcessStep {
+  position: relative;
+  min-width: 0;
+}
+
+.scProcessNumber {
+  position: absolute;
+  z-index: 0;
+  font-family:
+    "Plus Jakarta Sans",
+    "Inter",
+    sans-serif;
+  font-size: clamp(76px, 7vw, 118px);
+  line-height: 0.8;
+  font-weight: 800;
+  letter-spacing: -0.075em;
+  color: rgba(216, 225, 255, 0.055);
+  user-select: none;
+  pointer-events: none;
+}
+
+.scProcessNode {
+  position: absolute;
+  left: 50%;
+  z-index: 3;
+  width: 56px;
+  height: 56px;
+  display: grid;
+  place-items: center;
+  transform: translateX(-50%);
+  border: 1px solid rgba(51, 102, 255, 0.34);
+  border-radius: 17px;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(27, 51, 105, 0.96),
+      rgba(16, 33, 70, 0.98)
+    );
+  color: #9BB5FF;
+  font-size: 21px;
+  box-shadow:
+    0 0 0 7px rgba(9, 20, 43, 0.88),
+    0 12px 30px rgba(0, 11, 39, 0.32),
+    inset 0 1px 0 rgba(255, 255, 255, 0.07);
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    background-color 180ms ease;
+}
+
+.scProcessStep:hover .scProcessNode {
+  transform: translateX(-50%) translateY(-3px);
+  border-color: rgba(91, 135, 255, 0.62);
+  background:
+    linear-gradient(
+      180deg,
+      rgba(34, 67, 143, 0.98),
+      rgba(20, 43, 91, 0.99)
+    );
+}
+
+.scProcessCopy {
+  position: absolute;
+  left: 50%;
+  z-index: 2;
+  width: min(245px, calc(100% - 24px));
+  transform: translateX(-50%);
+}
+
+.scProcessCopy small {
+  display: block;
+  margin-bottom: 8px;
+  color: #6F8DD4;
+  font-size: 9px;
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+}
+
+.scProcessCopy h3 {
+  margin: 0;
+  color: #F7FAFF;
+  font-size: 18px;
+  line-height: 1.28;
+  font-weight: 760;
+  letter-spacing: -0.03em;
+}
+
+.scProcessCopy p {
+  margin: 9px 0 0;
+  color: #A6B4CA;
+  font-size: 13px;
+  line-height: 1.65;
+  font-weight: 500;
+}
+
+/* Node coordinates are aligned with the SVG path:
+   x = 12.5 / 37.5 / 62.5 / 87.5%
+   y = 238 / 128 / 248 / 138 */
+.scProcessStep-1 .scProcessNode {
+  top: 210px;
+}
+
+.scProcessStep-2 .scProcessNode {
+  top: 100px;
+}
+
+.scProcessStep-3 .scProcessNode {
+  top: 220px;
+}
+
+.scProcessStep-4 .scProcessNode {
+  top: 110px;
+}
+
+.scProcessStep-1 .scProcessCopy {
+  top: 44px;
+}
+
+.scProcessStep-2 .scProcessCopy {
+  top: 186px;
+}
+
+.scProcessStep-3 .scProcessCopy {
+  top: 50px;
+}
+
+.scProcessStep-4 .scProcessCopy {
+  top: 196px;
+}
+
+.scProcessStep-1 .scProcessNumber {
+  top: 12px;
+  left: 7%;
+}
+
+.scProcessStep-2 .scProcessNumber {
+  top: 150px;
+  right: 1%;
+}
+
+.scProcessStep-3 .scProcessNumber {
+  top: 16px;
+  left: 5%;
+}
+
+.scProcessStep-4 .scProcessNumber {
+  top: 160px;
+  right: 3%;
+}
+
+/* subtle process-point marker */
+.scProcessNode::after {
+  content: "";
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #6F95FF;
+  box-shadow: 0 0 16px rgba(75, 121, 255, 0.85);
+}
+
+/* ---------------------------------------------------------
+   PROJECT FILE EXPLORER
+   Reference-like compact nested tree.
+   --------------------------------------------------------- */
+
+.scFinalSidebarTree .scProfessionalTree {
+  --tree-line: #E1E6EE;
+  --tree-text: #4A5568;
+  --tree-folder: #7F8A99;
+  --tree-hover: #F6F8FB;
+  --tree-active: #EEF3FF;
+
+  width: 100%;
+  min-height: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+}
+
+.scProfessionalTree .fileExplorerTree {
+  padding: 0 !important;
+  background: transparent !important;
+}
+
+.scTreeRoot {
+  position: relative;
+}
+
+.scTreeRootRow {
+  min-height: 36px;
+  padding: 0 7px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid transparent;
+  border-radius: 7px;
+  color: #222B3A;
+}
+
+.scTreeRootRow strong {
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 760;
+  letter-spacing: -0.015em;
+}
+
+.scTreeRootChevron {
+  width: 11px;
+  flex: 0 0 11px;
+  display: grid;
+  place-items: center;
+  color: #7E8999;
+  font-size: 8px;
+}
+
+.scTreeRootChildren,
+.scTreeChildren {
+  position: relative;
+  margin-left: 14px;
+  padding-left: 11px;
+  border-left: 1px solid var(--tree-line);
+}
+
+.scTreeFolderBranch {
+  position: relative;
+}
+
+.scTreeFolderRow,
+.scTreeFileRow {
+  position: relative;
+  min-height: 34px !important;
+  margin: 0 !important;
+  border: 1px solid transparent !important;
+  border-radius: 6px !important;
+  background: transparent !important;
+  transition:
+    background-color 130ms ease,
+    border-color 130ms ease;
+}
+
+.scTreeFolderRow::before,
+.scTreeFileRow::before {
+  content: "";
+  position: absolute;
+  left: -12px;
+  top: 17px;
+  width: 9px;
+  height: 1px;
+  background: var(--tree-line);
+}
+
+.scTreeFolderRow:hover,
+.scTreeFileRow:hover {
+  background: var(--tree-hover) !important;
+}
+
+.scTreeFolderRow .fileExplorerFolder,
+.scTreeFileRow .fileExplorerFile {
+  width: 100% !important;
+  min-height: 34px !important;
+  height: 34px !important;
+  padding: 0 54px 0 5px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  border: 0 !important;
+  border-radius: 6px !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  text-align: left !important;
+}
+
+.scTreeFolderRow .fileExplorerFolder:hover,
+.scTreeFileRow .fileExplorerFile:hover {
+  background: transparent !important;
+}
+
+.scTreeFolderRow .folderArrow {
+  width: 9px !important;
+  flex: 0 0 9px;
+  color: #8D97A6 !important;
+  font-size: 7px !important;
+}
+
+.scTreeFolderGlyph {
+  position: relative;
+  width: 15px;
+  height: 12px;
+  flex: 0 0 15px;
+}
+
+.scTreeFolderGlyph::before {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  width: 7px;
+  height: 4px;
+  border-radius: 2px 2px 0 0;
+  background: #A7AFBA;
+}
+
+.scTreeFolderGlyph::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 4px;
+  bottom: 0;
+  border-radius: 3px;
+  background: #8F99A7;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.24);
+}
+
+.scTreeFolderGlyph.isOpen::before {
+  background: #9EA8B6;
+}
+
+.scTreeFolderGlyph.isOpen::after {
+  background: #7E8998;
+}
+
+.scTreeFolderRow .folderName {
+  min-width: 0;
+  overflow: hidden;
+  color: #344054 !important;
+  font-size: 11.5px !important;
+  line-height: 1;
+  font-weight: 640 !important;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* The reference uses compact method-like labels.
+   We use the same visual principle for file types. */
+.scTreeFileRow .scTreeTypeLabel {
+  min-width: 34px !important;
+  width: 34px !important;
+  height: auto !important;
+  padding: 0 !important;
+  display: inline-block !important;
+  flex: 0 0 34px !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  color: #818A98 !important;
+  font-family:
+    "SFMono-Regular",
+    Consolas,
+    "Liberation Mono",
+    monospace !important;
+  font-size: 8px !important;
+  line-height: 1 !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.02em !important;
+  text-align: left;
+}
+
+.scTreeFileRow .scTreeTypeLabel::before,
+.scTreeFileRow .scTreeTypeLabel::after {
+  content: none !important;
+  display: none !important;
+}
+
+.scTreeFileRow .scTreeTypeLabel.html {
+  color: #D56846 !important;
+}
+
+.scTreeFileRow .scTreeTypeLabel.css {
+  color: #3C73D4 !important;
+}
+
+.scTreeFileRow .scTreeTypeLabel.javascript {
+  color: #9B7D16 !important;
+}
+
+.scTreeFileRow .scTreeTypeLabel.typescript,
+.scTreeFileRow .scTreeTypeLabel.tsx {
+  color: #3569C2 !important;
+}
+
+.scTreeFileRow .scTreeTypeLabel.jsx {
+  color: #18839F !important;
+}
+
+.scTreeFileRow .scTreeTypeLabel.json {
+  color: #4F815B !important;
+}
+
+.scTreeFileRow .scTreeTypeLabel.markdown {
+  color: #7564A4 !important;
+}
+
+.scTreeFileRow .scTreeTypeLabel.vue {
+  color: #3D876E !important;
+}
+
+.scTreeFileRow .scTreeTypeLabel.svelte {
+  color: #C15B3B !important;
+}
+
+.scTreeFileRow .scTreeTypeLabel.astro {
+  color: #7A5BA7 !important;
+}
+
+.scTreeFileRow .fileName {
+  min-width: 0;
+  overflow: hidden;
+  color: #4D596C !important;
+  font-size: 11.5px !important;
+  line-height: 1;
+  font-weight: 535 !important;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Active row is intentionally restrained. */
+.scTreeFileRow.activeExplorerRow {
+  border-color: transparent !important;
+  background: var(--tree-active) !important;
+  box-shadow: inset 2px 0 0 #3366FF !important;
+}
+
+.scTreeFileRow.activeExplorerRow .fileExplorerFile,
+.scTreeFileRow .fileExplorerFile.activeFile {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.scTreeFileRow.activeExplorerRow .fileName,
+.scTreeFileRow .fileExplorerFile.activeFile .fileName {
+  color: #2453BD !important;
+  font-weight: 680 !important;
+}
+
+/* Hide edit/delete until the row is interacted with. */
+.scProfessionalTree .explorerRowActions {
+  right: 4px !important;
+  gap: 2px !important;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 120ms ease;
+}
+
+.scTreeFolderRow:hover .explorerRowActions,
+.scTreeFileRow:hover .explorerRowActions,
+.scTreeFolderRow:focus-within .explorerRowActions,
+.scTreeFileRow:focus-within .explorerRowActions {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.scProfessionalTree .explorerRowActions button {
+  width: 23px !important;
+  height: 23px !important;
+  border: 0 !important;
+  border-radius: 5px !important;
+  background: #FFFFFF !important;
+  color: #7C8797 !important;
+  box-shadow: 0 1px 4px rgba(15, 23, 42, 0.075) !important;
+}
+
+.scProfessionalTree .explorerRowActions button:hover {
+  color: #3366FF !important;
+}
+
+.scTreeFileRow.isDragging {
+  opacity: 0.38;
+}
+
+.scTreeFolderRow.isDropTarget,
+.scTreeRootRow.isDropTarget {
+  border-color: #B5C8FF !important;
+  background: #ECF2FF !important;
+  box-shadow: inset 0 0 0 1px rgba(51,102,255,0.07);
+}
+
+.scTreeDropHint,
+.scTreeDragGuide {
+  margin-left: auto;
+  white-space: nowrap;
+  font-size: 8.5px;
+  line-height: 1;
+  font-weight: 760;
+}
+
+.scTreeDropHint {
+  color: #3366FF;
+}
+
+.scTreeDragGuide {
+  color: #9AA4B2;
+}
+
+.scTreeEmptyFolder {
+  min-height: 26px;
+  padding: 6px 7px;
+  color: #A1A9B5;
+  font-size: 9.5px;
+  font-style: italic;
+}
+
+.scTreeEmptyActions {
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+}
+
+.scTreeEmptyActions button {
+  height: 29px;
+  padding: 0 9px;
+  border: 1px solid #DDE4EE;
+  border-radius: 6px;
+  background: #FFFFFF;
+  color: #536073;
+  font-size: 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.scTreeEmptyActions button:hover {
+  border-color: #B8CAFF;
+  color: #3366FF;
+}
+
+/* ---------------------------------------------------------
+   RESPONSIVE PROCESS FLOW
+   --------------------------------------------------------- */
+
+@media (max-width: 980px) {
+  .scProcessFlow {
+    min-height: 760px;
+    overflow: visible;
+  }
+
+  .scProcessFlowSvg {
+    display: none;
+  }
+
+  .scProcessGrid {
+    height: auto;
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .scProcessGrid::before {
+    content: "";
+    position: absolute;
+    top: 34px;
+    bottom: 36px;
+    left: 27px;
+    width: 1px;
+    background:
+      linear-gradient(
+        180deg,
+        rgba(51,102,255,0.12),
+        rgba(51,102,255,0.7),
+        rgba(51,102,255,0.12)
+      );
+  }
+
+  .scProcessStep {
+    min-height: 172px;
+    padding-left: 78px;
+  }
+
+  .scProcessNumber {
+    position: absolute !important;
+    top: 14px !important;
+    left: 74px !important;
+    right: auto !important;
+    font-size: 62px;
+  }
+
+  .scProcessNode {
+    position: absolute !important;
+    top: 14px !important;
+    left: 27px !important;
+    width: 46px;
+    height: 46px;
+    transform: translateX(-50%) !important;
+    border-radius: 14px;
+    font-size: 18px;
+  }
+
+  .scProcessStep:hover .scProcessNode {
+    transform: translateX(-50%) translateY(-2px) !important;
+  }
+
+  .scProcessCopy {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    width: min(100%, 560px);
+    padding-top: 76px;
+    transform: none !important;
+  }
+
+  .scProcessCopy small {
+    margin-bottom: 6px;
+  }
+}
+
+@media (max-width: 640px) {
+  .scProcessFlow {
+    margin-top: 40px;
+  }
+
+  .scProcessStep {
+    min-height: 182px;
+    padding-left: 66px;
+  }
+
+  .scProcessGrid::before {
+    left: 23px;
+  }
+
+  .scProcessNode {
+    left: 23px !important;
+    width: 42px;
+    height: 42px;
+    border-radius: 13px;
+    font-size: 17px;
+  }
+
+  .scProcessNumber {
+    left: 62px !important;
+    font-size: 52px;
+  }
+
+  .scProcessCopy {
+    padding-top: 70px;
+  }
+
+  .scProcessCopy h3 {
+    font-size: 17px;
+  }
+
+  .scProcessCopy p {
+    font-size: 12.5px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scProcessFlowTrack {
+    animation: none !important;
+  }
+
+  .scProcessNode {
+    transition: none !important;
+  }
+}
+
+
+/* =========================================================
+   SPLITCODE V12.3.8 — FOOTER COLOR MATCH
+   Target footer background sampled from supplied reference:
+   #0B0014
+   ========================================================= */
+
+.scHomeFooter.scCortexFooter {
+  background: #0B0014 !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+  color: #9E94AA !important;
+}
+
+.scFooterInner,
+.scFooterBrandBlock,
+.scFooterColumns,
+.scFooterColumn,
+.scFooterBottom {
+  background: transparent !important;
+}
+
+/* Footer copy */
+.scFooterBrandBlock > p {
+  color: #A69AAF !important;
+}
+
+.scFooterColumn > strong {
+  color: #FFFFFF !important;
+}
+
+.scFooterColumn a,
+.scFooterColumn button,
+.scFooterColumn > span {
+  color: #A094AC !important;
+}
+
+.scFooterColumn a:hover,
+.scFooterColumn button:hover {
+  color: #FFFFFF !important;
+}
+
+/* Trust chips */
+.scFooterTrust > span {
+  border-color: rgba(255, 255, 255, 0.10) !important;
+  background: rgba(255, 255, 255, 0.025) !important;
+  color: #B8AEC3 !important;
+}
+
+.scFooterTrust i {
+  color: #7EA0FF !important;
+}
+
+/* Footer divider + copyright */
+.scFooterBottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+.scFooterBottom > span {
+  color: #81778D !important;
+}
+
+/* Back to top */
+.scFooterBottom > button {
+  border-color: rgba(255, 255, 255, 0.10) !important;
+  background: rgba(255, 255, 255, 0.025) !important;
+  color: #B5AABD !important;
+}
+
+.scFooterBottom > button:hover {
+  border-color: rgba(51, 102, 255, 0.38) !important;
+  background: rgba(51, 102, 255, 0.10) !important;
+  color: #FFFFFF !important;
+}
+
+/* Keep exact black/blue SplitCode logo readable */
+.scFooterLogoPlate {
+  background: #FFFFFF !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+
+/* =========================================================
+   SPLITCODE V12.3.9 — FOOTER MATCHES SECTION ABOVE
+   Exact sampled upper-section background: #0B1220
+   ========================================================= */
+
+.scHomeFooter.scCortexFooter {
+  background: #0B1220 !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.07) !important;
+}
+
+.scFooterInner,
+.scFooterBrandBlock,
+.scFooterColumns,
+.scFooterColumn,
+.scFooterBottom {
+  background: transparent !important;
+}
+
+/* Keep footer typography neutral on the navy background. */
+.scFooterBrandBlock > p {
+  color: #A9B4C5 !important;
+}
+
+.scFooterColumn > strong {
+  color: #FFFFFF !important;
+}
+
+.scFooterColumn a,
+.scFooterColumn button,
+.scFooterColumn > span {
+  color: #9DA9BC !important;
+}
+
+.scFooterColumn a:hover,
+.scFooterColumn button:hover {
+  color: #FFFFFF !important;
+}
+
+.scFooterTrust > span {
+  border-color: rgba(255, 255, 255, 0.10) !important;
+  background: rgba(255, 255, 255, 0.025) !important;
+  color: #B5C0D0 !important;
+}
+
+.scFooterTrust i {
+  color: #7EA0FF !important;
+}
+
+.scFooterBottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.07) !important;
+}
+
+.scFooterBottom > span {
+  color: #8793A6 !important;
+}
+
+.scFooterBottom > button {
+  border-color: rgba(255, 255, 255, 0.11) !important;
+  background: rgba(255, 255, 255, 0.025) !important;
+  color: #B7C1D0 !important;
+}
+
+.scFooterBottom > button:hover {
+  border-color: rgba(51, 102, 255, 0.38) !important;
+  background: rgba(51, 102, 255, 0.10) !important;
+  color: #FFFFFF !important;
 }
