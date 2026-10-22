@@ -13347,6 +13347,563 @@ iframe {
   }
 }
 
+/* =========================================================
+   BUILDER UX POLISH — onboarding and workspace typography
+   ========================================================= */
+
+.scFinalWorkspacePage {
+  --scf-ink: #172033;
+  --scf-muted: #657086;
+  --scf-line: #e2e7ef;
+  --scf-canvas: #f5f7fb;
+  --scf-brand: #3366ff;
+  min-height: 100vh;
+  background: var(--scf-canvas) !important;
+  color: var(--scf-ink) !important;
+  font-family: "Inter", ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.scFinalWorkspacePage button,
+.scFinalWorkspacePage input,
+.scFinalWorkspacePage select,
+.scFinalWorkspacePage textarea {
+  font-family: inherit;
+}
+
+.scFinalWorkspacePage button {
+  font-size: inherit;
+}
+
+.scFinalWorkspacePage .scFinalHeaderInner {
+  min-height: 72px;
+  width: min(1480px, calc(100% - 64px));
+}
+
+.scFinalWorkspacePage .scFinalWorkspaceTitle strong {
+  color: var(--scf-ink);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.scFinalWorkspacePage .scFinalWorkspaceTitle span {
+  margin-top: 2px;
+  color: var(--scf-muted);
+  font-size: 12px;
+}
+
+.scFinalWorkspacePage .scFinalSaveStatus {
+  color: #536176;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.scFinalWorkspacePage .scFinalHeaderButton,
+.scFinalWorkspacePage .scFinalHeaderPrimary {
+  min-height: 40px;
+  padding: 0 15px;
+  border-radius: 9px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.scFinalWorkspacePage .scFinalContainer {
+  width: min(1480px, calc(100% - 64px));
+  padding: 28px 0 64px;
+}
+
+/* Keep the empty workspace out of the way until a project is opened. */
+.scFinalWorkspacePage .scFinalWorkspaceGrid.isOnboarding {
+  display: none !important;
+}
+
+.scFinalWorkspacePage .scV123StartPanel {
+  overflow: hidden;
+  margin: 0 auto 24px;
+  border: 1px solid var(--scf-line);
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 12px 36px rgba(25, 39, 67, 0.055);
+}
+
+.scFinalWorkspacePage .scSimpleStartHeader {
+  min-height: 88px;
+  padding: 20px 24px;
+  border-bottom: 1px solid #edf0f5;
+}
+
+.scFinalWorkspacePage .scSimpleStartHeader strong {
+  color: var(--scf-ink);
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.035em;
+}
+
+.scFinalWorkspacePage .scSimpleStartHeader > div > div > span {
+  display: block;
+  max-width: 720px;
+  margin-top: 4px;
+  color: var(--scf-muted);
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.scFinalWorkspacePage .scSimpleStartIcon {
+  width: 42px;
+  height: 42px;
+  border: 1px solid #dce6ff;
+  border-radius: 12px;
+  background: #edf3ff;
+  color: var(--scf-brand);
+  font-size: 17px;
+}
+
+.scFinalWorkspacePage .scV123ChoiceGrid {
+  gap: 16px;
+  padding: 20px 24px 24px;
+}
+
+.scFinalWorkspacePage .scV123ChoiceCard {
+  min-height: 206px;
+  padding: 22px;
+  gap: 12px;
+  border-color: #e3e8f0;
+  border-radius: 14px;
+  box-shadow: 0 3px 12px rgba(25, 39, 67, 0.035);
+}
+
+.scFinalWorkspacePage .scV123ChoiceCard:hover {
+  border-color: #b9cbff;
+  box-shadow: 0 10px 24px rgba(39, 76, 160, 0.09);
+}
+
+.scFinalWorkspacePage .scV123ChoiceCard > strong {
+  color: #1d2939;
+  font-size: 16px;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+}
+
+.scFinalWorkspacePage .scV123ChoiceCard > p {
+  color: #667085;
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.scFinalWorkspacePage .scV123ChoiceAction {
+  color: #2859df;
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.scFinalWorkspacePage .scV123ChoiceIcon {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  font-size: 18px;
+}
+
+.scFinalWorkspacePage .scV123ChoiceIcon.isPrimary {
+  border: 1px solid #dce6ff;
+  background: #edf3ff;
+  color: #3366ff;
+}
+
+.scFinalWorkspacePage .scV123CreateCard {
+  border-style: dashed;
+  background: #fbfcfe !important;
+}
+
+.scFinalWorkspacePage .scV123BackButton,
+.scFinalWorkspacePage .scV123ClearButton {
+  min-height: 36px;
+  padding: 0 11px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.scFinalWorkspacePage .scSimplePasteCard textarea {
+  min-height: 300px;
+  padding: 18px;
+  border: 1px solid #263247;
+  border-radius: 10px;
+  background: #111827;
+  color: #e6edf7;
+  font-family: "JetBrains Mono", "SFMono-Regular", Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.scFinalWorkspacePage .scSimplePasteFooter,
+.scFinalWorkspacePage .scSimpleImportNote {
+  font-size: 12px;
+}
+
+.scFinalWorkspacePage .scFinalWorkspaceGrid:not(.isOnboarding) {
+  grid-template-columns: 300px minmax(0, 1fr);
+  gap: 20px;
+}
+
+.scFinalWorkspacePage .scFinalSidebar,
+.scFinalWorkspacePage .scFinalEditorCard,
+.scFinalWorkspacePage .scFinalPreviewCard,
+.scFinalWorkspacePage .scFinalDiagnostics,
+.scFinalWorkspacePage .scRelationshipPanel,
+.scFinalWorkspacePage .scHealthCenter,
+.scFinalWorkspacePage .scExportPreflight {
+  border-color: var(--scf-line) !important;
+  border-radius: 14px !important;
+  box-shadow: 0 6px 22px rgba(25, 39, 67, 0.045) !important;
+}
+
+.scFinalWorkspacePage .scFinalSidebarTitle strong {
+  font-size: 14px !important;
+}
+
+.scFinalWorkspacePage .scFinalStats span,
+.scFinalWorkspacePage .scFinalSearch input,
+.scFinalWorkspacePage .scFinalSidebarHelp button {
+  font-size: 11px !important;
+}
+
+.scFinalWorkspacePage .scFinalSidebarHelp strong {
+  font-size: 12px !important;
+}
+
+.scFinalWorkspacePage .scFinalSidebarHelp p {
+  color: #667085 !important;
+  font-size: 11px !important;
+  line-height: 1.55 !important;
+}
+
+.scFinalWorkspacePage .scWorkspaceTabs {
+  gap: 4px;
+  padding: 5px;
+  border: 1px solid var(--scf-line);
+  border-radius: 11px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(25, 39, 67, 0.035);
+}
+
+.scFinalWorkspacePage .scWorkspaceTabs button {
+  min-height: 40px;
+  padding: 0 14px;
+  border-radius: 8px;
+  color: #536176;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.scFinalWorkspacePage .scWorkspaceTabs button.isActive {
+  border-color: #dce6ff !important;
+  background: #edf3ff !important;
+  color: #2455d6 !important;
+  box-shadow: none !important;
+}
+
+.scFinalWorkspacePage .scFinalFileTab,
+.scFinalWorkspacePage .scFinalTabsToolbar button,
+.scFinalWorkspacePage .scFinalEditorActions button {
+  font-size: 12px;
+}
+
+.scFinalWorkspacePage .scFinalEditorCard,
+.scFinalWorkspacePage .scFinalPreviewCard {
+  background: #fff;
+}
+
+.scFinalWorkspacePage .scFinalHeader :focus-visible,
+.scFinalWorkspacePage main :focus-visible {
+  outline: 3px solid rgba(51, 102, 255, 0.3);
+  outline-offset: 2px;
+}
+
+@media (max-width: 900px) {
+  .scFinalWorkspacePage .scFinalHeaderInner,
+  .scFinalWorkspacePage .scFinalContainer {
+    width: min(100% - 32px, 720px);
+  }
+
+  .scFinalWorkspacePage .scFinalWorkspaceGrid:not(.isOnboarding) {
+    grid-template-columns: 1fr;
+  }
+
+  .scFinalWorkspacePage .scFinalSidebar {
+    position: static;
+    min-height: auto;
+  }
+
+  .scFinalWorkspacePage .scFinalSidebarTree {
+    max-height: 300px;
+  }
+}
+
+@media (max-width: 640px) {
+  .scFinalWorkspacePage .scFinalHeaderInner {
+    min-height: 64px;
+    width: calc(100% - 24px);
+  }
+
+  .scFinalWorkspacePage .scFinalWorkspaceTitle span,
+  .scFinalWorkspacePage .scFinalSaveStatus {
+    display: none;
+  }
+
+  .scFinalWorkspacePage .scFinalContainer {
+    width: calc(100% - 24px);
+    padding-top: 16px;
+  }
+
+  .scFinalWorkspacePage .scSimpleStartHeader {
+    align-items: flex-start;
+    padding: 16px;
+  }
+
+  .scFinalWorkspacePage .scSimpleStartHeader strong {
+    font-size: 18px;
+  }
+
+  .scFinalWorkspacePage .scSimpleStartHeader > div > div > span {
+    font-size: 12px;
+  }
+
+  .scFinalWorkspacePage .scV123ChoiceGrid {
+    gap: 10px;
+    padding: 14px;
+  }
+
+  .scFinalWorkspacePage .scV123ChoiceCard {
+    padding: 16px;
+  }
+
+  .scFinalWorkspacePage .scWorkspaceTabs {
+    overflow-x: auto;
+  }
+}
+
+/* Apply the same type and control system to every builder view. The public
+   marketing homepage remains scoped to its existing .scCortexHome styles. */
+.scFinalWorkspacePage :is(h1, h2, h3, h4, h5, h6) {
+  font-family: inherit !important;
+  color: #1b2638;
+  letter-spacing: -0.025em;
+  line-height: 1.3;
+  text-wrap: pretty;
+}
+
+.scFinalWorkspacePage h1 { font-size: 26px !important; font-weight: 700; }
+.scFinalWorkspacePage h2 { font-size: 21px !important; font-weight: 680; }
+.scFinalWorkspacePage h3 { font-size: 16px !important; font-weight: 650; }
+.scFinalWorkspacePage h4,
+.scFinalWorkspacePage h5,
+.scFinalWorkspacePage h6 { font-size: 14px !important; font-weight: 650; }
+
+.scFinalWorkspacePage p {
+  font-family: inherit !important;
+  font-size: 13px !important;
+  line-height: 1.6 !important;
+}
+
+.scFinalWorkspacePage small,
+.scFinalWorkspacePage .scFinalMuted,
+.scFinalWorkspacePage .scMutedText {
+  font-family: inherit !important;
+  font-size: 11px !important;
+  line-height: 1.5;
+}
+
+.scFinalWorkspacePage label,
+.scFinalWorkspacePage input:not([type="file"]),
+.scFinalWorkspacePage select {
+  font-family: inherit !important;
+  font-size: 13px !important;
+}
+
+.scFinalWorkspacePage :is(
+  .scFinalHeaderButton,
+  .scFinalHeaderPrimary,
+  .scFinalPrimaryButton,
+  .scSimpleImportButton,
+  .scExportPrimaryButton,
+  .scHealthPrimaryButton,
+  .scFinalDiagnosticActions button,
+  .scRelationshipRepairActions button,
+  .scFinalEditorActions button,
+  .scHealthActions button,
+  .scExportPreflight button
+) {
+  min-height: 38px;
+  border-radius: 9px;
+  font-family: inherit !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  line-height: 1.35;
+}
+
+.scFinalWorkspacePage :is(
+  .scFinalEditorCard,
+  .scFinalPreviewCard,
+  .scFinalDiagnostics,
+  .scRelationshipPanel,
+  .scHealthCenter,
+  .scExportPreflight
+) {
+  border: 1px solid #e2e7ef !important;
+  border-radius: 14px !important;
+  background: #fff !important;
+  box-shadow: 0 6px 22px rgba(25, 39, 67, 0.045) !important;
+}
+
+.scFinalWorkspacePage :is(
+  .scFinalEditorCard,
+  .scFinalPreviewCard,
+  .scFinalDiagnostics,
+  .scRelationshipPanel,
+  .scHealthCenter,
+  .scExportPreflight
+) :is(h2, h3, h4) {
+  margin-top: 0;
+}
+
+.scFinalWorkspacePage :is(input, select, textarea):focus-visible,
+.scFinalWorkspacePage button:focus-visible {
+  outline: 3px solid rgba(51, 102, 255, 0.28) !important;
+  outline-offset: 2px;
+}
+
+/* Homepage process section: restrained, editorial four-step layout. */
+.scCortexHome .scProcessFlow {
+  min-height: 0 !important;
+  margin-top: 52px !important;
+  overflow: visible !important;
+}
+
+.scCortexHome .scProcessFlowSvg {
+  display: none !important;
+}
+
+.scCortexHome .scProcessGrid {
+  height: auto !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  border-top: 1px solid rgba(231, 237, 249, 0.18);
+}
+
+.scCortexHome .scProcessStep {
+  min-height: 0 !important;
+  padding: 24px 22px 10px !important;
+  border-right: 1px solid rgba(231, 237, 249, 0.14);
+}
+
+.scCortexHome .scProcessStep:last-child {
+  border-right: 0;
+}
+
+.scCortexHome .scProcessNumber {
+  display: none !important;
+}
+
+.scCortexHome .scProcessNode {
+  display: none !important;
+}
+
+.scCortexHome .scProcessCopy {
+  position: static !important;
+  width: auto !important;
+  transform: none !important;
+}
+
+.scCortexHome .scProcessCopy small {
+  display: block !important;
+  margin: 0 0 14px !important;
+  color: #9bb7ff !important;
+  font-size: 11px !important;
+  line-height: 1.2 !important;
+  font-weight: 650 !important;
+  letter-spacing: 0.08em !important;
+}
+
+.scCortexHome .scProcessCopy h3 {
+  margin: 0;
+  color: #f5f7fb !important;
+  font-size: 17px !important;
+  line-height: 1.35 !important;
+  font-weight: 650 !important;
+  letter-spacing: -0.02em !important;
+}
+
+.scCortexHome .scProcessCopy p {
+  max-width: 260px;
+  margin: 10px 0 0;
+  color: #b7c0cf !important;
+  font-size: 13px !important;
+  line-height: 1.65 !important;
+  font-weight: 400 !important;
+}
+
+@media (max-width: 980px) {
+  .scCortexHome .scProcessGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .scCortexHome .scProcessStep {
+    padding: 22px 20px 24px !important;
+    border-right: 0;
+    border-bottom: 1px solid rgba(231, 237, 249, 0.14);
+  }
+
+  .scCortexHome .scProcessStep:nth-child(odd) {
+    border-right: 1px solid rgba(231, 237, 249, 0.14);
+  }
+
+  .scCortexHome .scProcessStep:nth-last-child(-n + 2) {
+    border-bottom: 0;
+  }
+
+  .scCortexHome .scProcessCopy small {
+    margin-bottom: 12px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .scCortexHome .scProcessFlow {
+    margin-top: 30px !important;
+  }
+
+  .scCortexHome .scProcessGrid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .scCortexHome .scProcessStep,
+  .scCortexHome .scProcessStep:nth-child(odd) {
+    padding: 20px 2px 22px !important;
+    border-right: 0;
+    border-bottom: 1px solid rgba(231, 237, 249, 0.14);
+  }
+
+  .scCortexHome .scProcessStep:last-child {
+    border-bottom: 0;
+  }
+
+  .scCortexHome .scProcessCopy small {
+    margin-bottom: 10px !important;
+  }
+
+  .scCortexHome .scProcessCopy h3 {
+    font-size: 16px !important;
+  }
+
+  .scCortexHome .scProcessCopy p {
+    max-width: none;
+    font-size: 13px !important;
+  }
+}
+
 
 
 /* =========================================================
@@ -15290,6 +15847,1031 @@ iframe {
   color: #FFFFFF !important;
 }
 
+/* File explorer: keep names readable and reveal row actions on demand. */
+.scFinalWorkspacePage .scTreeRootRow {
+  min-height: 42px;
+  padding: 0 10px;
+  gap: 9px;
+}
+
+.scFinalWorkspacePage .scTreeRootRow strong {
+  color: #202c40;
+  font-size: 14px !important;
+  font-weight: 700;
+}
+
+.scFinalWorkspacePage .scTreeRootChevron {
+  width: 14px;
+  flex-basis: 14px;
+  font-size: 10px;
+}
+
+.scFinalWorkspacePage .scTreeRootChildren,
+.scFinalWorkspacePage .scTreeChildren {
+  margin-left: 17px;
+  padding-left: 13px;
+}
+
+.scFinalWorkspacePage .scTreeFolderRow,
+.scFinalWorkspacePage .scTreeFileRow {
+  min-height: 42px !important;
+  border-radius: 9px !important;
+}
+
+.scFinalWorkspacePage .scTreeFolderRow::before,
+.scFinalWorkspacePage .scTreeFileRow::before {
+  top: 21px;
+}
+
+.scFinalWorkspacePage .scTreeFolderRow .fileExplorerFolder,
+.scFinalWorkspacePage .scTreeFileRow .fileExplorerFile {
+  min-height: 42px !important;
+  height: 42px !important;
+  padding: 0 8px 0 8px !important;
+  gap: 9px !important;
+  border-radius: 8px !important;
+}
+
+.scFinalWorkspacePage .scTreeFolderRow:hover .fileExplorerFolder,
+.scFinalWorkspacePage .scTreeFileRow:hover .fileExplorerFile,
+.scFinalWorkspacePage .scTreeFolderRow:focus-within .fileExplorerFolder,
+.scFinalWorkspacePage .scTreeFileRow:focus-within .fileExplorerFile {
+  padding-right: 78px !important;
+}
+
+.scFinalWorkspacePage .scTreeFolderRow .folderArrow {
+  width: 12px !important;
+  flex-basis: 12px;
+  font-size: 9px !important;
+}
+
+.scFinalWorkspacePage .scTreeFolderGlyph {
+  width: 18px;
+  height: 14px;
+  flex-basis: 18px;
+}
+
+.scFinalWorkspacePage .scTreeFolderRow .folderName {
+  color: #344258 !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+}
+
+.scFinalWorkspacePage .scTreeFileRow .scTreeTypeLabel {
+  min-width: 32px !important;
+  width: 32px !important;
+  flex-basis: 32px !important;
+  font-size: 9px !important;
+  font-weight: 700 !important;
+}
+
+.scFinalWorkspacePage .scTreeFileRow .fileName {
+  color: #344258 !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  line-height: 1.35;
+}
+
+.scFinalWorkspacePage .scTreeFileRow.activeExplorerRow,
+.scFinalWorkspacePage .scTreeFileRow .fileExplorerFile.activeFile {
+  border-color: #d5e0ff !important;
+  border-radius: 9px !important;
+  background: #edf3ff !important;
+  box-shadow: inset 3px 0 0 #3366ff !important;
+}
+
+.scFinalWorkspacePage .scProfessionalTree .explorerRowActions {
+  right: 5px !important;
+  padding: 3px 3px 3px 12px !important;
+  gap: 4px;
+  background: linear-gradient(90deg, rgba(246, 248, 251, 0), #f6f8fb 28%) !important;
+}
+
+.scFinalWorkspacePage .scProfessionalTree .explorerRowActions button {
+  width: 28px !important;
+  height: 28px !important;
+  border: 1px solid #e0e6ef !important;
+  border-radius: 7px !important;
+  background: #fff !important;
+  color: #64748b !important;
+  font-size: 13px;
+  box-shadow: 0 1px 3px rgba(23, 32, 51, 0.06) !important;
+}
+
+.scFinalWorkspacePage .scProfessionalTree .explorerRowActions button:hover {
+  border-color: #c5d4fa !important;
+  background: #f3f6ff !important;
+  color: #2454e8 !important;
+}
+
+/* Missing entry-point warning: pair the alert with one actionable explanation. */
+.scFinalWorkspacePage .scFinalDiagnosticItem.isEntryPointWarning {
+  min-height: 92px;
+  border: 1px solid #eadfbe;
+  border-left: 3px solid #d89a23;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #fffdf8 0%, #fff 48%);
+  box-shadow: 0 2px 8px rgba(115, 82, 23, 0.045);
+}
+
+.scFinalWorkspacePage .scFinalDiagnosticItem.isEntryPointWarning .scFinalDiagnosticMain {
+  align-items: center;
+  padding: 17px 18px;
+  gap: 14px;
+}
+
+.scFinalWorkspacePage .scFinalDiagnosticItem.isEntryPointWarning .scFinalDiagnosticSeverity {
+  width: 42px;
+  height: 42px;
+  flex-basis: 42px;
+  border-radius: 11px;
+  background: #fff1d4;
+  color: #9a6500;
+  font-size: 17px;
+}
+
+.scFinalWorkspacePage .scFinalDiagnosticItem.isEntryPointWarning .scFinalDiagnosticCopy strong {
+  color: #263247;
+  font-size: 15px !important;
+  font-weight: 650;
+  line-height: 1.4;
+}
+
+.scFinalWorkspacePage .scFinalDiagnosticItem.isEntryPointWarning .scFinalDiagnosticHint {
+  margin-top: 4px;
+  color: #64748b;
+  font-size: 12px !important;
+  line-height: 1.45;
+}
+
+@media (max-width: 620px) {
+  .scFinalWorkspacePage .scFinalDiagnosticItem.isEntryPointWarning .scFinalDiagnosticMain {
+    align-items: flex-start;
+    padding: 14px;
+  }
+}
+
+/* Readable information hierarchy for export and file relationship panels. */
+.scFinalWorkspacePage .scExportPreflightHeader {
+  padding: 20px 22px;
+  align-items: center;
+  gap: 18px;
+}
+
+.scFinalWorkspacePage .scExportPreflightTitle > span {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  font-size: 18px;
+}
+
+.scFinalWorkspacePage .scExportPreflightTitle small {
+  margin-bottom: 5px;
+  color: #64748b;
+  font-size: 11px !important;
+  font-weight: 700;
+  letter-spacing: 0.055em;
+}
+
+.scFinalWorkspacePage .scExportPreflightTitle strong {
+  color: #172033;
+  font-size: 19px !important;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.scFinalWorkspacePage .scExportPreflightTitle p {
+  margin-top: 6px;
+  color: #64748b;
+  font-size: 13px !important;
+  line-height: 1.55;
+}
+
+.scFinalWorkspacePage .scExportPreflightBadge {
+  min-height: 36px;
+  padding: 0 13px;
+  gap: 7px;
+  font-size: 12px !important;
+  font-weight: 650;
+  letter-spacing: 0;
+}
+
+.scFinalWorkspacePage .scExportCheck {
+  min-height: 84px;
+  padding: 16px 18px;
+  grid-template-columns: 36px minmax(0, 1fr);
+  gap: 12px;
+}
+
+.scFinalWorkspacePage .scExportCheckIcon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+.scFinalWorkspacePage .scExportCheck strong {
+  color: #263247;
+  font-size: 14px !important;
+  font-weight: 650;
+  line-height: 1.4;
+}
+
+.scFinalWorkspacePage .scExportCheck small {
+  margin-top: 4px;
+  color: #64748b;
+  font-size: 12px !important;
+  line-height: 1.45;
+}
+
+.scFinalWorkspacePage .scExportDocumentation {
+  padding: 18px 22px;
+  gap: 20px;
+  border-color: #e8edf5;
+  background: #f8faff;
+}
+
+.scFinalWorkspacePage .scExportDocumentationTitle {
+  gap: 12px;
+}
+
+.scFinalWorkspacePage .scExportDocumentationTitle > span {
+  width: 42px;
+  height: 42px;
+  border-radius: 11px;
+  font-size: 17px;
+}
+
+.scFinalWorkspacePage .scExportDocumentationTitle strong {
+  color: #263247;
+  font-size: 15px !important;
+  font-weight: 700;
+}
+
+.scFinalWorkspacePage .scExportDocumentationTitle small {
+  max-width: 300px;
+  color: #64748b;
+  font-size: 12px !important;
+  line-height: 1.5;
+}
+
+.scFinalWorkspacePage .scExportDocumentationFiles {
+  flex: 1 1 600px;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.scFinalWorkspacePage .scExportDocumentationFiles > div {
+  min-width: 0;
+  max-width: none;
+  min-height: 64px;
+  flex: 1 1 260px;
+  padding: 11px 13px;
+  grid-template-columns: 34px minmax(0, 1fr) auto;
+  gap: 10px;
+  border-color: #dce3ef;
+  border-radius: 11px;
+  box-shadow: 0 1px 2px rgba(24, 39, 75, 0.03);
+}
+
+.scFinalWorkspacePage .scExportDocumentationFiles > div > i {
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
+  background: #edf3ff;
+  color: #3366ff;
+  font-size: 15px;
+}
+
+.scFinalWorkspacePage .scExportDocumentationFiles small {
+  color: #64748b;
+  font-size: 11px !important;
+  font-weight: 650;
+  letter-spacing: 0.02em;
+}
+
+.scFinalWorkspacePage .scExportDocumentationFiles strong {
+  overflow-wrap: anywhere;
+  color: #263247;
+  font-family: inherit !important;
+  font-size: 13px !important;
+  font-weight: 650;
+  line-height: 1.4;
+  text-overflow: clip;
+  white-space: normal;
+}
+
+.scFinalWorkspacePage .scExportDocumentationFiles em {
+  padding: 5px 8px;
+  font-size: 10px !important;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.scFinalWorkspacePage .scExportPreflightFooter {
+  padding: 16px 22px;
+  gap: 16px;
+}
+
+.scFinalWorkspacePage .scExportPreflightMeta {
+  gap: 9px;
+}
+
+.scFinalWorkspacePage .scExportPreflightMeta > span {
+  min-width: 100px;
+  padding: 9px 12px;
+  border-radius: 9px;
+}
+
+.scFinalWorkspacePage .scExportPreflightMeta small {
+  color: #64748b;
+  font-size: 11px !important;
+}
+
+.scFinalWorkspacePage .scExportPreflightMeta strong {
+  color: #263247;
+  font-size: 13px !important;
+}
+
+.scFinalWorkspacePage .scExportPreflightActions {
+  gap: 9px;
+}
+
+.scFinalWorkspacePage .scExportPreflightActions button {
+  min-height: 40px;
+  padding: 0 14px;
+  gap: 8px;
+  border-color: #cdd7e6;
+  border-radius: 9px;
+  color: #344258;
+  font-size: 13px !important;
+}
+
+.scFinalWorkspacePage .scExportPreflightActions button.isPrimary {
+  border-color: #3366ff;
+  background: #3366ff;
+  color: #fff;
+}
+
+.scFinalWorkspacePage .scExportPreflightActions button:hover:not(:disabled) {
+  border-color: #2454e8;
+  background: #f3f6ff;
+  color: #2454e8;
+}
+
+.scFinalWorkspacePage .scExportPreflightActions button.isPrimary:hover:not(:disabled) {
+  background: #2454e8;
+  color: #fff;
+}
+
+.scFinalWorkspacePage .scExportRuntimeNote {
+  padding: 12px 22px;
+  color: #526176;
+  font-size: 12px !important;
+  line-height: 1.5;
+}
+
+.scFinalWorkspacePage .scRelationshipHeader {
+  min-height: 76px;
+  padding: 14px 20px;
+  gap: 18px;
+}
+
+.scFinalWorkspacePage .scRelationshipHeader > div:first-child {
+  gap: 12px;
+}
+
+.scFinalWorkspacePage .scRelationshipIcon {
+  width: 42px;
+  height: 42px;
+  border-radius: 11px;
+  background: #edf3ff;
+  color: #3366ff;
+  font-size: 17px;
+}
+
+.scFinalWorkspacePage .scRelationshipHeader strong {
+  color: #172033;
+  font-size: 16px !important;
+  font-weight: 700;
+}
+
+.scFinalWorkspacePage .scRelationshipHeader small {
+  margin-top: 4px;
+  color: #64748b;
+  font-size: 12px !important;
+}
+
+.scFinalWorkspacePage .scRelationshipSummary {
+  gap: 9px;
+}
+
+.scFinalWorkspacePage .scRelationshipSummary > span {
+  min-width: 84px;
+  padding: 9px 12px;
+  border-color: #dce3ef;
+  border-radius: 9px;
+  background: #f8faff;
+  color: #526176;
+  font-size: 11px !important;
+  font-weight: 550;
+}
+
+.scFinalWorkspacePage .scRelationshipSummary > span strong {
+  font-size: 15px !important;
+  font-weight: 700;
+}
+
+.scFinalWorkspacePage .scRelationshipConnections,
+.scFinalWorkspacePage .scRelationshipProblems {
+  padding: 18px 20px 20px;
+}
+
+.scFinalWorkspacePage .scRelationshipSectionTitle {
+  margin-bottom: 14px;
+  gap: 12px;
+}
+
+.scFinalWorkspacePage .scRelationshipSectionTitle strong {
+  color: #263247;
+  font-size: 14px !important;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.scFinalWorkspacePage .scRelationshipSectionTitle span {
+  color: #64748b;
+  font-size: 12px !important;
+}
+
+.scFinalWorkspacePage .scRelationshipItem {
+  min-height: 52px;
+  padding: 11px 13px;
+  grid-template-columns: minmax(0, 1fr) 24px minmax(0, 1fr) auto;
+  gap: 10px;
+  border-color: #dce3ef;
+  border-radius: 10px;
+}
+
+.scFinalWorkspacePage .scRelationshipItem:hover {
+  border-color: #b8c9f4;
+  background: #f8faff;
+}
+
+.scFinalWorkspacePage .scRelationshipItem i {
+  color: #7183a1;
+  font-size: 14px;
+}
+
+.scFinalWorkspacePage .scRelationshipSource,
+.scFinalWorkspacePage .scRelationshipTarget {
+  color: #344258;
+  font-family: inherit !important;
+  font-size: 13px !important;
+  font-weight: 550;
+  line-height: 1.4;
+}
+
+.scFinalWorkspacePage .scRelationshipTarget {
+  color: #2454e8;
+}
+
+.scFinalWorkspacePage .scRelationshipItem small {
+  color: #64748b;
+  font-size: 11px !important;
+}
+
+.scFinalWorkspacePage .scRelationshipIssueGroup + .scRelationshipIssueGroup {
+  margin-top: 18px;
+}
+
+.scFinalWorkspacePage .scRelationshipIssueGroup > small {
+  margin-bottom: 8px;
+  color: #526176;
+  font-size: 11px !important;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.scFinalWorkspacePage .scRelationshipIssue {
+  margin-top: 8px;
+  padding: 10px 11px;
+  grid-template-columns: 34px minmax(0, 1fr);
+  gap: 11px;
+  border-color: #dce3ef;
+  border-radius: 10px;
+}
+
+.scFinalWorkspacePage .scRelationshipIssue > span,
+.scFinalWorkspacePage .scRelationshipIssueMain > span:first-child {
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
+  font-size: 15px;
+}
+
+.scFinalWorkspacePage .scRelationshipIssue > div {
+  gap: 4px;
+}
+
+.scFinalWorkspacePage .scRelationshipIssue strong,
+.scFinalWorkspacePage .scRelationshipIssueMain strong {
+  color: #263247;
+  font-size: 13px !important;
+  font-weight: 650;
+  line-height: 1.4;
+}
+
+.scFinalWorkspacePage .scRelationshipIssue small,
+.scFinalWorkspacePage .scRelationshipIssueMain small {
+  color: #64748b;
+  font-size: 12px !important;
+  line-height: 1.45;
+}
+
+.scFinalWorkspacePage .scRelationshipRepairItem {
+  padding: 0;
+}
+
+.scFinalWorkspacePage .scRelationshipIssueMain {
+  padding: 12px 13px;
+  grid-template-columns: 34px minmax(0, 1fr);
+  gap: 11px;
+}
+
+.scFinalWorkspacePage .scRelationshipSuggestion {
+  margin-top: 8px;
+  padding: 8px 10px;
+  gap: 7px;
+  border-color: #dce6ff;
+  border-radius: 8px;
+  background: #f4f7ff;
+  color: #526176;
+  font-size: 12px !important;
+}
+
+.scFinalWorkspacePage .scRelationshipSuggestion b {
+  color: #2454e8;
+  font-family: inherit !important;
+  font-size: 12px !important;
+}
+
+.scFinalWorkspacePage .scRelationshipSuggestion em {
+  padding: 4px 7px;
+  font-size: 10px !important;
+}
+
+.scFinalWorkspacePage .scRelationshipRepairActions {
+  padding: 10px 13px 12px 58px;
+  gap: 8px;
+  border-color: #e8edf5;
+  background: #f8faff;
+}
+
+.scFinalWorkspacePage .scRelationshipRepairActions button {
+  min-height: 38px;
+  padding: 0 12px;
+  gap: 7px;
+  border-radius: 8px;
+  font-size: 12px !important;
+}
+
+.scFinalWorkspacePage .scRelationshipHealthy strong {
+  color: #263247;
+  font-size: 13px !important;
+}
+
+.scFinalWorkspacePage .scRelationshipHealthy small,
+.scFinalWorkspacePage .scRelationshipMuted {
+  color: #64748b;
+  font-size: 12px !important;
+}
+
+@media (max-width: 820px) {
+  .scFinalWorkspacePage .scExportDocumentation {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .scFinalWorkspacePage .scExportDocumentationFiles {
+    flex-basis: auto;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .scFinalWorkspacePage .scExportPreflightFooter {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .scFinalWorkspacePage .scExportPreflightActions {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 620px) {
+  .scFinalWorkspacePage .scRelationshipHeader {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .scFinalWorkspacePage .scRelationshipSummary {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .scFinalWorkspacePage .scRelationshipSummary > span {
+    min-width: 0;
+  }
+
+  .scFinalWorkspacePage .scRelationshipItem {
+    grid-template-columns: minmax(0, 1fr) 20px minmax(0, 1fr);
+  }
+
+  .scFinalWorkspacePage .scRelationshipItem small {
+    grid-column: 1 / -1;
+    justify-self: start;
+  }
+
+  .scFinalWorkspacePage .scExportDocumentationFiles > div {
+    flex-basis: 100%;
+  }
+}
+
+/* Workspace health and diagnostics: clear type, consistent icon tiles, and
+   comfortable controls. Scoped to the builder so the homepage is unchanged. */
+.scFinalWorkspacePage .scHealthCenter {
+  border-color: #dce3ef;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(24, 39, 75, 0.055);
+}
+
+.scFinalWorkspacePage .scHealthCenterTop {
+  padding: 20px 22px;
+  gap: 18px;
+}
+
+.scFinalWorkspacePage .scHealthIdentity {
+  align-items: center;
+  gap: 14px;
+}
+
+.scFinalWorkspacePage .scHealthIcon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  font-size: 18px;
+}
+
+.scFinalWorkspacePage .scHealthEyebrow {
+  margin-bottom: 6px;
+  color: #64748b;
+  font-size: 11px !important;
+  font-weight: 700;
+  letter-spacing: 0.055em;
+}
+
+.scFinalWorkspacePage .scHealthIdentity strong {
+  color: #172033;
+  font-size: 19px !important;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.scFinalWorkspacePage .scHealthIdentity p {
+  margin-top: 6px;
+  color: #64748b;
+  font-size: 13px !important;
+  line-height: 1.55;
+}
+
+.scFinalWorkspacePage .scHealthStatusBlock {
+  min-width: 180px;
+  padding: 12px 14px;
+  gap: 4px;
+  border-color: #dce3ef;
+  border-radius: 11px;
+  background: #f8faff;
+}
+
+.scFinalWorkspacePage .scHealthStatusBlock small,
+.scFinalWorkspacePage .scHealthStatusBlock span {
+  color: #64748b;
+  font-size: 11px !important;
+}
+
+.scFinalWorkspacePage .scHealthStatusBlock strong {
+  font-size: 13px !important;
+}
+
+.scFinalWorkspacePage .scHealthMetrics > div {
+  min-height: 82px;
+  padding: 14px 16px;
+  grid-template-columns: 36px minmax(0, 1fr);
+  column-gap: 10px;
+  border-color: #e8edf5;
+}
+
+.scFinalWorkspacePage .scHealthMetrics > div > span {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+.scFinalWorkspacePage .scHealthMetrics strong {
+  color: #172033;
+  font-size: 18px !important;
+  font-weight: 700;
+}
+
+.scFinalWorkspacePage .scHealthMetrics small {
+  color: #64748b;
+  font-size: 11px !important;
+  font-weight: 600;
+}
+
+.scFinalWorkspacePage .scHealthFooter {
+  padding: 15px 20px;
+}
+
+.scFinalWorkspacePage .scHealthRuntimeInfo > span {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+.scFinalWorkspacePage .scHealthRuntimeInfo small,
+.scFinalWorkspacePage .scHealthRuntimeInfo strong {
+  color: #526176;
+  font-size: 12px !important;
+}
+
+.scFinalWorkspacePage .scHealthActions {
+  gap: 9px;
+}
+
+.scFinalWorkspacePage .scHealthActions button,
+.scFinalWorkspacePage .scHealthReady {
+  min-height: 40px;
+  padding: 0 14px;
+  gap: 8px;
+  border-color: #cdd7e6;
+  border-radius: 9px;
+  color: #344258;
+  font-size: 13px !important;
+  font-weight: 650;
+}
+
+.scFinalWorkspacePage .scHealthActions button:hover {
+  border-color: #3366ff;
+  background: #f3f6ff;
+  color: #2454e8;
+}
+
+.scFinalWorkspacePage .scHealthActions button.isPrimary {
+  border-color: #3366ff;
+  background: #3366ff;
+  box-shadow: 0 3px 8px rgba(51, 102, 255, 0.18);
+  color: #fff;
+}
+
+.scFinalWorkspacePage .scHealthActions button.isPrimary:hover {
+  border-color: #2454e8;
+  background: #2454e8;
+}
+
+.scFinalWorkspacePage .scHealthSafetyNote {
+  padding: 11px 20px;
+  border-color: #e8edf5;
+  background: #f8faff;
+  color: #526176;
+  font-size: 12px !important;
+  line-height: 1.5;
+}
+
+.scFinalWorkspacePage .scFinalDiagnosticsHeader {
+  min-height: 74px;
+  padding: 0 20px;
+}
+
+.scFinalWorkspacePage .scFinalDiagnosticsIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: #edf3ff;
+  color: #3366ff;
+  font-size: 17px;
+}
+
+.scFinalWorkspacePage .scFinalDiagnosticsHeader strong {
+  color: #172033;
+  font-size: 16px !important;
+  font-weight: 700;
+}
+
+.scFinalWorkspacePage .scFinalDiagnosticsHeader small {
+  color: #64748b;
+  font-size: 12px !important;
+}
+
+.scFinalWorkspacePage .scFinalDiagnosticsSummary > span {
+  min-width: 76px;
+  padding: 8px 11px;
+  border-radius: 9px;
+  font-size: 11px !important;
+}
+
+.scFinalWorkspacePage .scFinalDiagnosticsSummary strong {
+  font-size: 15px !important;
+}
+
+.scFinalWorkspacePage .scFinalDiagnosticsList {
+  padding: 14px;
+  gap: 10px;
+}
+
+.scFinalWorkspacePage .scFinalDiagnosticItem {
+  border-radius: 11px;
+  box-shadow: 0 1px 2px rgba(24, 39, 75, 0.03);
+}
+
+.scFinalWorkspacePage .scFinalDiagnosticMain {
+  padding: 14px 15px;
+  gap: 12px;
+}
+
+.scFinalWorkspacePage .scFinalDiagnosticSeverity {
+  width: 34px;
+  height: 34px;
+  flex-basis: 34px;
+  border-radius: 9px;
+  background: #fff5e5;
+  color: #a66a00;
+  font-size: 15px;
+}
+
+.scFinalWorkspacePage .scFinalDiagnosticItem.isError .scFinalDiagnosticSeverity {
+  background: #fff0f0;
+  color: #c53d46;
+}
+
+.scFinalWorkspacePage .scFinalDiagnosticItem.isWarning .scFinalDiagnosticSeverity {
+  background: #fff5e5;
+  color: #a66a00;
+}
+
+.scFinalWorkspacePage .scFinalDiagnosticCopy strong {
+  color: #263247;
+  font-size: 13px !important;
+  font-weight: 650;
+  line-height: 1.45;
+}
+
+.scFinalWorkspacePage .scFinalDiagnosticCopy span,
+.scFinalWorkspacePage .scFinalDiagnosticCopy small,
+.scFinalWorkspacePage .scFinalDiagnosticCopy code {
+  color: #64748b;
+  font-size: 12px !important;
+  line-height: 1.45;
+}
+
+.scFinalWorkspacePage .scFinalDiagnosticActions {
+  gap: 8px;
+  padding-right: 12px;
+}
+
+.scFinalWorkspacePage .scFinalDiagnosticActions button {
+  min-height: 36px;
+  padding: 0 12px;
+  border-color: #d5deeb;
+  border-radius: 8px;
+  background: #fff;
+  color: #344258;
+  font-size: 12px !important;
+  font-weight: 600;
+}
+
+.scFinalWorkspacePage .scFinalDiagnosticActions button:hover {
+  border-color: #3366ff;
+  background: #f3f6ff;
+  color: #2454e8;
+}
+
+.scFinalWorkspacePage .scHealthActions button:focus-visible,
+.scFinalWorkspacePage .scFinalDiagnosticActions button:focus-visible,
+.scFinalWorkspacePage .scFinalDiagnosticMain:focus-visible {
+  outline: 3px solid rgba(51, 102, 255, 0.28);
+  outline-offset: 2px;
+}
+
+@media (max-width: 720px) {
+  .scFinalWorkspacePage .scHealthCenterTop {
+    flex-direction: column;
+  }
+
+  .scFinalWorkspacePage .scHealthStatusBlock {
+    width: 100%;
+    align-items: flex-start;
+  }
+
+  .scFinalWorkspacePage .scHealthMetrics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .scFinalWorkspacePage .scHealthMetrics > div {
+    border-bottom: 1px solid #e8edf5;
+  }
+
+  .scFinalWorkspacePage .scHealthFooter {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .scFinalWorkspacePage .scHealthActions {
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .scFinalWorkspacePage .scFinalDiagnosticItem {
+    grid-template-columns: 1fr;
+  }
+
+  .scFinalWorkspacePage .scFinalDiagnosticActions {
+    padding: 0 12px 12px 61px;
+    flex-wrap: wrap;
+  }
+}
+
+/* Final builder typography override: one UI font across every Start Building
+   and workspace control. Keep code entry and Monaco in their code fonts. */
+.scFinalWorkspacePage
+  *:not(i):not(svg):not(code):not(pre):not(textarea) {
+  font-family: "Inter", ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+}
+
+.scFinalWorkspacePage .monaco-editor,
+.scFinalWorkspacePage .monaco-editor * {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace !important;
+}
+
+.scFinalWorkspacePage .scV123StartPanel :is(
+  .scSimpleStartHeader strong,
+  .scSimpleStartHeader span,
+  .scV123ChoiceCard strong,
+  .scV123ChoiceCard p,
+  .scV123ChoiceAction,
+  .scV123BackButton,
+  .scV123ClearButton,
+  .scSimplePasteFooter,
+  .scSimpleImportCopy strong,
+  .scSimpleImportCopy p,
+  .scSimpleImportActions label,
+  .scSimpleImportNote,
+  .scSimpleStartMessage
+) {
+  font-family: "Inter", ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+}
+
+.scFinalWorkspacePage .scV123ChoiceCard > p,
+.scFinalWorkspacePage .scSimpleImportCopy p {
+  font-size: 13px !important;
+  line-height: 1.65 !important;
+}
+
+.scFinalWorkspacePage .scSimpleStartHeader strong {
+  font-size: 20px !important;
+  line-height: 1.3 !important;
+}
+
+.scFinalWorkspacePage .scV123ChoiceCard > strong {
+  font-size: 16px !important;
+  line-height: 1.35 !important;
+}
+
+.scFinalWorkspacePage .scV123ChoiceAction,
+.scFinalWorkspacePage .scSimpleImportActions label,
+.scFinalWorkspacePage .scV123BackButton,
+.scFinalWorkspacePage .scV123ClearButton {
+  font-size: 12px !important;
+  font-weight: 600 !important;
+}
+
+.scFinalWorkspacePage .scWorkspaceTabs button,
+.scFinalWorkspacePage .scFinalHeaderButton,
+.scFinalWorkspacePage .scFinalPrimaryButton,
+.scFinalWorkspacePage .scFinalEditorActions button {
+  font-family: "Inter", ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+}
+
 /* Keep exact black/blue SplitCode logo readable */
 .scFooterLogoPlate {
   background: #FFFFFF !important;
@@ -15363,4 +16945,115 @@ iframe {
   border-color: rgba(51, 102, 255, 0.38) !important;
   background: rgba(51, 102, 255, 0.10) !important;
   color: #FFFFFF !important;
+}
+
+/* Final file-tree interaction pass: deliberate hover and readable type badges. */
+.scFinalWorkspacePage .scTreeFolderRow,
+.scFinalWorkspacePage .scTreeFileRow {
+  border-color: transparent !important;
+  border-radius: 9px !important;
+  transition: background-color 140ms ease, border-color 140ms ease, box-shadow 140ms ease;
+}
+
+.scFinalWorkspacePage .scTreeFolderRow:hover,
+.scFinalWorkspacePage .scTreeFileRow:hover:not(.activeExplorerRow) {
+  border-color: #dce5f1 !important;
+  background: #f5f8fc !important;
+  box-shadow: 0 1px 3px rgba(24, 39, 75, 0.045);
+}
+
+.scFinalWorkspacePage .scTreeFolderRow:focus-within,
+.scFinalWorkspacePage .scTreeFileRow:focus-within {
+  border-color: #b9ccff !important;
+  background: #f2f6ff !important;
+  box-shadow: 0 0 0 2px rgba(51, 102, 255, 0.10);
+}
+
+.scFinalWorkspacePage .scTreeFileRow .scTreeTypeLabel {
+  min-width: 38px !important;
+  width: 38px !important;
+  height: 23px !important;
+  flex-basis: 38px !important;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  padding: 0 5px !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 6px !important;
+  background: #f8fafc !important;
+  box-shadow: none !important;
+  font-family: inherit !important;
+  font-size: 9px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.025em !important;
+  line-height: 1 !important;
+  text-align: center;
+}
+
+.scFinalWorkspacePage .scTreeFileRow .scTreeTypeLabel.html {
+  border-color: #f4d1c3 !important;
+  background: #fff5f0 !important;
+  color: #b54724 !important;
+}
+
+.scFinalWorkspacePage .scTreeFileRow .scTreeTypeLabel.css {
+  border-color: #cfe0ff !important;
+  background: #f1f6ff !important;
+  color: #285fc5 !important;
+}
+
+.scFinalWorkspacePage .scTreeFileRow .scTreeTypeLabel.javascript {
+  border-color: #eadc9c !important;
+  background: #fff9df !important;
+  color: #806200 !important;
+}
+
+.scFinalWorkspacePage .scTreeFileRow .scTreeTypeLabel.typescript,
+.scFinalWorkspacePage .scTreeFileRow .scTreeTypeLabel.tsx {
+  border-color: #cfe0ff !important;
+  background: #f1f6ff !important;
+  color: #285fc5 !important;
+}
+
+.scFinalWorkspacePage .scTreeFileRow .scTreeTypeLabel.jsx {
+  border-color: #c8edf5 !important;
+  background: #effbff !important;
+  color: #126b83 !important;
+}
+
+.scFinalWorkspacePage .scTreeFileRow .scTreeTypeLabel.json,
+.scFinalWorkspacePage .scTreeFileRow .scTreeTypeLabel.vue,
+.scFinalWorkspacePage .scTreeFileRow .scTreeTypeLabel.svelte {
+  border-color: #cbe9d5 !important;
+  background: #f0faf3 !important;
+  color: #267345 !important;
+}
+
+.scFinalWorkspacePage .scTreeFileRow .fileName {
+  color: #27364d !important;
+  font-size: 13.5px !important;
+  font-weight: 520 !important;
+  letter-spacing: -0.01em;
+}
+
+.scFinalWorkspacePage .scTreeFileRow.activeExplorerRow .fileName,
+.scFinalWorkspacePage .scTreeFileRow .fileExplorerFile.activeFile .fileName {
+  color: #1949b5 !important;
+  font-weight: 650 !important;
+}
+
+.scFinalWorkspacePage .scTreeFileRow.activeExplorerRow .explorerRowActions {
+  background: linear-gradient(90deg, rgba(237, 243, 255, 0), #edf3ff 30%) !important;
+}
+
+.scFinalWorkspacePage .scTreeFileRow:focus-within .fileExplorerFile,
+.scFinalWorkspacePage .scTreeFolderRow:focus-within .fileExplorerFolder {
+  outline: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scFinalWorkspacePage .scTreeFolderRow,
+  .scFinalWorkspacePage .scTreeFileRow {
+    transition: none;
+  }
 }

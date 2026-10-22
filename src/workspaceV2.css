@@ -1,0 +1,1138 @@
+/* SPLITCODE WORKSPACE V2
+   One functional work surface; no decorative dashboard cards.
+   Imported last so older release themes do not override this workspace. */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;550;600;650;700;750;800&display=swap');
+.scFinalWorkspacePage {
+  --v2-ink: #172338;
+  --v2-secondary: #65758c;
+  --v2-line: #e5eaf1;
+  --v2-blue: #2954d7;
+  --v2-surface: #ffffff;
+  --v2-panel: #f8fafc;
+  color: var(--v2-ink) !important;
+  background: #fff !important;
+  min-height: 100vh;
+  font-family: Inter, 'Segoe UI', Arial, sans-serif !important;
+  letter-spacing: -.012em;
+}
+.scFinalWorkspacePage .scIcon {
+  flex: 0 0 auto;
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  stroke: currentColor;
+}
+.scFinalWorkspacePage .scIcon.isRotateMinus90 { transform: rotate(-90deg); }
+.scFinalWorkspacePage button .scIcon,
+.scFinalWorkspacePage a .scIcon,
+.scFinalWorkspacePage span .scIcon,
+.scFinalWorkspacePage summary .scIcon {
+  vertical-align: middle;
+}
+.scFinalWorkspacePage .scV2HeaderTextButton .scIcon,
+.scFinalWorkspacePage .scStableImportButton .scIcon,
+.scFinalWorkspacePage .scFinalHeaderButton .scIcon,
+.scFinalWorkspacePage .scWorkspaceTabs > button .scIcon,
+.scFinalWorkspacePage .scFinalPreviewTextButton .scIcon,
+.scFinalWorkspacePage .scFinalViewportButton .scIcon,
+.scFinalWorkspacePage .scV3DownloadButton .scIcon,
+.scFinalWorkspacePage .scDialogClose .scIcon {
+  width: 18px;
+  height: 18px;
+}
+.scFinalWorkspacePage .scWorkspaceMenuTrigger .scIcon,
+.scFinalWorkspacePage .scFinalIconButton .scIcon,
+.scFinalWorkspacePage .scCleanCreateActions .scIcon {
+  width: 16px;
+  height: 16px;
+}
+.scFinalWorkspacePage .folderArrow.scIcon {
+  width: 14px;
+  height: 14px;
+}
+.scFinalWorkspacePage button, .scFinalWorkspacePage input,
+.scFinalWorkspacePage textarea, .scFinalWorkspacePage select {
+  font-family: Inter, 'Segoe UI', Arial, sans-serif !important;
+}
+.scFinalWorkspacePage .scFinalHeader {
+  position: relative !important;
+  height: 66px !important;
+  min-height: 66px !important;
+  z-index: 70 !important;
+  background: white !important;
+  box-shadow: none !important;
+  border-bottom: 1px solid var(--v2-line) !important;
+}
+.scFinalWorkspacePage .scFinalHeaderInner {
+  min-height: 65px !important;
+  height: 65px !important;
+  width: 100% !important;
+  max-width: none !important;
+  padding: 0 25px !important;
+  gap: 18px !important;
+  box-sizing: border-box !important;
+}
+.scFinalWorkspacePage .scFinalBrandLogoImage { width: 125px !important; max-height: 30px !important; }
+.scFinalWorkspacePage .scFinalHeaderDivider {
+  height: 24px !important;
+  width: 1px !important;
+  margin: 0 16px !important;
+  background: #e4e8ef !important;
+}
+.scFinalWorkspacePage .scFinalWorkspaceTitle strong {
+  font-size: 13px !important; line-height: 17px !important;
+  color: #1b2941 !important; font-weight: 650 !important;
+}
+.scFinalWorkspacePage .scFinalWorkspaceTitle span {
+  font-size: 11px !important; line-height: 15px !important;
+  color: #8b98aa !important; font-weight: 450 !important;
+}
+.scFinalWorkspacePage .scFinalHeaderActions { gap: 8px !important; }
+.scFinalWorkspacePage .scFinalHeaderActions button { font-size: 12px !important; font-weight: 600 !important; }
+.scV2HeaderTextButton {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  background: transparent; border: 1px solid transparent; border-radius: 7px;
+  min-height: 35px; padding: 0 12px; color: #4c5c73; cursor: pointer;
+}
+.scV2HeaderTextButton:hover { color: var(--v2-blue); background: #f4f7fc; }
+.scFinalWorkspacePage .scStableImportButton {
+  display: inline-flex !important; align-items: center !important; gap: 8px !important;
+  background: white !important; border: 1px solid #dbe2ec !important;
+  border-radius: 7px !important; color: #34455f !important;
+  min-height: 35px !important; padding: 0 12px !important;
+  font-size: 12px !important; font-weight: 600 !important;
+}
+.scFinalWorkspacePage .scStableImportButton:hover { background: #f5f7fb !important; }
+.scFinalWorkspacePage .scFinalSaveStatus,
+.scFinalWorkspacePage .scFinalSaveStatus-saved {
+  min-height: 32px !important; border: 0 !important; border-radius: 0 !important;
+  padding: 0 11px !important; gap: 7px !important;
+  background: transparent !important; color: #77869b !important;
+  font-size: 11px !important; font-weight: 500 !important;
+}
+.scFinalWorkspacePage .scFinalStatusDot { width: 7px !important; height: 7px !important; background: #269b73 !important; }
+.scFinalWorkspacePage .scFinalSaveStatus-error { color: #bf4040 !important; }
+.scFinalWorkspacePage .scFinalSaveStatus-error .scFinalStatusDot { background: #bf4040 !important; }
+.scFinalWorkspacePage .scFinalHeaderButton {
+  border: 1px solid #2854d8 !important; border-radius: 7px !important;
+  min-height: 36px !important; padding: 0 15px !important;
+  background: #2954d7 !important; color: #fff !important;
+  font-size: 12px !important; font-weight: 650 !important;
+  box-shadow: none !important;
+}
+.scFinalWorkspacePage .scFinalHeaderButton:hover { background: #2145b1 !important; }
+.scFinalWorkspacePage .scWorkspaceMenuTrigger {
+  min-width: 35px !important; height: 35px !important;
+  border: 1px solid #e1e6ee !important; border-radius: 7px !important;
+  background: white !important; color: #58677b !important;
+}
+/* Single uninterrupted layout */
+.scFinalWorkspacePage .scFinalContainer {
+  width: 100% !important; max-width: none !important;
+  margin: 0 !important; padding: 0 !important;
+}
+.scFinalWorkspacePage .scFinalWorkspaceGrid {
+  width: 100% !important; min-height: calc(100vh - 66px) !important;
+  grid-template-columns: 268px minmax(0, 1fr) !important;
+  gap: 0 !important; align-items: stretch !important;
+}
+.scFinalWorkspacePage .scFinalSidebar {
+  position: relative !important; top: 0 !important;
+  width: auto !important; height: calc(100vh - 66px) !important;
+  min-height: 0 !important; max-height: none !important;
+  overflow: hidden !important; border: 0 !important;
+  border-right: 1px solid var(--v2-line) !important;
+  border-radius: 0 !important; background: #f9fafc !important;
+  box-shadow: none !important;
+}
+.scFinalWorkspacePage .scFinalSidebarHeader {
+  padding: 18px 14px 13px !important;
+  background: #f9fafc !important; border: 0 !important;
+}
+.scFinalWorkspacePage .scFinalSidebarTitleRow { gap: 8px !important; min-height: 35px !important; }
+.scFinalWorkspacePage .scFinalSidebarTitle i { display: none !important; }
+.scFinalWorkspacePage .scFinalSidebarTitle strong {
+  font-size: 11px !important; font-weight: 750 !important;
+  letter-spacing: .075em !important; text-transform: uppercase !important;
+  color: #67768a !important;
+}
+.scFinalWorkspacePage .scCleanCreateActions,
+.scFinalWorkspacePage .scV123SidebarActions {
+  min-height: 31px !important; padding: 0 !important;
+  background: transparent !important; border: none !important; box-shadow: none !important;
+}
+.scFinalWorkspacePage .scCleanCreateActions button {
+  width: 29px !important; height: 29px !important;
+  padding: 0 !important; display: inline-flex !important;
+  align-items: center !important; justify-content: center !important;
+  border-radius: 6px !important; border: 1px solid transparent !important;
+  color: #64758c !important; background: transparent !important;
+}
+.scFinalWorkspacePage .scCleanCreateActions button:hover { background: #ebf0f9 !important; color: var(--v2-blue) !important; }
+.scFinalWorkspacePage .scCleanCreateActions button > span:last-child { display: none !important; }
+.scFinalWorkspacePage .scCleanCreatePlus { font-size: 19px !important; font-weight: 400 !important; }
+.scFinalWorkspacePage .scCleanCreateDivider { margin: 0 2px !important; height: 17px !important; background: #e3e8f0 !important; }
+.scFinalWorkspacePage .scFrameworkDetector {
+  min-height: 35px !important; margin: 8px 0 !important;
+  padding: 6px 8px !important; border: none !important; border-radius: 6px !important;
+  background: #edf2fb !important; box-shadow: none !important;
+}
+.scFinalWorkspacePage .scFrameworkDetectorIcon { display: none !important; }
+.scFinalWorkspacePage .scFrameworkDetectorText small { display: none !important; }
+.scFinalWorkspacePage .scFrameworkDetectorText strong { color: #405678 !important; font-size: 11px !important; font-weight: 600 !important; }
+.scFinalWorkspacePage .scFrameworkConfidence { font-size: 9px !important; }
+.scFinalWorkspacePage .scFinalSearch {
+  margin-top: 13px !important; min-height: 35px !important;
+  background: white !important; border: 1px solid #e0e6ee !important;
+  border-radius: 7px !important; box-shadow: none !important;
+}
+.scFinalWorkspacePage .scFinalSearch input { color: #223047 !important; font-size: 12px !important; }
+.scFinalWorkspacePage .scFinalSearch input::placeholder { color: #99a3b2 !important; }
+.scFinalWorkspacePage .scFinalSidebarTree {
+  flex: 1 1 auto !important; min-height: 100px !important;
+  padding: 8px 10px !important; background: transparent !important;
+  border: 0 !important; overflow-y: auto !important;
+}
+.scFinalWorkspacePage .scFinalSidebarTree .fileExplorerFile,
+.scFinalWorkspacePage .scFinalSidebarTree .fileExplorerFolder {
+  border-radius: 5px !important; box-shadow: none !important;
+}
+.scFinalWorkspacePage .scFinalSidebarTree .fileExplorerFile.activeFile,
+.scFinalWorkspacePage .scFinalSidebarTree .activeExplorerRow {
+  box-shadow: none !important; border-color: transparent !important;
+  background: #e7eefb !important; color: #244ebc !important;
+}
+.scV2ExplorerFooter {
+  min-height: 47px; padding: 0 15px; display: flex;
+  align-items: center; justify-content: space-between; gap: 10px;
+  border-top: 1px solid #e6eaf1; color: #9aa4b4; font-size: 11px;
+}
+.scV2ExplorerFooter button { border: 0; background: transparent; padding: 7px 0; color: #667891; font-size: 11px; cursor: pointer; display: inline-flex; gap: 6px; align-items: center; }
+.scV2ExplorerFooter button:not(:disabled):hover { color: var(--v2-blue); }
+/* Editor, view tabs and preview all align to the same grid */
+.scFinalWorkspacePage .scFinalMain {
+  min-width: 0 !important; min-height: calc(100vh - 66px) !important;
+  max-height: none !important; gap: 0 !important; background: #fff !important;
+}
+.scFinalWorkspacePage .scWorkspaceTabs {
+  position: relative !important; top: 0 !important; z-index: 26 !important;
+  margin: 0 !important; flex: 0 0 54px !important;
+  height: 54px !important; min-height: 54px !important;
+  padding: 0 20px !important; display: flex !important; align-items: center !important;
+  border: 0 !important; border-bottom: 1px solid var(--v2-line) !important;
+  border-radius: 0 !important; background: #fff !important;
+  gap: 26px !important; box-shadow: none !important; overflow: visible !important;
+}
+.scFinalWorkspacePage .scWorkspaceTabs > button {
+  position: relative; align-self: stretch !important; height: 53px !important;
+  margin: 0 !important; padding: 0 1px !important; border: 0 !important;
+  border-radius: 0 !important; background: transparent !important;
+  box-shadow: none !important; color: #7b899c !important;
+  font-size: 12px !important; font-weight: 600 !important; gap: 8px !important;
+}
+.scFinalWorkspacePage .scWorkspaceTabs > button:hover { color: #273c61 !important; }
+.scFinalWorkspacePage .scWorkspaceTabs > button.isActive {
+  color: #2351ca !important; background: none !important; box-shadow: none !important;
+}
+.scFinalWorkspacePage .scWorkspaceTabs > button.isActive::after {
+  content: ''; position: absolute; bottom: -1px; height: 2px; left: 0; right: 0;
+  background: #2855d8;
+}
+.scV2ToolsMenu { position: relative; margin-left: auto; flex: 0 0 auto; font-size: 12px; }
+.scV2ToolsMenu summary {
+  display: flex; align-items: center; gap: 7px; min-height: 35px;
+  padding: 0 10px; border: 0; border-radius: 6px;
+  color: #74839a; cursor: pointer; list-style: none; font-weight: 600;
+}
+.scV2ToolsMenu summary::-webkit-details-marker { display: none; }
+.scV2ToolsMenu summary:hover, .scV2ToolsMenu[open] summary { background: #f2f5fa; color: #3458ad; }
+.scV2ToolsMenu summary i:last-child { font-size: 9px; }
+.scV2ToolsList {
+  position: absolute; z-index: 40; right: 0; top: 40px; min-width: 185px;
+  padding: 5px; border: 1px solid var(--v2-line); border-radius: 9px;
+  background: white; box-shadow: 0 14px 34px rgba(21,40,76,.12);
+}
+.scFinalWorkspacePage .scV2ToolsList button {
+  display: flex !important; align-items: center !important; justify-content: flex-start !important;
+  gap: 10px !important; width: 100%; min-height: 36px !important;
+  height: auto !important; padding: 7px 10px !important;
+  border: 0 !important; border-radius: 5px !important;
+  background: transparent !important; box-shadow: none !important;
+  color: #4b5c75 !important; font-size: 12px !important; cursor: pointer;
+}
+.scFinalWorkspacePage .scV2ToolsList button:hover,
+.scFinalWorkspacePage .scV2ToolsList button.isActive { background: #eff4ff !important; color: #2954d7 !important; }
+.scFinalWorkspacePage .scFinalEditorCard,
+.scFinalWorkspacePage .scFinalPreviewCard,
+.scFinalWorkspacePage .scHealthCenter,
+.scFinalWorkspacePage .scFinalDiagnostics,
+.scFinalWorkspacePage .scExportPreflight,
+.scFinalWorkspacePage .scRelationshipPanel {
+  margin: 0 !important; border: none !important; border-radius: 0 !important;
+  box-shadow: none !important; background: white !important;
+}
+.scFinalWorkspacePage .scFinalEditorCard { display: flex; flex-direction: column; flex: 1 1 auto; min-height: 0 !important; }
+.scFinalWorkspacePage .scFinalTabsToolbar {
+  flex: 0 0 46px !important; min-height: 46px !important;
+  padding: 0 12px !important; align-items: center !important;
+  border-bottom: 1px solid #e6eaf0 !important;
+  background: #fafbfd !important;
+}
+.scFinalWorkspacePage .scFinalTabsList { align-items: stretch !important; gap: 1px !important; height: 46px !important; }
+.scFinalWorkspacePage .scFinalFileTab { align-self: stretch; height: 46px !important; border-radius: 0 !important; border: 0 !important; box-shadow: none !important; padding: 0 9px !important; color: #71829a !important; }
+.scFinalWorkspacePage .scFinalFileTab.isActive { color: #2c4e98 !important; border-bottom: 2px solid #2e5cdb !important; background: #fff !important; }
+.scFinalWorkspacePage .scFinalTabsEmpty { height: 46px !important; font-size: 11px !important; color: #a1adbd !important; }
+.scFinalWorkspacePage .scFinalAddTab { height: 28px !important; width: 28px !important; align-self: center !important; border-radius: 5px !important; border: 0 !important; background: transparent !important; color: #8190a5 !important; }
+.scFinalWorkspacePage .scFinalAddTab:hover { background: #eaf0fc !important; }
+.scFinalWorkspacePage .scFinalTabTools { padding: 0 !important; }
+.scFinalWorkspacePage .scFinalTabTools .scFinalIconButton { width: 29px !important; height: 29px !important; border: 0 !important; border-radius: 5px !important; background: transparent !important; }
+.scFinalWorkspacePage .scFinalLanguageBadge { border: 0 !important; background: transparent !important; color: #8897aa !important; font-size: 10px !important; font-weight: 550 !important; }
+.scFinalWorkspacePage .scFinalEditorSurface {
+  flex: 1 1 auto !important; display: flex !important;
+  min-height: 440px !important; height: calc(100vh - 244px) !important;
+  background: #141b2c !important;
+}
+.scFinalWorkspacePage .monacoEditorWrapper,
+.scFinalWorkspacePage .monacoEmptyState { height: 100% !important; flex: 1 1 100%; min-height: 400px !important; }
+.scFinalWorkspacePage .monacoEditorWrapper > section,
+.scFinalWorkspacePage .monacoEditorWrapper > div { height: 100% !important; }
+.scFinalWorkspacePage .scFinalEditorStatus { border-top: 1px solid #e9edf3 !important; background: white !important; color: #8794a5 !important; font-size: 10px !important; }
+.scFinalWorkspacePage .scFinalEditorActions {
+  display: flex !important; flex-wrap: wrap !important; gap: 6px !important;
+  border-top: 1px solid #e8edf3 !important; padding: 8px 14px !important;
+  background: white !important; margin: 0 !important; border-radius: 0 !important;
+}
+.scFinalWorkspacePage .scFinalEditorActions button {
+  box-shadow: none !important; border-radius: 5px !important;
+  min-height: 30px !important; padding: 5px 9px !important;
+  font-size: 11px !important; font-weight: 550 !important;
+}
+/* Empty workspace: intentionally replaces the editor, not another panel above it. */
+.scFinalWorkspacePage .scV2NewProject > .scFinalEditorCard,
+.scFinalWorkspacePage .scV2NewProject > .scFinalEditorActions,
+.scFinalWorkspacePage .scV2NewProject > .scFinalWorkflow,
+.scFinalWorkspacePage .scV2NewProject > .scFinalPreviewCard,
+.scFinalWorkspacePage .scV2NewProject > .scFinalDiagnostics,
+.scFinalWorkspacePage .scV2NewProject > .scHealthCenter,
+.scFinalWorkspacePage .scV2NewProject > .scRelationshipPanel,
+.scFinalWorkspacePage .scV2NewProject > .scExportPreflight { display: none !important; }
+.scV2EmptyWorkspace {
+  flex: 1; min-height: 600px; display: flex; align-items: center;
+  justify-content: center; flex-direction: column; padding: 64px 24px 78px;
+  text-align: center; background: radial-gradient(ellipse at 50% 37%, #f9fbff 0, #fff 65%);
+}
+.scV2EmptyMark {
+  display: grid; place-items: center; width: 60px; height: 60px;
+  margin-bottom: 26px; border: 1px solid #dfe8fa; border-radius: 14px;
+  color: #2855d8; background: #f0f5ff; font-size: 24px;
+}
+.scV2Eyebrow { font-size: 10px; font-weight: 750; letter-spacing: .17em; color: #8a9ab2; }
+.scV2EmptyWorkspace h1 {
+  margin: 14px 0 13px; color: #14233e;
+  font-size: clamp(25px, 3.5vw, 36px); line-height: 1.19;
+  letter-spacing: -.055em; font-weight: 750;
+}
+.scV2EmptyWorkspace h1 span { color: #315cc8; }
+.scV2EmptyWorkspace p {
+  max-width: 475px; margin: 0 !important; line-height: 1.73;
+  color: #738198; font-size: 13px; font-weight: 450;
+}
+.scV2EmptyActions { margin-top: 30px; display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
+.scFinalWorkspacePage .scV2EmptyActions button {
+  min-height: 43px !important; padding: 0 18px !important;
+  display: inline-flex; align-items: center; justify-content: center; gap: 11px;
+  border-radius: 7px !important; font-size: 12px !important; font-weight: 650 !important;
+  cursor: pointer; box-shadow: none !important;
+}
+.scFinalWorkspacePage .scV2EmptyPrimary { color: white !important; background: #2c56d6 !important; border: 1px solid #2c56d6 !important; }
+.scFinalWorkspacePage .scV2EmptyPrimary:hover { background: #2244af !important; }
+.scFinalWorkspacePage .scV2EmptySecondary { color: #354761 !important; background: #fff !important; border: 1px solid #dce4ee !important; }
+.scFinalWorkspacePage .scV2EmptySecondary:hover { background: #f5f7fb !important; }
+.scFinalWorkspacePage .scV2BlankLink { margin-top: 20px; border: 0; background: transparent; color: #68768a; padding: 7px 10px; font-size: 11px; cursor: pointer; }
+.scFinalWorkspacePage .scV2BlankLink:hover { color: #2954d7; }
+.scV2EmptyFooter { margin-top: 55px; color: #9ba8b9; font-size: 10px; display: flex; align-items: center; gap: 7px; }
+/* Modals instead of a permanent onboarding dashboard */
+.scV2StartBackdrop {
+  position: fixed; inset: 0; z-index: 1500;
+  background: rgba(15,26,48,.46); display: flex;
+  justify-content: center; align-items: center; padding: 26px;
+  backdrop-filter: blur(3px);
+}
+.scFinalWorkspacePage .scV2StartDialog {
+  width: min(680px, 100%) !important; max-height: min(90vh, 840px) !important;
+  overflow: auto !important; margin: 0 !important;
+  padding: 0 !important; border: 1px solid #e3e8f2 !important;
+  border-radius: 12px !important; background: white !important;
+  box-shadow: 0 30px 90px rgba(10,23,51,.20) !important;
+}
+.scFinalWorkspacePage .scSimpleStartHeader {
+  padding: 19px 24px !important; min-height: 78px !important;
+  background: white !important; border-bottom: 1px solid #edf0f5 !important;
+}
+.scFinalWorkspacePage .scSimpleStartHeader strong { font-size: 16px !important; color: #15233c !important; font-weight: 700 !important; }
+.scFinalWorkspacePage .scSimpleStartHeader span { color: #77849a !important; font-size: 11px !important; }
+.scFinalWorkspacePage .scSimpleStartIcon { display: none !important; }
+.scFinalWorkspacePage .scV123FocusedCard { margin: 0 !important; border: 0 !important; box-shadow: none !important; border-radius: 0 !important; padding: 22px 24px 24px !important; }
+.scFinalWorkspacePage .scV123FocusedTop { margin-bottom: 13px !important; }
+.scFinalWorkspacePage .scV123BackButton { display: none !important; }
+.scFinalWorkspacePage .scSimplePasteCard textarea { min-height: 270px !important; background: #141b2a !important; color: #ecf1ff !important; font-family: 'Cascadia Code', Consolas, monospace !important; font-size: 12px !important; border-radius: 8px !important; }
+.scFinalWorkspacePage .scSimplePasteFooter { margin-top: 13px !important; }
+.scFinalWorkspacePage .scSimpleImportCopy p { max-width: 500px !important; color: #79869c !important; line-height: 1.7 !important; }
+.scFinalWorkspacePage .scSimpleImportActions { margin-top: 20px !important; }
+.scFinalWorkspacePage .scSimpleImportButton { border-radius: 7px !important; }
+.scV2StatusToast {
+  position: fixed; z-index: 1100; right: 18px; bottom: 18px; max-width: min(430px, calc(100vw - 36px));
+  display: flex; align-items: center; gap: 10px; padding: 12px 14px;
+  border: 1px solid #e0e6ef; border-radius: 8px;
+  background: white; color: #475974; box-shadow: 0 12px 32px rgba(17,30,56,.12);
+  font-size: 12px;
+}
+.scV2StatusToast > button { margin-left: auto; border: 0; color: #8190a6; background: transparent; cursor: pointer; }
+@media (max-width: 900px) {
+  .scFinalWorkspacePage .scFinalWorkspaceGrid { grid-template-columns: 230px minmax(0, 1fr) !important; }
+  .scFinalWorkspacePage .scFinalHeaderInner { padding: 0 14px !important; }
+  .scFinalWorkspacePage .scFinalSidebar { height: calc(100vh - 66px) !important; max-height: none !important; position: relative !important; }
+}
+@media (max-width: 690px) {
+  .scFinalWorkspacePage .scFinalHeader { height: 59px !important; min-height: 59px !important; }
+  .scFinalWorkspacePage .scFinalHeaderInner { height: 58px !important; min-height: 58px !important; }
+  .scFinalWorkspacePage .scFinalBrandLogoImage { width: 103px !important; }
+  .scFinalWorkspacePage .scFinalWorkspaceTitle, .scFinalWorkspacePage .scFinalHeaderDivider,
+  .scFinalWorkspacePage .scFinalSaveStatus { display: none !important; }
+  .scFinalWorkspacePage .scV2HeaderTextButton { padding: 0 8px; }
+  .scV2HeaderTextButton span { display: none; }
+  .scFinalWorkspacePage .scFinalWorkspaceGrid { grid-template-columns: 1fr !important; min-height: calc(100vh - 59px) !important; }
+  .scFinalWorkspacePage .scFinalSidebar { height: auto !important; min-height: 0 !important; max-height: 230px !important; border-right: 0 !important; border-bottom: 1px solid #e5eaf1 !important; }
+  .scFinalWorkspacePage .scFinalSidebarHeader { padding: 9px 13px !important; }
+  .scFinalWorkspacePage .scFinalSearch { margin-top: 4px !important; }
+  .scFinalWorkspacePage .scFinalSidebarTree { min-height: 40px !important; max-height: 90px !important; }
+  .scV2ExplorerFooter { min-height: 30px !important; }
+  .scFinalWorkspacePage .scFinalMain { min-height: calc(100vh - 300px) !important; }
+  .scFinalWorkspacePage .scWorkspaceTabs { padding: 0 14px !important; gap: 17px !important; }
+  .scFinalWorkspacePage .scWorkspaceTabs > button { font-size: 11px !important; }
+  .scV2EmptyWorkspace { min-height: 450px; padding: 48px 18px; }
+  .scV2EmptyWorkspace h1 { font-size: 26px; }
+  .scFinalWorkspacePage .scFinalEditorSurface { min-height: 420px !important; height: 54vh !important; }
+  .scFinalWorkspacePage .scFinalEditorActions { overflow-x: auto; }
+  .scV2StartBackdrop { padding: 12px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .scFinalWorkspacePage *, .scFinalWorkspacePage *::before, .scFinalWorkspacePage *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
+/* Contextual file actions live in the tab toolbar. The old second action rail
+   duplicated Save, Copy, Download and Export, and consumed editor space. */
+.scFinalWorkspacePage .scFinalEditorActions { display: none !important; }
+.scFinalWorkspacePage .scFinalTabsToolbar .scFinalTabTools { gap: 2px !important; }
+.scFinalWorkspacePage .scFinalTabsToolbar .scFinalTabTools .scFinalIconButton:hover:not(:disabled) {
+  background: #edf2fb !important; color: #2855cc !important;
+}
+.scFinalWorkspacePage .scFinalSidebarTree .fileExplorerEmpty {
+  margin: 16px 8px !important; padding: 14px 8px !important; border: none !important;
+  background: transparent !important; box-shadow: none !important; text-align: left !important;
+}
+.scFinalWorkspacePage .scFinalSidebarTree .fileExplorerEmpty strong { font-size: 12px !important; font-weight: 600 !important; color: #8693a5 !important; }
+.scFinalWorkspacePage .scFinalSidebarTree .fileExplorerEmpty span { font-size: 11px !important; line-height: 1.6 !important; color: #a0aab8 !important; }
+.scFinalWorkspacePage .scFinalSidebarTree .fileExplorerEmpty .scTreeEmptyActions { display: none !important; }
+.scFinalWorkspacePage .scFinalSidebarTree .scTreeRootRow { color: #64758c !important; font-size: 11px !important; font-weight: 650 !important; }
+/* The active pane must exclusively own the workspace; these selectors outrank
+   legacy display declarations and the new flex editor layout. */
+.scFinalWorkspacePage .scWorkspaceView-preview > .scFinalEditorCard,
+.scFinalWorkspacePage .scWorkspaceView-issues > .scFinalEditorCard,
+.scFinalWorkspacePage .scWorkspaceView-relationships > .scFinalEditorCard,
+.scFinalWorkspacePage .scWorkspaceView-export > .scFinalEditorCard { display: none !important; }
+@media (max-width: 420px) {
+  .scFinalWorkspacePage .scStableImportButton span { display: none !important; }
+  .scFinalWorkspacePage .scFinalHeaderActions { gap: 4px !important; }
+  .scFinalWorkspacePage .scFinalHeaderButton { padding: 0 9px !important; }
+  .scFinalWorkspacePage .scFinalHeaderInner { padding: 0 9px !important; }
+}
+.scFinalWorkspacePage .scFinalHeaderButton:disabled { opacity: .48 !important; cursor: not-allowed !important; }
+.scFinalWorkspacePage .scWorkspaceView-relationships .scV2ToolsMenu summary,
+.scFinalWorkspacePage .scWorkspaceView-export .scV2ToolsMenu summary {
+  color: #2954d7 !important; background: #f0f4ff !important;
+}
+
+/* V2.1 — Developer Checks replaces the redundant five-metric health dashboard. */
+.scFinalWorkspacePage .scWorkspaceView-code > .scDevChecks,
+.scFinalWorkspacePage .scWorkspaceView-preview > .scDevChecks,
+.scFinalWorkspacePage .scWorkspaceView-relationships > .scDevChecks,
+.scFinalWorkspacePage .scWorkspaceView-export > .scDevChecks,
+.scFinalWorkspacePage .scV2NewProject > .scDevChecks { display: none !important; }
+.scFinalWorkspacePage .scWorkspaceView-issues > .scDevChecks { display: block !important; }
+.scDevChecks {
+  min-height: calc(100vh - 124px); padding: 32px 36px 52px;
+  background: #fff; color: #1b2b44; font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+.scDevHeader { display: flex; align-items: flex-start; justify-content: space-between; gap: 20px; padding-bottom: 26px; border-bottom: 1px solid #edf0f4; }
+.scDevOverline { color: #6d7f98; font-size: 10px; letter-spacing: .12em; font-weight: 700; margin-bottom: 9px; }
+.scDevHeader h1 { font-size: 24px; letter-spacing: -.045em; line-height: 1.25; color: #1a2940; font-weight: 730; margin: 0 0 7px; }
+.scDevHeader p { font-size: 12px; line-height: 1.65; color: #7a8799; margin: 0; }
+.scFinalWorkspacePage .scDevReportButton {
+  white-space: nowrap; display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  min-height: 35px; padding: 0 12px; border: 1px solid #dce3ec !important;
+  border-radius: 7px !important; color: #415371 !important; background: white !important;
+  font-size: 12px !important; font-weight: 600 !important; box-shadow: none !important; cursor: pointer;
+}
+.scFinalWorkspacePage .scDevReportButton:hover:not(:disabled) { background: #f6f8fb !important; }
+.scFinalWorkspacePage .scDevReportButton:disabled { opacity: .45; cursor: not-allowed; }
+.scDevLayout { display: grid; grid-template-columns: minmax(0, 1fr) 285px; gap: 34px; align-items: start; margin-top: 26px; }
+.scDevPrimary { min-width: 0; }
+.scDevProblemHeader { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 34px; }
+.scDevProblemHeading { display: flex; gap: 10px; align-items: center; }
+.scDevProblemHeading h2, .scDevSideSection h2 { margin: 0; color: #22324b; font-size: 13px; font-weight: 730; letter-spacing: -.012em; }
+.scDevCount { min-width: 21px; padding: 2px 6px; border-radius: 5px; background: #edf2f7; color: #63748a; text-align: center; font-size: 11px; font-weight: 700; }
+.scDevCount.hasIssues { color: #a46a17; background: #fff2dd; }
+.scFinalWorkspacePage .scDevFixAll {
+  display: inline-flex; align-items: center; gap: 7px; min-height: 32px; padding: 0 11px !important;
+  border-radius: 6px !important; border: 1px solid #bdd0f6 !important;
+  background: #eff4ff !important; color: #2854ce !important;
+  font-size: 11px !important; font-weight: 700 !important; cursor: pointer;
+}
+.scFinalWorkspacePage .scDevFixAll:hover { background: #e1eaff !important; }
+.scDevFilters { display: flex; gap: 4px; padding: 5px 0 12px; margin-top: 11px; border-bottom: 1px solid #e8edf3; }
+.scFinalWorkspacePage .scDevFilters button {
+  border: 0 !important; background: transparent !important; min-height: 32px; box-shadow: none !important;
+  border-radius: 6px !important; color: #7a889b !important; cursor: pointer; padding: 0 11px !important;
+  font-size: 12px !important; font-weight: 570 !important;
+}
+.scFinalWorkspacePage .scDevFilters button span { margin-left: 5px; opacity: .72; font-variant-numeric: tabular-nums; }
+.scFinalWorkspacePage .scDevFilters button.isSelected { color: #2a56d2 !important; background: #eef3ff !important; font-weight: 680 !important; }
+.scDevIssueList { display: flex; flex-direction: column; }
+.scDevIssue { display: flex; align-items: flex-start; gap: 13px; padding: 19px 0 20px; border-bottom: 1px solid #edf0f4; }
+.scDevIssue > i { margin-top: 2px; color: #cb5757; font-size: 16px; }
+.scDevIssue.is-warning > i { color: #c18a2b; }
+.scDevIssueBody { display: flex; flex-direction: column; align-items: flex-start; min-width: 0; flex: 1; gap: 7px; }
+.scDevIssueBody > strong { font-size: 12px; line-height: 1.55; color: #26344b; font-weight: 650; }
+.scFinalWorkspacePage .scDevFileLink {
+  min-height: 25px; display: inline-flex; align-items: center; gap: 6px; max-width: 100%;
+  padding: 0 !important; background: none !important; border: 0 !important; box-shadow: none !important;
+  font-size: 11px !important; font-family: 'Cascadia Code', Consolas, monospace; font-weight: 500 !important;
+  color: #2b57cd !important; cursor: pointer; overflow-wrap: anywhere; text-align: left;
+}
+.scDevIssueBody > small { font-size: 11px; color: #718098; }
+.scDevIssueBody code { padding: 2px 5px; background: #f3f5f9; color: #3a4b65; border-radius: 3px; font-size: 10px; }
+.scDevSourceLabel { font-size: 11px; color: #8794a4; }
+.scDevIssueActions { display: flex; align-items: center; gap: 7px; margin-top: 3px; flex-wrap: wrap; }
+.scFinalWorkspacePage .scDevIssueActions button {
+  font-size: 11px !important; font-weight: 640 !important; color: #536682 !important;
+  padding: 5px 9px !important; min-height: 29px; border-radius: 5px !important;
+  border: 1px solid #dfe5ef !important; background: white !important;
+  box-shadow: none !important; cursor: pointer;
+}
+.scFinalWorkspacePage .scDevIssueActions button:hover { background: #f4f7fc !important; }
+.scFinalWorkspacePage .scDevIssueActions button.isAction { border-color: #cad9fb !important; color: #2a55cf !important; background: #f1f5ff !important; }
+.scDevEmpty { padding: 54px 20px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 8px; color: #7a889a; }
+.scDevEmpty > i { font-size: 25px; color: #9dadc4; margin-bottom: 4px; }
+.scDevEmpty.isClean > i { color: #2a9974; }
+.scDevEmpty strong { font-size: 14px; color: #2e4059; }
+.scDevEmpty p { max-width: 420px; font-size: 12px; line-height: 1.7; margin: 0; }
+.scDevEmpty small { font-size: 10px; color: #9ba7b7; }
+.scDevProblemFooter { display: flex; align-items: flex-start; gap: 8px; padding: 18px 0; font-size: 11px; color: #97a3b2; line-height: 1.5; }
+.scDevSide { border-left: 1px solid #e9edf3; padding-left: 26px; min-width: 0; }
+.scDevSideSection { padding: 5px 0 24px; margin-bottom: 22px; border-bottom: 1px solid #e9edf3; }
+.scDevSideSection:last-child { border: none; }
+.scDevSideSection h2 { margin-bottom: 16px; }
+.scDevSideSection dl { padding: 0; margin: 0; display: flex; flex-direction: column; gap: 13px; }
+.scDevSideSection dl > div { display: flex; justify-content: space-between; gap: 10px; align-items: baseline; }
+.scDevSideSection dt { font-size: 11px; color: #8895a5; }
+.scDevSideSection dd { margin: 0; color: #30425c; text-align: right; font-size: 11px; font-weight: 650; overflow-wrap: anywhere; }
+.scDevEntry { display: flex; gap: 10px; align-items: flex-start; }
+.scDevEntry > i { color: #315bcb; background: #edf3ff; border-radius: 6px; display: grid; place-items: center; font-size: 15px; width: 33px; min-width: 33px; height: 33px; }
+.scDevEntry > div { min-width: 0; display: flex; flex-direction: column; gap: 4px; }
+.scDevEntry strong { font-family: 'Cascadia Code', Consolas, monospace; font-size: 11px; color: #364963; overflow-wrap: anywhere; font-weight: 650; }
+.scDevEntry small { font-size: 10px; color: #8592a5; line-height: 1.4; }
+.scDevSideButtons { display: flex; gap: 7px; flex-wrap: wrap; margin-top: 15px; }
+.scFinalWorkspacePage .scDevSideButtons button, .scFinalWorkspacePage .scDevRelationships {
+  display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+  border: 1px solid #dfe6f0 !important; border-radius: 6px !important; background: white !important;
+  font-size: 11px !important; font-weight: 650 !important; color: #455b78 !important;
+  padding: 8px 10px !important; min-height: 34px; box-shadow: none !important; cursor: pointer;
+}
+.scFinalWorkspacePage .scDevSideButtons .scDevSidePrimary { color: white !important; background: #2954d7 !important; border-color: #2954d7 !important; }
+.scFinalWorkspacePage .scDevSideButtons button:hover:not(:disabled), .scFinalWorkspacePage .scDevRelationships:hover:not(:disabled) { filter: brightness(.96); }
+.scDevSideHelp { font-size: 11px; line-height: 1.6; margin: 0 0 13px; color: #7e8da2; }
+.scFinalWorkspacePage .scDevRelationships { width: 100%; justify-content: space-between; }
+.scFinalWorkspacePage .scDevRelationships:disabled { opacity: .5; cursor: default; }
+.scDevCommands { margin: 16px 0 0; display: flex; flex-direction: column; gap: 8px; }
+.scDevCommands > div { display: flex; align-items: center; justify-content: space-between; gap: 6px; }
+.scDevCommands small { font-size: 10px; color: #8693a5; }
+.scDevCommands code { padding: 6px 8px; border-radius: 5px; background: #eff2f8; color: #29405c; font-size: 10px; overflow-wrap: anywhere; }
+.scDevCommands > span { color: #92a0b1; font-size: 10px; line-height: 1.5; }
+@media (max-width: 1050px) {
+  .scDevChecks { padding: 26px 22px 40px; }
+  .scDevLayout { grid-template-columns: minmax(0,1fr) 235px; gap: 20px; }
+  .scDevSide { padding-left: 18px; }
+}
+@media (max-width: 760px) {
+  .scDevChecks { padding: 21px 16px 40px; }
+  .scDevLayout { display: flex; flex-direction: column; }
+  .scDevPrimary, .scDevSide { width: 100%; }
+  .scDevSide { border-left: none; padding-left: 0; border-top: 1px solid #e9edf3; padding-top: 20px; }
+  .scDevHeader { flex-wrap: wrap; }
+  .scDevHeader h1 { font-size: 21px; }
+  .scDevSideSection { margin-bottom: 14px; }
+}
+
+/* V3: Three focused product sections: Split Code, Preview, Export. */
+.scFinalWorkspacePage .scFinalMain.scWorkspaceView-code > .scV3ExportPanel,
+.scFinalWorkspacePage .scFinalMain.scWorkspaceView-preview > .scV3ExportPanel,
+.scFinalWorkspacePage .scFinalMain.scWorkspaceView-export > .scFinalEditorCard,
+.scFinalWorkspacePage .scFinalMain.scWorkspaceView-export > .scFinalPreviewCard,
+.scFinalWorkspacePage .scFinalMain.scWorkspaceView-code > .scFinalPreviewCard,
+.scFinalWorkspacePage .scFinalMain.scWorkspaceView-preview > .scFinalEditorCard { display: none !important; }
+.scFinalWorkspacePage .scFinalMain.scWorkspaceView-export > .scV3ExportPanel { display: flex !important; }
+.scFinalWorkspacePage .scV2NewProject > .scV3ExportPanel { display: none !important; }
+.scFinalWorkspacePage .scV3FileFooterHint { font-size: 10px; color: #929fb0; white-space: nowrap; }
+.scFinalWorkspacePage .scV3ExportPanel {
+  flex: 1; min-height: calc(100vh - 121px); background: #fff;
+  padding: clamp(25px, 5vw, 72px) 22px 70px; justify-content: center; align-items: flex-start;
+}
+.scV3ExportContent { width: 100%; max-width: 590px; margin: 0 auto; }
+.scV3ExportIcon { width: 48px; height: 48px; display: grid; place-items: center; font-size: 22px;
+  color: #2452cd; background: #eef3fd; border: 1px solid #e3ebfb; border-radius: 10px; margin-bottom: 26px; }
+.scV3ExportOverline { color: #7b8799; font-size: 10px; font-weight: 720; letter-spacing: .14em; margin-bottom: 9px; }
+.scV3ExportContent h1 { margin: 0 0 11px; color: #17253b; letter-spacing: -.045em; font-size: clamp(24px, 3vw, 31px); font-weight: 700; }
+.scV3ExportContent > p { max-width: 500px; color: #718098; font-size: 13px; line-height: 1.7; margin: 0 0 28px; }
+.scV3ExportSummary { display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid #e6eaf0; border-radius: 9px; overflow: hidden; }
+.scV3ExportSummary div { display: flex; align-items: flex-start; flex-direction: column; gap: 7px; padding: 17px 20px; border-right: 1px solid #e6eaf0; }
+.scV3ExportSummary div:last-child { border-right: none; }
+.scV3ExportSummary span { font-size: 11px; color: #8896a8; }
+.scV3ExportSummary strong { font-size: 21px; font-weight: 680; color: #22334a; font-variant-numeric: tabular-nums; }
+.scV3ExportFiles { border: 1px solid #e6eaf0; border-radius: 9px; margin-top: 20px; overflow: hidden; }
+.scV3ExportFilesHeading { display: flex; justify-content: space-between; background: #f9fafc; color: #526179; border-bottom: 1px solid #e6eaf0; padding: 12px 17px; font-size: 11px; font-weight: 650; }
+.scV3ExportFilesHeading span:last-child { color: #98a4b3; font-weight: 500; }
+.scV3ExportFiles ul { list-style: none; padding: 7px 0; margin: 0; max-height: 310px; overflow-y: auto; }
+.scV3ExportFiles li { display: flex; gap: 11px; padding: 9px 17px; font-size: 12px; color: #3f526d; align-items: center; min-width: 0; }
+.scV3ExportFiles li i { color: #6e829f; }
+.scV3ExportFiles li span { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-family: 'Cascadia Code', Consolas, monospace; font-size: 11px; }
+.scV3ExportFiles li.scV3ExportMore { font-size: 11px; color: #91a0b2; padding-top: 11px; }
+.scFinalWorkspacePage .scV3DownloadButton { display: inline-flex; align-items: center; justify-content: center; gap: 10px; margin-top: 22px;
+  border: 1px solid #2954d7 !important; color: #fff !important; background: #2954d7 !important; border-radius: 7px !important;
+  min-height: 43px !important; padding: 0 21px !important; font-size: 12px !important; font-weight: 650 !important; cursor: pointer; box-shadow: none !important; }
+.scFinalWorkspacePage .scV3DownloadButton:hover:not(:disabled) { background: #2146ba !important; }
+.scFinalWorkspacePage .scV3DownloadButton:disabled { opacity: .45; cursor: not-allowed; }
+.scV3ExportFootnote { margin-top: 18px; display: flex; gap: 8px; align-items: center; color: #93a0b0; font-size: 11px; line-height: 1.6; }
+.scFinalWorkspacePage .scWorkspaceTabs > button { min-width: max-content; }
+@media (max-width: 690px) { .scFinalWorkspacePage .scV3ExportPanel { min-height: 450px; padding: 32px 17px 48px; } .scV3ExportSummary div { padding: 14px; } }
+
+.scFinalWorkspacePage .scV3SplitButton {
+  min-width: 96px !important; min-height: 30px !important; padding: 0 10px !important;
+  display: inline-flex !important; align-items: center !important; justify-content: center !important;
+  gap: 6px; font-size: 11px !important; font-weight: 650 !important; border: 1px solid #cfdcf7 !important;
+  border-radius: 5px !important; color: #2451cf !important; background: #eff4ff !important; cursor: pointer;
+}
+.scFinalWorkspacePage .scV3SplitButton:hover { background: #e3ecff !important; }
+
+/* Home: the product now has exactly three workflow stages. */
+.scV3ProcessRail { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+@media(max-width:980px){.scV3ProcessRail{grid-template-columns:repeat(2,minmax(0,1fr));}}
+@media(max-width:640px){.scV3ProcessRail{grid-template-columns:1fr;}}
+
+/* =========================================================
+   ORBIX-INSPIRED VISUAL REFINEMENT
+   Soft lilac product UI + lighter line icon language
+   ========================================================= */
+.scHomePage.scCortexHome {
+  min-height: 100vh;
+  background:
+    radial-gradient(60rem 40rem at 50% 12%, rgba(189, 172, 255, 0.38), transparent 60%),
+    linear-gradient(180deg, #ebe5ff 0%, #d9cbff 46%, #a98df4 100%);
+  color: #17131f;
+}
+.scHomePage.scCortexHome .scHomeNav {
+  width: min(1080px, calc(100% - 64px));
+  margin: 26px auto 0;
+  padding: 14px 18px;
+  border: 1px solid rgba(255,255,255,0.48);
+  border-radius: 30px;
+  background: rgba(255,255,255,0.54);
+  box-shadow: 0 18px 44px rgba(71, 40, 148, 0.10);
+  backdrop-filter: blur(14px);
+}
+.scHomePage.scCortexHome .scCortexNavLinks {
+  background: rgba(255,255,255,0.55);
+  border: 1px solid rgba(149,124,233,0.15);
+  border-radius: 999px;
+  padding: 6px 10px;
+  gap: 8px;
+}
+.scHomePage.scCortexHome .scCortexNavLinks a,
+.scHomePage.scCortexHome .scLocalPill {
+  color: #5f5d73;
+  border-radius: 999px;
+  padding: 10px 14px;
+}
+.scHomePage.scCortexHome .scCortexNavLinks a:hover { background: rgba(137, 110, 232, 0.08); color: #7d5de7; }
+.scHomePage.scCortexHome .scLocalPill { background: rgba(137, 110, 232, 0.10); color: #7d5de7; }
+.scHomePage.scCortexHome .scNavSecondary,
+.scHomePage.scCortexHome .scSecondaryCta {
+  border-radius: 999px;
+  background: rgba(255,255,255,0.65);
+  border: 1px solid rgba(148, 126, 234, 0.18);
+  color: #544f67;
+}
+.scHomePage.scCortexHome .scNavPrimary,
+.scHomePage.scCortexHome .scPrimaryCta,
+.scHomePage.scCortexHome .scDarkPrimary,
+.scHomePage.scCortexHome .scMockSite button {
+  border-radius: 999px;
+  background: linear-gradient(135deg, #8763f1 0%, #9a7cff 100%);
+  color: white;
+  box-shadow: 0 16px 30px rgba(129, 101, 229, 0.24);
+}
+.scHomePage.scCortexHome .scCortexMain {
+  width: min(1120px, calc(100% - 64px));
+  margin: 20px auto 0;
+}
+.scHomePage.scCortexHome .scCortexHero {
+  position: relative;
+  border-radius: 42px;
+  overflow: hidden;
+  padding: 54px 42px 38px;
+  background: rgba(255,255,255,0.70);
+  border: 1px solid rgba(255,255,255,0.55);
+  box-shadow: 0 30px 65px rgba(82, 53, 161, 0.16);
+}
+.scHomePage.scCortexHome .scHeroGlowOne,
+.scHomePage.scCortexHome .scHeroGlowTwo {
+  filter: blur(70px);
+  opacity: .55;
+}
+.scHomePage.scCortexHome .scHeroGlowOne { background: rgba(134, 98, 245, .36); }
+.scHomePage.scCortexHome .scHeroGlowTwo { background: rgba(194, 186, 255, .5); }
+.scHomePage.scCortexHome .scHeroEyebrow {
+  background: rgba(255,255,255,.66);
+  border: 1px solid rgba(149,124,233,0.18);
+  color: #8166ea;
+  border-radius: 999px;
+}
+.scHomePage.scCortexHome .scCortexHeroContent h1 {
+  font-size: clamp(52px, 6vw, 78px);
+  line-height: .98;
+  letter-spacing: -.045em;
+  max-width: 8.5ch;
+}
+.scHomePage.scCortexHome .scCortexHeroContent h1 span { color: #8b6df3; }
+.scHomePage.scCortexHome .scCortexHeroContent p {
+  max-width: 610px;
+  font-size: 18px;
+  line-height: 1.65;
+  color: #666172;
+}
+.scHomePage.scCortexHome .scCortexMeta span,
+.scHomePage.scCortexHome .scFooterTrust span {
+  background: rgba(255,255,255,.6);
+  border: 1px solid rgba(149,124,233,.14);
+  color: #5c5971;
+  border-radius: 999px;
+}
+.scHomePage.scCortexHome .scProductStage { margin-top: 42px; }
+.scHomePage.scCortexHome .scProductWindow {
+  border-radius: 30px;
+  background: rgba(255,255,255,.88);
+  border: 1px solid rgba(255,255,255,.72);
+  box-shadow: 0 28px 70px rgba(75, 54, 145, 0.18);
+}
+.scHomePage.scCortexHome .scProductTopbar {
+  background: rgba(255,255,255,.72);
+  border-bottom: 1px solid rgba(176, 163, 225, 0.22);
+}
+.scHomePage.scCortexHome .scMiniTopActions span,
+.scHomePage.scCortexHome .scMockTabs span,
+.scHomePage.scCortexHome .scMockPreviewTitle,
+.scHomePage.scCortexHome .scMockSectionTitle {
+  color: #6f6a7f;
+}
+.scHomePage.scCortexHome .scMiniExport,
+.scHomePage.scCortexHome .scMockTabs span.active {
+  background: rgba(142, 115, 236, 0.12);
+  color: #8362ef;
+  border-radius: 999px;
+}
+.scHomePage.scCortexHome .scMockExplorer,
+.scHomePage.scCortexHome .scMockEditor,
+.scHomePage.scCortexHome .scMockPreview {
+  border-radius: 26px;
+  border: 1px solid rgba(177, 168, 221, 0.25);
+  background: rgba(255,255,255,0.86);
+  box-shadow: 0 16px 36px rgba(128, 111, 190, 0.10);
+}
+.scHomePage.scCortexHome .scMockFile.active,
+.scHomePage.scCortexHome .scMockFolder,
+.scHomePage.scCortexHome .scMockSiteBadge {
+  background: rgba(141, 115, 236, 0.10);
+  color: #8466ec;
+}
+.scHomePage.scCortexHome .scCortexDark {
+  margin-top: 26px;
+  border-radius: 36px;
+  background: rgba(255,255,255,.58);
+  border: 1px solid rgba(255,255,255,.52);
+  box-shadow: 0 20px 55px rgba(85, 59, 161, 0.11);
+}
+.scHomePage.scCortexHome .scRailStep,
+.scHomePage.scCortexHome .scDarkBottom,
+.scHomePage.scCortexHome .scFooterInner {
+  border-radius: 28px;
+  background: rgba(255,255,255,.72);
+  border: 1px solid rgba(182, 170, 229, .22);
+}
+.scHomePage.scCortexHome .scRailNode {
+  width: 58px; height: 58px; border-radius: 18px;
+  background: rgba(140, 114, 236, 0.11);
+  color: #805fea;
+}
+.scHomePage.scCortexHome .scDarkIntro h2 span,
+.scHomePage.scCortexHome .scRailCopy small { color: #8366e9; }
+.scHomePage.scCortexHome .scCortexFooter {
+  background: transparent;
+}
+.scHomePage.scCortexHome .scFooterInner {
+  width: min(1120px, calc(100% - 64px));
+  margin: 24px auto 38px;
+}
+.scHomePage.scCortexHome .scFooterColumn a,
+.scHomePage.scCortexHome .scFooterBrandBlock p { color: #666276; }
+.scHomePage.scCortexHome .scFooterColumn strong,
+.scHomePage.scCortexHome .scFooterBrandBlock strong { color: #1f1a2d; }
+
+/* Workspace */
+.scFinalWorkspacePage {
+  background:
+    radial-gradient(60rem 36rem at 50% -10%, rgba(191, 176, 255, 0.50), transparent 62%),
+    linear-gradient(180deg, #eee7ff 0%, #e3dcff 22%, #d4c3ff 100%) !important;
+  padding: 18px !important;
+}
+.scFinalWorkspacePage .scFinalHeader {
+  position: sticky !important;
+  top: 18px;
+  max-width: 1360px;
+  margin: 0 auto 14px;
+  border: 1px solid rgba(255,255,255,0.56) !important;
+  border-radius: 28px !important;
+  background: rgba(255,255,255,0.74) !important;
+  box-shadow: 0 22px 50px rgba(78, 57, 153, 0.10) !important;
+  backdrop-filter: blur(16px);
+}
+.scFinalWorkspacePage .scFinalHeaderInner {
+  max-width: none !important;
+}
+.scFinalWorkspacePage .scFinalHeaderActions { gap: 10px !important; }
+.scFinalWorkspacePage .scV2HeaderTextButton,
+.scFinalWorkspacePage .scStableImportButton,
+.scFinalWorkspacePage .scWorkspaceMenuTrigger {
+  min-height: 42px !important;
+  border-radius: 999px !important;
+  background: rgba(255,255,255,.76) !important;
+  border: 1px solid rgba(156, 141, 219, .20) !important;
+  color: #5b5671 !important;
+}
+.scFinalWorkspacePage .scFinalHeaderButton {
+  min-height: 42px !important;
+  border-radius: 999px !important;
+  border: 1px solid rgba(142,117,236,.18) !important;
+  background: linear-gradient(135deg, #8866ef 0%, #9d7dff 100%) !important;
+  box-shadow: 0 14px 28px rgba(128, 102, 239, 0.24) !important;
+}
+.scFinalWorkspacePage .scFinalSaveStatus,
+.scFinalWorkspacePage .scFinalSaveStatus-saved {
+  background: rgba(255,255,255,.56) !important;
+  border-radius: 999px !important;
+  border: 1px solid rgba(156, 141, 219, .16) !important;
+  min-height: 38px !important;
+}
+.scFinalWorkspacePage .scFinalStatusDot { background: #7fddac !important; }
+.scFinalWorkspacePage .scFinalContainer {
+  max-width: 1360px !important;
+  margin: 0 auto !important;
+}
+.scFinalWorkspacePage .scFinalWorkspaceGrid {
+  min-height: calc(100vh - 132px) !important;
+  gap: 18px !important;
+  grid-template-columns: 286px minmax(0, 1fr) !important;
+}
+.scFinalWorkspacePage .scFinalSidebar,
+.scFinalWorkspacePage .scFinalMain {
+  border: 1px solid rgba(255,255,255,.58) !important;
+  border-radius: 30px !important;
+  background: rgba(255,255,255,.76) !important;
+  box-shadow: 0 26px 60px rgba(83, 58, 162, 0.12) !important;
+  backdrop-filter: blur(18px);
+}
+.scFinalWorkspacePage .scFinalSidebar {
+  border-right: 0 !important;
+  height: calc(100vh - 150px) !important;
+}
+.scFinalWorkspacePage .scFinalSidebarHeader {
+  padding: 22px 18px 14px !important;
+  background: transparent !important;
+}
+.scFinalWorkspacePage .scFinalSidebarTitle strong {
+  font-size: 12px !important;
+  letter-spacing: .14em !important;
+  color: #7f7890 !important;
+}
+.scFinalWorkspacePage .scCleanCreateActions button {
+  width: 34px !important;
+  height: 34px !important;
+  border-radius: 999px !important;
+  border: 1px solid rgba(156,141,219,.16) !important;
+  background: rgba(255,255,255,.7) !important;
+}
+.scFinalWorkspacePage .scFinalSearch {
+  border-radius: 18px !important;
+  border: 1px solid rgba(156,141,219,.16) !important;
+  background: rgba(255,255,255,.84) !important;
+}
+.scFinalWorkspacePage .scFrameworkDetector {
+  border-radius: 18px !important;
+  background: rgba(141, 115, 236, 0.08) !important;
+}
+.scFinalWorkspacePage .scFinalSidebarTree { padding: 8px 12px 12px !important; }
+.scFinalWorkspacePage .scTreeRootRow,
+.scFinalWorkspacePage .explorerFolderRow,
+.scFinalWorkspacePage .explorerFileRow {
+  border-radius: 18px;
+}
+.scFinalWorkspacePage .fileExplorerFolder,
+.scFinalWorkspacePage .fileExplorerFile {
+  min-height: 44px !important;
+  padding: 0 12px !important;
+  border-radius: 16px !important;
+  color: #2b2840 !important;
+}
+.scFinalWorkspacePage .scTreeRootRow {
+  min-height: 42px;
+  color: #766f87;
+}
+.scFinalWorkspacePage .fileExplorerFolder:hover,
+.scFinalWorkspacePage .fileExplorerFile:hover {
+  background: rgba(138, 114, 235, 0.07) !important;
+}
+.scFinalWorkspacePage .fileExplorerFile.activeFile,
+.scFinalWorkspacePage .activeExplorerRow,
+.scFinalWorkspacePage .fileExplorerFolder:focus-visible {
+  background: rgba(137, 111, 236, 0.12) !important;
+  color: #7f60ec !important;
+}
+.scFinalWorkspacePage .scTreeFileGlyph,
+.scFinalWorkspacePage .scTreeFolderGlyph {
+  width: 30px;
+  height: 30px;
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(137, 111, 236, 0.08);
+  color: #8264ec;
+}
+.scFinalWorkspacePage .scTreeFolderGlyph {
+  position: relative;
+  background: rgba(255,255,255,.72);
+  border: 1px solid rgba(156,141,219,.18);
+}
+.scFinalWorkspacePage .scTreeFolderGlyph::before,
+.scFinalWorkspacePage .scTreeFolderGlyph::after {
+  content: "";
+  position: absolute;
+  left: 7px;
+  border: 1.6px solid currentColor;
+}
+.scFinalWorkspacePage .scTreeFolderGlyph::before {
+  width: 16px; height: 10px; bottom: 7px;
+  border-radius: 5px;
+  border-top-left-radius: 3px;
+}
+.scFinalWorkspacePage .scTreeFolderGlyph::after {
+  width: 10px; height: 4px; top: 7px; left: 7px;
+  border-bottom: 0;
+  border-radius: 3px 3px 0 0;
+  background: transparent;
+}
+.scFinalWorkspacePage .scTreeFileMeta {
+  margin-left: auto;
+  font-size: 10px;
+  letter-spacing: .08em;
+  color: #9b93ad;
+}
+.scFinalWorkspacePage .fileName,
+.scFinalWorkspacePage .folderName { font-weight: 600; }
+.scFinalWorkspacePage .folderArrow.scIcon,
+.scFinalWorkspacePage .scTreeRootChevron .scIcon { color: #a095bc; }
+.scFinalWorkspacePage .explorerRowActions button {
+  width: 30px; height: 30px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.72);
+  border: 1px solid rgba(156,141,219,.14);
+  color: #81798f;
+}
+.scFinalWorkspacePage .explorerRowActions button:hover { color: #8467ec; }
+.scFinalWorkspacePage .scV2ExplorerFooter {
+  background: transparent;
+  color: #837b96;
+  border-top: 1px solid rgba(156,141,219,.12);
+}
+.scFinalWorkspacePage .scWorkspaceTabs {
+  height: 72px !important;
+  min-height: 72px !important;
+  padding: 0 22px !important;
+  border-bottom: 1px solid rgba(156,141,219,.16) !important;
+  background: transparent !important;
+  gap: 16px !important;
+}
+.scFinalWorkspacePage .scWorkspaceTabs > button {
+  height: 44px !important;
+  align-self: center !important;
+  padding: 0 16px !important;
+  border-radius: 999px !important;
+  color: #746d84 !important;
+  background: transparent !important;
+}
+.scFinalWorkspacePage .scWorkspaceTabs > button.isActive {
+  color: #7e5fea !important;
+  background: rgba(140, 115, 236, 0.10) !important;
+}
+.scFinalWorkspacePage .scWorkspaceTabs > button.isActive::after { display: none; }
+.scFinalWorkspacePage .scV2ToolsMenu summary {
+  min-height: 42px;
+  padding: 0 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(156,141,219,.16);
+  background: rgba(255,255,255,.72);
+}
+.scFinalWorkspacePage .scFinalEditorCard,
+.scFinalWorkspacePage .scFinalPreviewCard,
+.scFinalWorkspacePage .scV3ExportPanel {
+  background: transparent !important;
+}
+.scFinalWorkspacePage .scFinalTabsToolbar {
+  height: 58px !important;
+  background: rgba(255,255,255,.4) !important;
+  border-bottom: 1px solid rgba(156,141,219,.12) !important;
+}
+.scFinalWorkspacePage .scFinalFileTab {
+  height: 56px !important;
+  border-radius: 16px 16px 0 0 !important;
+  color: #837b98 !important;
+}
+.scFinalWorkspacePage .scFinalFileTab.isActive {
+  color: #7d5ee8 !important;
+  background: rgba(255,255,255,.76) !important;
+  border-bottom: 2px solid #8e71ef !important;
+}
+.scFinalWorkspacePage .scFinalEditorSurface {
+  background: #151523 !important;
+  height: calc(100vh - 315px) !important;
+}
+.scFinalWorkspacePage .scFinalEditorStatus {
+  background: rgba(255,255,255,.56) !important;
+  border-top: 1px solid rgba(156,141,219,.12) !important;
+  color: #857f95 !important;
+}
+.scFinalWorkspacePage .scFinalPreviewCard {
+  padding: 22px 22px 24px !important;
+}
+.scFinalWorkspacePage .scFinalPreviewHeader,
+.scFinalWorkspacePage .scV3ExportContent {
+  border-radius: 28px;
+  background: rgba(255,255,255,.54);
+  border: 1px solid rgba(255,255,255,.52);
+  box-shadow: 0 18px 40px rgba(90, 68, 160, 0.10);
+}
+.scFinalWorkspacePage .scFinalPreviewHeader {
+  padding: 16px 18px;
+}
+.scFinalWorkspacePage .scFinalPreviewCanvas {
+  margin-top: 16px;
+  border-radius: 28px;
+  background: rgba(255,255,255,.40);
+  border: 1px solid rgba(255,255,255,.5);
+  padding: 22px;
+  min-height: 520px;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.2);
+}
+.scFinalWorkspacePage .scFinalPreviewFrame {
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid rgba(177, 168, 221, 0.25);
+  background: white;
+  box-shadow: 0 18px 40px rgba(91, 70, 161, 0.12);
+}
+.scFinalWorkspacePage .scFinalPreviewTextButton,
+.scFinalWorkspacePage .scFinalViewportButton,
+.scFinalWorkspacePage .scRuntimePreviewActions button,
+.scFinalWorkspacePage .scV3DownloadButton {
+  min-height: 42px !important;
+  border-radius: 999px !important;
+  border: 1px solid rgba(156,141,219,.18) !important;
+  background: rgba(255,255,255,.78) !important;
+  color: #5d5871 !important;
+}
+.scFinalWorkspacePage .scFinalViewportButton.isActive {
+  color: white !important;
+  background: linear-gradient(135deg, #8a68f0 0%, #9c7cff 100%) !important;
+  box-shadow: 0 12px 24px rgba(132, 104, 240, 0.20) !important;
+}
+.scFinalWorkspacePage .scV3ExportPanel { padding: 22px !important; }
+.scFinalWorkspacePage .scV3ExportContent {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 36px 34px 32px;
+}
+.scFinalWorkspacePage .scV3ExportIcon {
+  width: 72px; height: 72px; border-radius: 22px;
+  background: rgba(140,115,236,.10);
+  color: #8466ec;
+}
+.scFinalWorkspacePage .scV3ExportSummary > div,
+.scFinalWorkspacePage .scV3ExportFiles {
+  border-radius: 22px;
+  background: rgba(255,255,255,.68);
+  border: 1px solid rgba(156,141,219,.14);
+}
+.scFinalWorkspacePage .scV3ExportFiles li {
+  border-bottom-color: rgba(156,141,219,.12);
+}
+.scFinalWorkspacePage .scV3ExportFootnote,
+.scFinalWorkspacePage .scV2StatusToast {
+  border-radius: 999px;
+  background: rgba(255,255,255,.84);
+  border: 1px solid rgba(156,141,219,.16);
+  box-shadow: 0 16px 34px rgba(87, 63, 166, 0.14);
+}
+.scFinalWorkspacePage .scDialogCard,
+.scFinalWorkspacePage .scV2StartDialog {
+  border-radius: 34px !important;
+  background: rgba(255,255,255,.92) !important;
+  border: 1px solid rgba(255,255,255,.65) !important;
+  box-shadow: 0 28px 60px rgba(81, 59, 154, 0.18) !important;
+}
+.scFinalWorkspacePage .scSimpleStartIcon,
+.scFinalWorkspacePage .scV2EmptyMark {
+  background: rgba(140,115,236,.10) !important;
+  color: #8668ee !important;
+}
+.scFinalWorkspacePage .scSimplePasteCard textarea {
+  border-radius: 24px !important;
+  border: 1px solid rgba(156,141,219,.16) !important;
+  background: rgba(249,247,255,.88) !important;
+}
+.scFinalWorkspacePage .scFinalPrimaryButton,
+.scFinalWorkspacePage .scV123PrimaryAction,
+.scFinalWorkspacePage .scV2BlankLink {
+  border-radius: 999px !important;
+}
+
+@media (max-width: 1080px) {
+  .scHomePage.scCortexHome .scHomeNav,
+  .scHomePage.scCortexHome .scCortexMain,
+  .scHomePage.scCortexHome .scFooterInner {
+    width: min(100%, calc(100% - 28px));
+  }
+  .scFinalWorkspacePage {
+    padding: 12px !important;
+  }
+  .scFinalWorkspacePage .scFinalHeader {
+    top: 12px;
+  }
+}

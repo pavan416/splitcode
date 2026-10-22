@@ -3955,14 +3955,17 @@ function repairDiagnosticReference(issue) {
   function scrollToProjectIssues() {
     setWorkspaceTab("issues");
 
-    window.setTimeout(() => {
-      document
-        .getElementById("splitcode-diagnostics")
-        ?.scrollIntoView({
-          behavior: "smooth",
-          block: "start",
-        });
-    }, 0);
+    // Wait for React to commit the Issues view before measuring/scrolling to it.
+    window.requestAnimationFrame(() => {
+      window.requestAnimationFrame(() => {
+        document
+          .getElementById("splitcode-diagnostics")
+          ?.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+      });
+    });
   }
 
   async function fixAllSafeIssues() {
@@ -4942,7 +4945,11 @@ function repairDiagnosticReference(issue) {
           </section>
         ) : null}
 
-        <section className="scFinalWorkspaceGrid">
+        <section
+          className={`scFinalWorkspaceGrid ${
+            !sourceCollapsed && files.length === 0 ? "isOnboarding" : ""
+          }`}
+        >
           <aside className="scFinalSidebar">
             <div className="scFinalSidebarHeader">
               <div className="scFinalSidebarTitleRow">
@@ -5102,7 +5109,7 @@ function repairDiagnosticReference(issue) {
               <button
                 type="button"
                 disabled={!files.length}
-                onClick={() => setWorkspaceTab("issues")}
+                onClick={scrollToProjectIssues}
               >
                 {diagnostics.issues.length > 0
                   ? "Review Issues"
@@ -5694,7 +5701,7 @@ function repairDiagnosticReference(issue) {
 
                 <div>
                   <span className="isOrphaned">
-                    <i className="bi bi-file-earmark-question" aria-hidden="true" />
+                    <i className="bi bi-file-earmark-minus" aria-hidden="true" />
                   </span>
                   <strong>{projectHealth.orphaned}</strong>
                   <small>Orphaned</small>
@@ -5702,7 +5709,7 @@ function repairDiagnosticReference(issue) {
 
                 <div>
                   <span className="isSafe">
-                    <i className="bi bi-magic" aria-hidden="true" />
+                    <i className="bi bi-check2-square" aria-hidden="true" />
                   </span>
                   <strong>{projectHealth.safeFixCount}</strong>
                   <small>Safe fixes</small>
@@ -5735,7 +5742,7 @@ function repairDiagnosticReference(issue) {
                       className="isPrimary"
                       onClick={fixAllSafeIssues}
                     >
-                      <i className="bi bi-stars" aria-hidden="true" />
+                      <i className="bi bi-check2-circle" aria-hidden="true" />
                       Fix All Safe Issues
                     </button>
                   ) : null}
@@ -5869,7 +5876,9 @@ function repairDiagnosticReference(issue) {
 
                     <span>
                       <small>README</small>
-                      <strong>{exportDocumentationPlan.readmePath}</strong>
+                      <strong title={exportDocumentationPlan.readmePath}>
+                        {exportDocumentationPlan.readmePath}
+                      </strong>
                     </span>
 
                     <em
@@ -5890,7 +5899,9 @@ function repairDiagnosticReference(issue) {
 
                     <span>
                       <small>Preflight report</small>
-                      <strong>{exportDocumentationPlan.reportPath}</strong>
+                      <strong title={exportDocumentationPlan.reportPath}>
+                        {exportDocumentationPlan.reportPath}
+                      </strong>
                     </span>
 
                     <em className="isGenerated">
@@ -6044,7 +6055,10 @@ function repairDiagnosticReference(issue) {
                                 }
                               }}
                             >
-                              <span className="scRelationshipSource">
+                              <span
+                                className="scRelationshipSource"
+                                title={edge.sourcePath}
+                              >
                                 {edge.sourcePath}
                               </span>
 
@@ -6053,7 +6067,10 @@ function repairDiagnosticReference(issue) {
                                 aria-hidden="true"
                               />
 
-                              <span className="scRelationshipTarget">
+                              <span
+                                className="scRelationshipTarget"
+                                title={edge.targetPath}
+                              >
                                 {edge.targetPath}
                               </span>
 
@@ -6282,6 +6299,10 @@ function repairDiagnosticReference(issue) {
                           issue.severity === "error"
                             ? "isError"
                             : "isWarning"
+                        }${
+                          issue.message.startsWith("No index.html file")
+                            ? " isEntryPointWarning"
+                            : ""
                         }`}
                       >
                         <button
@@ -6289,12 +6310,29 @@ function repairDiagnosticReference(issue) {
                           className="scFinalDiagnosticMain"
                           onClick={() => openDiagnosticFile(issue)}
                         >
-                          <span className="scFinalDiagnosticSeverity">
-                            {issue.severity === "error" ? "!" : "⚠"}
+                          <span
+                            className="scFinalDiagnosticSeverity"
+                            role="img"
+                            aria-label={issue.severity === "error" ? "Error" : "Warning"}
+                          >
+                            <i
+                              className={
+                                issue.severity === "error"
+                                  ? "bi bi-x-circle-fill"
+                                  : "bi bi-exclamation-triangle-fill"
+                              }
+                              aria-hidden="true"
+                            />
                           </span>
 
                           <span className="scFinalDiagnosticCopy">
                             <strong>{issue.message}</strong>
+
+                            {issue.message.startsWith("No index.html file") ? (
+                              <small className="scFinalDiagnosticHint">
+                                Add an index.html file at the project root to define the browser entry point.
+                              </small>
+                            ) : null}
 
                             {issue.file ? (
                               <span>{issue.file}</span>
